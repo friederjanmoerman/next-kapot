@@ -1,28 +1,64 @@
+// React
 import React from "react"
+
+// Next
+import Image from "next/image"
+
+// Components
 import ImageSlider from "../components/ImageSlider"
 
-const images = [
-  "https://via.placeholder.com/800x600/ff0000",
-  "https://via.placeholder.com/800x600/00ff00",
-  "https://via.placeholder.com/800x600/0000ff",
-]
+import KapotLogo from "./../public/images/logo--white.svg"
 
 // MUI
-import { styled } from "@mui/material"
+import { Container, styled } from "@mui/material"
 
-export const Container = styled("div")`
+const Navbar = styled("nav")`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  color: #fff;
+  width: 100%;
+  position: absolute;
+  z-index: 9000;
 `
+
+const Logo = styled("div")`
+  flex: 1;
+  margin: 40px 80px;
+`
+
+const Menu = styled("ul")`
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+`
+
+const MenuItem = styled("li")`
+  font-size: 62px;
+  font-weight: bold:
+  cursor: pointer;
+`
+
+const images = ["/../public/images/splash-1.jpg", "/../public/images/splash-2.jpg"] // Images array for ImageSlider
 
 function Home() {
   return (
-    <Container>
-      <ImageSlider images={images} />
-    </Container>
+    <>
+      <Navbar>
+        <Logo>
+          <Image src={KapotLogo} alt="Logo" height={150} />
+        </Logo>
+        <Menu>
+          <MenuItem>Learn</MenuItem>
+          <MenuItem>Events</MenuItem>
+          <MenuItem>Contact</MenuItem>
+        </Menu>
+      </Navbar>
+      <Container>
+        <ImageSlider images={images} />
+      </Container>
+    </>
   )
 }
 

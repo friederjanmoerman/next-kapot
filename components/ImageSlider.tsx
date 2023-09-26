@@ -2,10 +2,6 @@
 import { useState } from "react"
 import Image from "next/image"
 
-// Images
-import splash1Image from "./../public/images/splash-1.jpg"
-import splash2Image from "./../public/images/splash-2.jpg"
-
 // MUI
 import { Box, Button, Card, CardContent, Typography, Grid } from "@mui/material"
 import { ArrowBack, ArrowForward } from "@mui/icons-material"
@@ -14,8 +10,8 @@ interface ImageSliderProps {
   images: string[]
 }
 
-const ImageSlider: React.FC<ImageSliderProps> = () => {
-  const images = [splash1Image, splash2Image] // Define an array of images
+const ImageSlider = (props: ImageSliderProps) => {
+  const { images } = props
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   const prevImage = () => {
