@@ -36,7 +36,7 @@ const Menu = styled("ul")`
 
 const MenuItem = styled("li")`
   font-size: 62px;
-  font-weight: bold:
+  text-transform: uppercase;
   cursor: pointer;
 `
 

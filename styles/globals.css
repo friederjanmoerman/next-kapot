@@ -106,3 +106,14 @@ a {
     color-scheme: dark;
   }
 }
+
+/* fonts */
+
+@font-face {
+  font-family: 'FuturaStdExtraBoldOblique';
+  src: url('../public/fonts/FuturaStdExtraBoldOblique.woff2') format('woff2');
+}
+
+body {
+  font-family: 'FuturaStdExtraBoldOblique', sans-serif;
+}
