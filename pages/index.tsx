@@ -1,16 +1,28 @@
-// React
 import React from "react"
-
-// Components
 import ImageSlider from "../components/ImageSlider"
 
-const images = ["/images/splash.jpg"]
+const images = [
+  "https://via.placeholder.com/800x600/ff0000",
+  "https://via.placeholder.com/800x600/00ff00",
+  "https://via.placeholder.com/800x600/0000ff",
+]
 
-const Home: React.FC = () => {
+// MUI
+import { styled } from "@mui/material"
+
+export const Container = styled("div")`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+`
+
+function Home() {
   return (
-    <div>
+    <Container>
       <ImageSlider images={images} />
-    </div>
+    </Container>
   )
 }
 

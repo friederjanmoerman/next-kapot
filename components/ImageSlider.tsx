@@ -1,53 +1,60 @@
 // React
 import { useState } from "react"
-
-// Material UI
-import { Button, Container, Grid, Paper } from "@mui/material"
-
-// Next
 import Image from "next/image"
+
+// Images
+import splash1Image from "./../public/images/splash-1.jpg"
+import splash2Image from "./../public/images/splash-2.jpg"
+
+// MUI
+import { Box, Button, Card, CardContent, Typography, Grid } from "@mui/material"
+import { ArrowBack, ArrowForward } from "@mui/icons-material"
 
 interface ImageSliderProps {
   images: string[]
 }
 
-const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
-  const [currentSlide, setCurrentSlide] = useState(0)
+const ImageSlider: React.FC<ImageSliderProps> = () => {
+  const images = [splash1Image, splash2Image] // Define an array of images
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-  const nextSlide = () => {
-    setCurrentSlide(prev => (prev + 1) % images.length)
+  const prevImage = () => {
+    setCurrentImageIndex(prevIndex => (prevIndex === 0 ? images.length - 1 : prevIndex - 1))
   }
 
-  const prevSlide = () => {
-    setCurrentSlide(prev => (prev - 1 + images.length) % images.length)
+  const nextImage = () => {
+    setCurrentImageIndex(prevIndex => (prevIndex === images.length - 1 ? 0 : prevIndex + 1))
   }
 
   return (
-    <Container maxWidth="lg">
-      <Paper elevation={3} style={{ overflow: "hidden" }}>
-        <Grid
-          container
-          style={{ transform: `translateX(-${currentSlide * 100}%)`, transition: "transform 0.5s ease-in-out" }}
-        >
-          {images.map((image, index) => (
-            <Grid item key={index} xs={12}>
-              <Image
-                src={image}
-                alt={`Slide ${index + 1}`}
-                width={1920} // Set the desired width
-                height={1080} // Set the desired height
-              />
-            </Grid>
-          ))}
+    <Card>
+      <CardContent>
+        <Box display="flex" alignItems="center" justifyContent="center">
+          <Image
+            src={images[currentImageIndex]} // Use the current image from the array
+            alt={`Image ${currentImageIndex + 1}`}
+            layout="fill" // Set layout to "fill" for full width
+            objectFit="cover"
+            // Other props like quality, objectFit, objectPosition, etc. can also be added as needed
+          />
+        </Box>
+        <Typography variant="h6" align="center">
+          Image {currentImageIndex + 1} of {images.length}
+        </Typography>
+        <Grid container justifyContent="center">
+          <Grid item>
+            <Button onClick={prevImage} startIcon={<ArrowBack />} variant="outlined" color="primary">
+              Previous
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button onClick={nextImage} endIcon={<ArrowForward />} variant="outlined" color="primary">
+              Next
+            </Button>
+          </Grid>
         </Grid>
-      </Paper>
-      <Button variant="contained" color="primary" onClick={prevSlide} style={{ marginTop: "1rem" }}>
-        Previous
-      </Button>
-      <Button variant="contained" color="primary" onClick={nextSlide} style={{ marginTop: "1rem", marginLeft: "1rem" }}>
-        Next
-      </Button>
-    </Container>
+      </CardContent>
+    </Card>
   )
 }
 
