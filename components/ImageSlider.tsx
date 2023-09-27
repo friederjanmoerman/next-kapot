@@ -27,11 +27,10 @@ const ImageSlider = (props: ImageSliderProps) => {
       <CardContent>
         <Box display="flex" alignItems="center" justifyContent="center">
           <Image
-            src={images[currentImageIndex]} // Use the current image from the array
+            src={images[currentImageIndex]}
             alt={`Image ${currentImageIndex + 1}`}
-            layout="fill" // Set layout to "fill" for full width
+            layout="fill"
             objectFit="cover"
-            // Other props like quality, objectFit, objectPosition, etc. can also be added as needed
           />
         </Box>
         <Typography variant="h6" align="center">

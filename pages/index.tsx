@@ -10,7 +10,7 @@ import ImageSlider from "../components/ImageSlider"
 import KapotLogo from "./../public/images/logo--white.svg"
 
 // MUI
-import { Container, styled } from "@mui/material"
+import { Container, Typography, styled } from "@mui/material"
 
 const Navbar = styled("nav")`
   display: flex;
@@ -35,10 +35,8 @@ const Menu = styled("ul")`
 `
 
 const MenuItem = styled("li")`
-  font-size: 62px;
+  font-size: 32px;
   text-transform: uppercase;
-  cursor: pointer;
-  font-family: "FuturaStdExtraBoldOblique", sans-serif;
 `
 
 const images = ["/../public/images/splash-1.jpg", "/../public/images/splash-2.jpg"] // Images array for ImageSlider
@@ -51,9 +49,15 @@ function Home() {
           <Image src={KapotLogo} alt="Logo" height={150} />
         </Logo>
         <Menu>
-          <MenuItem>Learn</MenuItem>
-          <MenuItem>Events</MenuItem>
-          <MenuItem>Contact</MenuItem>
+          <MenuItem>
+            <Typography variant="h2">Learn</Typography>
+          </MenuItem>
+          <MenuItem>
+            <Typography variant="h2">Events</Typography>
+          </MenuItem>
+          <MenuItem>
+            <Typography variant="h2">Contact</Typography>
+          </MenuItem>
         </Menu>
       </Navbar>
       <Container>
