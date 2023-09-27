@@ -18,6 +18,6 @@ a {
 /* @import fonts */
 
 @font-face {
-  font-family: 'FuturaStdExtraBoldOblique';
-  src: url('../public/fonts/FuturaStdExtraBoldOblique.woff2') format('woff2');
+  font-family: 'FuturaStdCondExtraBoldOblique';
+  src: url('../public/fonts/FuturaStdCondExtraBoldObl.woff2') format('woff2');
 }

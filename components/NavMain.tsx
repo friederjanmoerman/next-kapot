@@ -13,18 +13,18 @@ const Navbar = styled("nav")`
   width: 100%;
   position: absolute;
   z-index: 9000;
+  padding: 45px 7%;
 `
 
 const Logo = styled("div")`
   flex: 1;
-  margin: 40px 80px;
 `
 
 const Menu = styled("ul")`
   list-style: none;
   display: flex;
   justify-content: flex-end;
-  gap: 20px;
+  gap: 70px;
 `
 
 const MenuItem = styled("li")`

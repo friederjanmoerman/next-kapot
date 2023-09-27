@@ -8,9 +8,9 @@ const theme = createTheme({
       "sans-serif",
     ].join(','),
     h2: {
-      fontFamily: "FuturaStdExtraBoldOblique, sans-serif",
-      fontSize: "32px",
-      letterSpacing: "-0.05rem",
+      fontFamily: "FuturaStdCondExtraBoldOblique, sans-serif",
+      fontSize: "62px",
+      letterSpacing: "-0.2rem",
     },
   },
 });
