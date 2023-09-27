@@ -1,9 +1,6 @@
 // React
 import React from "react"
 
-// Next
-import Image from "next/image"
-
 // Components
 import NavMain from "../components/NavMain"
 import ImageSlider from "../components/ImageSlider"
