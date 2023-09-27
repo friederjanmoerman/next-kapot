@@ -38,6 +38,7 @@ const MenuItem = styled("li")`
   font-size: 62px;
   text-transform: uppercase;
   cursor: pointer;
+  font-family: "FuturaStdExtraBoldOblique", sans-serif;
 `
 
 const images = ["/../public/images/splash-1.jpg", "/../public/images/splash-2.jpg"] // Images array for ImageSlider

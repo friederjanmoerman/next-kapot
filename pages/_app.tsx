@@ -1,8 +1,17 @@
-// Types
-import type { AppProps } from "next/app"
+// MUI
+import { ThemeProvider } from "@emotion/react"
+import { CssBaseline } from "@mui/material"
 
-import "/styles/globals.css"
+// Theme
+import theme from "../theme/theme"
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+function App({ Component, pageProps }) {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }
+
+export default App
