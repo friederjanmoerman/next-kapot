@@ -37,6 +37,23 @@ const SlideCaption = styled(Typography)`
   text-transform: uppercase;
   color: #fff;
   transition: opacity 0.4s ease-out;
+  margin-bottom: 34px;
+`
+
+const StyledButton = styled(Button)`
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.4s ease-out;
+  background: #000;
+  font-family: FuturaStdCondensedBold, sans-serif;
+  font-size: 40px;
+  letter-spacing: -0.15rem;
+  padding: 8px 75px;
+  :hover,
+  :active {
+    color: #fff;
+    background: #000;
+  }
 `
 
 interface Slide {
@@ -84,14 +101,15 @@ const ImageSlider = (props: ImageSliderProps) => {
               <SlideCaption variant="h3" style={{ opacity: index === currentSlideIndex ? 1 : 0 }}>
                 {slide.caption}
               </SlideCaption>
-              <Button
+              <StyledButton
                 href={slide.ctaUrl}
                 variant="contained"
                 size="large"
+                disableElevation
                 style={{ opacity: index === currentSlideIndex ? 1 : 0 }}
               >
                 {slide.ctaCopy}
-              </Button>
+              </StyledButton>
             </SlideBody>
           </>
         ))}
