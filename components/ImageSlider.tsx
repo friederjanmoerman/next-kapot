@@ -3,11 +3,6 @@ import Image from "next/image"
 import { Button, Typography, Grid, styled } from "@mui/material"
 import { ArrowBack, ArrowForward } from "@mui/icons-material"
 
-const SlideCard = styled("div")`
-  height: 100%;
-  width: 100%;
-`
-
 const SlideContent = styled("div")`
   position: relative;
   padding: 0;
@@ -15,15 +10,9 @@ const SlideContent = styled("div")`
   height: 100%;
 `
 
-const ImageContainer = styled("div")`
-  position: relative;
-  height: 100%;
-  width: 100%;
-`
-
 const SlideImage = styled(Image)`
   object-fit: cover;
-  transition: opacity 0.7s ease-out;
+  transition: opacity 1.4s ease-out;
 `
 
 const Overlay = styled("div")`
@@ -35,20 +24,27 @@ const Overlay = styled("div")`
   background-color: rgba(0, 0, 0, 0.4);
 `
 
-const SlideCaption = styled(Typography)`
+const SlideBody = styled("div")`
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 7%;
+  bottom: 10%;
   z-index: 1;
+  width: 40%;
+  max-width: 700px;
+`
+
+const SlideCaption = styled(Typography)`
+  text-transform: uppercase;
+  color: #fff;
+  transition: opacity 0.4s ease-out;
 `
 
 interface Slide {
   imageUrl: string
   imageAlt: string
   caption: string
-  ctaUrl?: string
-  ctaCopy?: string
+  ctaUrl: string
+  ctaCopy: string
 }
 
 interface ImageSliderProps {
@@ -68,42 +64,52 @@ const ImageSlider = (props: ImageSliderProps) => {
   }, [slides.length])
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 4000)
-    return () => clearInterval(interval)
+    const interval = setInterval(nextSlide, 7000)
+    return () => clearInterval(interval) // Cleanup the interval on component unmount
   }, [currentSlideIndex, nextSlide])
 
   return (
-    <SlideCard>
+    <>
       <SlideContent>
-        <ImageContainer>
-          {slides.map((slide, index) => (
-            <>
-              <SlideImage
-                key={index}
-                src={slide.imageUrl}
-                alt={slide.imageAlt}
-                layout="fill"
+        {slides.map((slide, index) => (
+          <>
+            <SlideImage
+              key={index}
+              src={slide.imageUrl}
+              alt={slide.imageAlt}
+              layout="fill"
+              style={{ opacity: index === currentSlideIndex ? 1 : 0 }}
+            />
+            <SlideBody>
+              <SlideCaption variant="h3" style={{ opacity: index === currentSlideIndex ? 1 : 0 }}>
+                {slide.caption}
+              </SlideCaption>
+              <Button
+                href={slide.ctaUrl}
+                variant="contained"
+                size="large"
                 style={{ opacity: index === currentSlideIndex ? 1 : 0 }}
-              />
-              <SlideCaption variant="h3">{slide.caption}</SlideCaption>
-            </>
-          ))}
-          <Overlay></Overlay>
-        </ImageContainer>
-        <Grid container justifyContent="center">
-          <Grid item>
-            <Button onClick={prevSlide} startIcon={<ArrowBack />} variant="outlined" color="primary">
-              Previous
-            </Button>
-          </Grid>
-          <Grid item>
-            <Button onClick={nextSlide} endIcon={<ArrowForward />} variant="outlined" color="primary">
-              Next
-            </Button>
-          </Grid>
-        </Grid>
+              >
+                {slide.ctaCopy}
+              </Button>
+            </SlideBody>
+          </>
+        ))}
+        <Overlay></Overlay>
       </SlideContent>
-    </SlideCard>
+      <Grid container justifyContent="center">
+        <Grid item>
+          <Button onClick={prevSlide} startIcon={<ArrowBack />} variant="outlined" color="primary">
+            Previous
+          </Button>
+        </Grid>
+        <Grid item>
+          <Button onClick={nextSlide} endIcon={<ArrowForward />} variant="outlined" color="primary">
+            Next
+          </Button>
+        </Grid>
+      </Grid>
+    </>
   )
 }
 

@@ -16,7 +16,14 @@ a {
   text-decoration: none;
 }
 
-/* @import fonts */
+/* 
+ * Fonts 
+ */
+
+@font-face {
+  font-family: 'FuturaStdCondensedBold';
+  src: url('../public/fonts/FuturaStdCondensedBold.woff2') format('woff2');
+}
 
 @font-face {
   font-family: 'FuturaStdCondExtraBoldOblique';

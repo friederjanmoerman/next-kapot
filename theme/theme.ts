@@ -12,6 +12,11 @@ const theme = createTheme({
       fontSize: "62px",
       letterSpacing: "-0.2rem",
     },
+    h3: {
+      fontFamily: "FuturaStdCondensedBold, sans-serif",
+      fontSize: "51px",
+      letterSpacing: "-0.15rem",
+    },
   },
 });
 
