@@ -79,6 +79,10 @@ const ImageSlider = (props: ImageSliderProps) => {
               style={{ opacity: index === currentImageIndex ? 1 : 0 }} // Set opacity based on the current image
             />
           ))}
+          <Overlay></Overlay>
+          <SlideCaption variant="h6" align="center">
+            {captions[currentImageIndex]}
+          </SlideCaption>
         </ImageContainer>
         <Grid container justifyContent="center">
           <Grid item>
