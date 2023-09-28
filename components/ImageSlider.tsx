@@ -40,58 +40,64 @@ const SlideCaption = styled(Typography)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
   z-index: 1;
 `
 
+interface Slide {
+  imageUrl: string
+  imageAlt: string
+  caption: string
+  ctaUrl?: string
+  ctaCopy?: string
+}
+
 interface ImageSliderProps {
-  images: string[]
-  captions: string[]
+  slides: Slide[]
 }
 
 const ImageSlider = (props: ImageSliderProps) => {
-  const { images, captions } = props
-  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const { slides } = props
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
 
-  const prevImage = () => {
-    setCurrentImageIndex(prevIndex => (prevIndex === 0 ? images.length - 1 : prevIndex - 1))
+  const prevSlide = () => {
+    setCurrentSlideIndex(prevIndex => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1))
   }
 
-  const nextImage = useCallback(() => {
-    setCurrentImageIndex(prevIndex => (prevIndex === images.length - 1 ? 0 : prevIndex + 1))
-  }, [images.length])
+  const nextSlide = useCallback(() => {
+    setCurrentSlideIndex(prevIndex => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1))
+  }, [slides.length])
 
   useEffect(() => {
-    const interval = setInterval(nextImage, 4000) // Transition every 4 seconds
-    return () => clearInterval(interval) // Cleanup the interval on component unmount
-  }, [currentImageIndex, nextImage])
+    const interval = setInterval(nextSlide, 4000)
+    return () => clearInterval(interval)
+  }, [currentSlideIndex, nextSlide])
 
   return (
     <SlideCard>
       <SlideContent>
         <ImageContainer>
-          {images.map((image, index) => (
-            <SlideImage
-              key={image}
-              src={image}
-              alt={`Image ${index + 1}`}
-              layout="fill"
-              style={{ opacity: index === currentImageIndex ? 1 : 0 }} // Set opacity based on the current image
-            />
+          {slides.map((slide, index) => (
+            <>
+              <SlideImage
+                key={index}
+                src={slide.imageUrl}
+                alt={slide.imageAlt}
+                layout="fill"
+                style={{ opacity: index === currentSlideIndex ? 1 : 0 }}
+              />
+              <SlideCaption variant="h3">{slide.caption}</SlideCaption>
+            </>
           ))}
           <Overlay></Overlay>
-          <SlideCaption variant="h6" align="center">
-            {captions[currentImageIndex]}
-          </SlideCaption>
         </ImageContainer>
         <Grid container justifyContent="center">
           <Grid item>
-            <Button onClick={prevImage} startIcon={<ArrowBack />} variant="outlined" color="primary">
+            <Button onClick={prevSlide} startIcon={<ArrowBack />} variant="outlined" color="primary">
               Previous
             </Button>
           </Grid>
           <Grid item>
-            <Button onClick={nextImage} endIcon={<ArrowForward />} variant="outlined" color="primary">
+            <Button onClick={nextSlide} endIcon={<ArrowForward />} variant="outlined" color="primary">
               Next
             </Button>
           </Grid>
