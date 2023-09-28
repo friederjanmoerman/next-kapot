@@ -1,41 +1,85 @@
-// React
-import { useState } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Image from "next/image"
-
-// MUI
-import { Box, Button, Card, CardContent, Typography, Grid } from "@mui/material"
+import { Button, Typography, Grid, styled } from "@mui/material"
 import { ArrowBack, ArrowForward } from "@mui/icons-material"
+
+const SlideCard = styled("div")`
+  height: 100%;
+  width: 100%;
+`
+
+const SlideContent = styled("div")`
+  position: relative;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+`
+
+const ImageContainer = styled("div")`
+  position: relative;
+  height: 100%;
+  width: 100%;
+`
+
+const SlideImage = styled(Image)`
+  object-fit: cover;
+  transition: opacity 0.7s ease-out;
+`
+
+const Overlay = styled("div")`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+`
+
+const SlideCaption = styled(Typography)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+`
 
 interface ImageSliderProps {
   images: string[]
+  captions: string[]
 }
 
 const ImageSlider = (props: ImageSliderProps) => {
-  const { images } = props
+  const { images, captions } = props
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
   const prevImage = () => {
     setCurrentImageIndex(prevIndex => (prevIndex === 0 ? images.length - 1 : prevIndex - 1))
   }
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     setCurrentImageIndex(prevIndex => (prevIndex === images.length - 1 ? 0 : prevIndex + 1))
-  }
+  }, [images.length])
+
+  useEffect(() => {
+    const interval = setInterval(nextImage, 4000) // Transition every 4 seconds
+    return () => clearInterval(interval) // Cleanup the interval on component unmount
+  }, [currentImageIndex, nextImage])
 
   return (
-    <Card>
-      <CardContent>
-        <Box display="flex" alignItems="center" justifyContent="center">
-          <Image
-            src={images[currentImageIndex]}
-            alt={`Image ${currentImageIndex + 1}`}
-            layout="fill"
-            objectFit="cover"
-          />
-        </Box>
-        <Typography variant="h6" align="center">
-          Image {currentImageIndex + 1} of {images.length}
-        </Typography>
+    <SlideCard>
+      <SlideContent>
+        <ImageContainer>
+          {images.map((image, index) => (
+            <SlideImage
+              key={image}
+              src={image}
+              alt={`Image ${index + 1}`}
+              layout="fill"
+              style={{ opacity: index === currentImageIndex ? 1 : 0 }} // Set opacity based on the current image
+            />
+          ))}
+        </ImageContainer>
         <Grid container justifyContent="center">
           <Grid item>
             <Button onClick={prevImage} startIcon={<ArrowBack />} variant="outlined" color="primary">
@@ -48,8 +92,8 @@ const ImageSlider = (props: ImageSliderProps) => {
             </Button>
           </Grid>
         </Grid>
-      </CardContent>
-    </Card>
+      </SlideContent>
+    </SlideCard>
   )
 }
 

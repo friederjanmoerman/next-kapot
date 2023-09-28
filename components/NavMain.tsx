@@ -1,5 +1,7 @@
 // Next
 import Image from "next/image"
+
+// Images
 import KapotLogo from "./../public/images/logo--white.svg"
 
 // MUI
@@ -31,6 +33,7 @@ const MenuItem = styled("li")`
   font-size: 32px;
   text-transform: uppercase;
 `
+
 const NavMain = () => {
   return (
     <Navbar>

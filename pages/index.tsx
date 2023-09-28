@@ -5,18 +5,14 @@ import React from "react"
 import NavMain from "../components/NavMain"
 import ImageSlider from "../components/ImageSlider"
 
-// MUI
-import { Container } from "@mui/material"
-
 const images = ["/../public/images/splash-1.jpg", "/../public/images/splash-2.jpg"] // Images array for ImageSlider
+const captions = ["Caption one", "Caption two"] // Captions array for ImageSlider
 
 function Home() {
   return (
     <>
       <NavMain />
-      <Container>
-        <ImageSlider images={images} />
-      </Container>
+      <ImageSlider captions={captions} images={images} />
     </>
   )
 }
