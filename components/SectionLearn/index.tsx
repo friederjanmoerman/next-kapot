@@ -1,18 +1,18 @@
 // Modules
 
 // Components
+import { Section } from "./styles"
 
 // MUI
 import { Typography } from "@mui/material"
-import Grid from "@mui/material/Grid"
 
 const SectionLearn = () => {
   return (
-    <Grid container flexDirection="column" alignItems="center">
-      <Typography variant="h1" component="h2">
+    <Section container flexDirection="column" alignItems="center">
+      <Typography color={"#fff"} variant="h1" component="h2">
         Learn
       </Typography>
-    </Grid>
+    </Section>
   )
 }
 

@@ -7,6 +7,11 @@ const theme = createTheme({
       "Arial",
       "sans-serif",
     ].join(','),
+    h1: {
+      fontFamily: "AnotherDanger, serif",
+      fontSize: "62px",
+      letterSpacing: "-0.2rem",
+    },
     h2: {
       fontFamily: "FuturaStdCondExtraBoldOblique, sans-serif",
       fontSize: "62px",
