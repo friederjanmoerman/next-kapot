@@ -2,7 +2,8 @@
 import Image from "next/image"
 
 // Images
-import KapotLogo from "./../public/images/logo--white.svg"
+import KapotLogo from "./../public/images/illustrations/logo--white.svg"
+import SplashIllustration from "./../public/images/illustrations/paint-splash-1.svg"
 
 // MUI
 import { Typography, styled } from "@mui/material"
@@ -20,6 +21,15 @@ const Navbar = styled("nav")`
 
 const Logo = styled("div")`
   flex: 1;
+  position: relative;
+  z-index: 9003;
+`
+
+const StyledSplashIllustration = styled(Image)`
+  position: absolute;
+  left: 0;
+  top: 70px;
+  z-index: 9001;
 `
 
 const Menu = styled("ul")`
@@ -27,6 +37,8 @@ const Menu = styled("ul")`
   display: flex;
   justify-content: flex-end;
   gap: 70px;
+  position: relative;
+  z-index: 9002;
 `
 
 const MenuItem = styled("li")`
@@ -51,6 +63,7 @@ const NavMain = () => {
           <Typography variant="h2">Contact</Typography>
         </MenuItem>
       </Menu>
+      <StyledSplashIllustration src={SplashIllustration} alt="Splash illustration" width={550} />
     </Navbar>
   )
 }

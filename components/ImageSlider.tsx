@@ -115,7 +115,7 @@ const ImageSlider = (props: ImageSliderProps) => {
         ))}
         <Overlay></Overlay>
       </SlideContent>
-      <Grid container justifyContent="center">
+      <Grid display={"none"} container justifyContent="center">
         <Grid item>
           <Button onClick={prevSlide} startIcon={<ArrowBack />} variant="outlined" color="primary">
             Previous
