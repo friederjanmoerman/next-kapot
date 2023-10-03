@@ -4,14 +4,28 @@
 import { Section } from "./styles"
 
 // MUI
-import { Typography } from "@mui/material"
+import { Grid, Typography } from "@mui/material"
 
 const SectionLearn = () => {
   return (
-    <Section container flexDirection="column" alignItems="center">
+    <Section>
       <Typography color={"#fff"} variant="h1" component="h2">
         Learn
       </Typography>
+      <Grid container spacing={3}>
+        <Grid item xs={12} sm={6}>
+          <Typography variant="h5" color={"#fff"}>
+            Subtitle
+          </Typography>
+          <Typography color={"#fff"}>Text</Typography>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Typography variant="h5" color={"#fff"}>
+            Subtitle
+          </Typography>
+          <Typography color={"#fff"}>Text</Typography>
+        </Grid>
+      </Grid>
     </Section>
   )
 }
