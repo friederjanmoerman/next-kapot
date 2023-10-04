@@ -22,6 +22,18 @@ const theme = createTheme({
       fontSize: "51px",
       letterSpacing: "-0.15rem",
     },
+    h4: {
+      fontFamily: "FuturaStdHeavy, sans-serif",
+      fontSize: "26px",
+      letterSpacing: "-0.04rem",
+      textTransform: "uppercase",
+    },
+    h5: {
+      fontSize: "17px",
+      fontWeight: "800",
+      lineHeight: "1.4em",
+      letterSpacing: "-0.04rem",
+    },
   },
 });
 

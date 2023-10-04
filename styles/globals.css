@@ -26,6 +26,11 @@ a {
 }
 
 @font-face {
+  font-family: "FuturaStdHeavy";
+  src: url("../public/fonts/FuturaStdCondensedBold.woff2") format('woff2');
+}
+
+@font-face {
   font-family: "FuturaStdCondensedBold";
   src: url("../public/fonts/FuturaStdCondensedBold.woff2") format('woff2');
 }
