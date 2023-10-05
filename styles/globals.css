@@ -36,6 +36,11 @@ a {
 }
 
 @font-face {
+  font-family: "FuturaStdCondensedExtraBd";
+  src: url("../public/fonts/FuturaStdCondensedExtraBd.woff2") format('woff2');
+}
+
+@font-face {
   font-family: "FuturaStdCondExtraBoldOblique";
   src: url("../public/fonts/FuturaStdCondExtraBoldObl.woff2") format('woff2');
 }

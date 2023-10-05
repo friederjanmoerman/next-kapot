@@ -16,11 +16,17 @@ const SectionLearn = () => {
       <Typography color={"#fff"} variant="h1" component="h2">
         Learn
       </Typography>
-      <Typography color={"#fff"} variant="h3">
+      <Typography
+        variant="h2"
+        fontFamily={"FuturaStdCondensedExtraBd"}
+        textTransform={"uppercase"}
+        fontSize={"51px"}
+        color={"#fff"}
+      >
         Always wanted to improve at inline skating?
       </Typography>
-      <Typography color={"#fee502"} variant="h3">
-        Enroll now
+      <Typography variant="h2" textTransform={"uppercase"} fontSize={"51px"} color={"#fee502"}>
+        Enroll now.
       </Typography>
       <Grid container spacing={7}>
         <Grid item lg={6}>
