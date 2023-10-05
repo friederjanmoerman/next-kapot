@@ -1,6 +1,15 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
+  palette: {
+    common: {
+      black: '#000000',
+      white: '#ffffff'
+    },
+    primary: {
+      main: '#fee502',
+    },
+  },
   typography: {
     fontFamily: [
       "Nunito Sans",
