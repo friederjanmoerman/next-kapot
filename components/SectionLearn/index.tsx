@@ -16,6 +16,12 @@ const SectionLearn = () => {
       <Typography color={"#fff"} variant="h1" component="h2">
         Learn
       </Typography>
+      <Typography color={"#fff"} variant="h3">
+        Always wanted to improve at inline skating?
+      </Typography>
+      <Typography color={"#fee502"} variant="h3">
+        Enroll now
+      </Typography>
       <Grid container spacing={7}>
         <Grid item lg={6}>
           <Typography variant="h4" color={"#fff"}>

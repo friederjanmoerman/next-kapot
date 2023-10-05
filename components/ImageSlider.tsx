@@ -36,7 +36,6 @@ const SlideBody = styled("div")`
 `
 
 const SlideCaption = styled(Typography)`
-  text-transform: uppercase;
   color: #fff;
   transition: opacity 0.4s ease-out;
   margin-bottom: 34px;

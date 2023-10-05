@@ -18,7 +18,7 @@ const theme = createTheme({
     ].join(','),
     h1: {
       fontFamily: "AnotherDanger, serif",
-      fontSize: "62px",
+      fontSize: "100px",
       letterSpacing: "-0.2rem",
     },
     h2: {
@@ -30,6 +30,7 @@ const theme = createTheme({
       fontFamily: "FuturaStdCondensedBold, sans-serif",
       fontSize: "51px",
       letterSpacing: "-0.15rem",
+      textTransform: "uppercase",
     },
     h4: {
       fontFamily: "FuturaStdHeavy, sans-serif",
