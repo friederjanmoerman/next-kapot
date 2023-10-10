@@ -4,7 +4,8 @@ import React from "react"
 // Components
 import NavMain from "../components/NavMain"
 import ImageSlider from "../components/ImageSlider"
-import SectionLearn from "../components/SectionLearn"
+import SectionLearn from "../components/Section/SectionLearn"
+import SectionEvents from "../components/Section/SectionEvents"
 
 const slides = [
   {
@@ -29,6 +30,7 @@ function Home() {
       <NavMain />
       <ImageSlider slides={slides} />
       <SectionLearn />
+      <SectionEvents />
     </>
   )
 }

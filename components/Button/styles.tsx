@@ -18,7 +18,7 @@ export const StyledButton = styled(MuiButton)<IButtonProps>(
     transition: all 0.4s ease-out;
     border-radius: 0;
     letter-spacing: ${theme.typography.h5.letterSpacing};
-    
+    margin-top: 34px;
     ${
       inverted &&
       `
