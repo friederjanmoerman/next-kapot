@@ -20,12 +20,27 @@ a {
  * Fonts 
  */
 
-@font-face {
-  font-family: 'FuturaStdCondensedBold';
-  src: url('../public/fonts/FuturaStdCondensedBold.woff2') format('woff2');
+ @font-face {
+  font-family: "AnotherDanger";
+  src: url("../public/fonts/AnotherDanger.woff2") format('woff2');
 }
 
 @font-face {
-  font-family: 'FuturaStdCondExtraBoldOblique';
-  src: url('../public/fonts/FuturaStdCondExtraBoldObl.woff2') format('woff2');
+  font-family: "FuturaStdHeavy";
+  src: url("../public/fonts/FuturaStdHeavy.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: "FuturaStdCondensedBold";
+  src: url("../public/fonts/FuturaStdCondensedBold.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: "FuturaStdCondensedExtraBd";
+  src: url("../public/fonts/FuturaStdCondensedExtraBd.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: "FuturaStdCondExtraBoldObl";
+  src: url("../public/fonts/FuturaStdCondExtraBoldObl.woff2") format('woff2');
 }
