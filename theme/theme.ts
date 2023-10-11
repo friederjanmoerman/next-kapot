@@ -38,10 +38,9 @@ const theme = createTheme({
       letterSpacing: "-0.04rem",
     },
     h5: {
-      fontSize: "18px",
+      fontSize: "16px",
       fontWeight: "800",
       lineHeight: "1.4em",
-      letterSpacing: "-0.04rem",
     }, 
   },
 });

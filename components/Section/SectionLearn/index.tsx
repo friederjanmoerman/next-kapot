@@ -8,11 +8,11 @@ import {
   StyledSplashIllustrationTop,
   SectionSubtitle,
   Container,
-  ProductTitle,
-  ProductPrice,
+  ItemTitle,
+  ItemPrice,
   TeacherTitle,
   TeacherTag,
-  TeacherMeta,
+  ItemMeta,
   TeacherBody,
   SectionSubtitleEmphasis,
 } from "./../styles"
@@ -36,12 +36,10 @@ const SectionLearn = () => {
       </SectionSubtitle>
       <Container container spacing={7}>
         <Grid item lg={6}>
-          <ProductTitle variant="h4">Private session</ProductTitle>
-          <Typography variant="h4" color={"#fff"}>
-            Anywhere
-          </Typography>
-          <ProductPrice variant="h4">€40 per hour</ProductPrice>
-          <Typography variant="h5" color={"#fff"}>
+          <ItemTitle variant="h4">Private session</ItemTitle>
+          <Typography variant="h4">Anywhere</Typography>
+          <ItemPrice variant="h4">€40 per hour</ItemPrice>
+          <Typography variant="h5">
             A personalised in person experience. You&apos;ll be privately thaught to inline skate by one of our
             teachers. We have one pair of adaptable size junior aggressive inline skates to try out for children. Ask
             beforehand, not always available! All ages and levels welcome. Access to our exclusive online inline skate
@@ -50,12 +48,10 @@ const SectionLearn = () => {
           <Button inverted variant="contained" size="large" disableElevation label="Book session" />
         </Grid>
         <Grid item lg={6}>
-          <ProductTitle variant="h4">Kapot Membership</ProductTitle>
-          <Typography variant="h4" color={"#fff"}>
-            Anywhere
-          </Typography>
-          <ProductPrice variant="h4">€400 per year</ProductPrice>
-          <Typography variant="h5" color={"#fff"}>
+          <ItemTitle variant="h4">Kapot Membership</ItemTitle>
+          <Typography variant="h4">Anywhere</Typography>
+          <ItemPrice variant="h4">€400 per year</ItemPrice>
+          <Typography variant="h5">
             Access to our exclusive inline skate online community, a Whatsapp group. One year access to a coach: 24/7
             feedback. We will analyze your videos, suggest training plans and answer questions. One monthly one hour
             feedback session included, online or in person. This plan saves you €80 if you would want a private session
@@ -74,8 +70,8 @@ const SectionLearn = () => {
             Gilles
           </TeacherTitle>
           <TeacherTag variant="h5">@gilles.buelens</TeacherTag>
-          <TeacherMeta variant="h4">27 years old</TeacherMeta>
-          <TeacherMeta variant="h4">Skating for 24 years</TeacherMeta>
+          <ItemMeta variant="h4">27 years old</ItemMeta>
+          <ItemMeta variant="h4">Skating for 24 years</ItemMeta>
           <TeacherBody variant="h5">
             Incredible control, style and trick repertoire. Won multiple international contests both street and park.
           </TeacherBody>
@@ -85,8 +81,8 @@ const SectionLearn = () => {
             Frieder
           </TeacherTitle>
           <TeacherTag variant="h5">@shredpuppy</TeacherTag>
-          <TeacherMeta variant="h4">32 years old</TeacherMeta>
-          <TeacherMeta variant="h4">Skating for 11 years</TeacherMeta>
+          <ItemMeta variant="h4">32 years old</ItemMeta>
+          <ItemMeta variant="h4">Skating for 11 years</ItemMeta>
           <TeacherBody variant="h5">Surfer/skater nomad. Loves street. Skates 3.5 hours on average daily.</TeacherBody>
         </Grid>
         <Grid item lg={4}>
@@ -94,8 +90,8 @@ const SectionLearn = () => {
             Tom
           </TeacherTitle>
           <TeacherTag variant="h5">@tom_couvreur</TeacherTag>
-          <TeacherMeta variant="h4">27 years old</TeacherMeta>
-          <TeacherMeta variant="h4">Skating for 24 years</TeacherMeta>
+          <ItemMeta variant="h4">27 years old</ItemMeta>
+          <ItemMeta variant="h4">Skating for 24 years</ItemMeta>
           <TeacherBody variant="h5">
             Incredible control, style and trick repertoire. Won multiple international contests both street and park.
           </TeacherBody>
