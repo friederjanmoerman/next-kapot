@@ -52,13 +52,13 @@ export const Container = styled(Grid)`
   margin-top: 0;
 `
 
-export const ProductTitle = styled(Typography)<TypographyProps>(
+export const ItemTitle = styled(Typography)<TypographyProps>(
   ({ theme }) => `
     text-transform: uppercase;
   `
 )
 
-export const ProductPrice = styled(Typography)<TypographyProps>(
+export const ItemPrice = styled(Typography)<TypographyProps>(
   ({ theme }) => `
     && {
       text-transform: capitalize;
@@ -67,10 +67,21 @@ export const ProductPrice = styled(Typography)<TypographyProps>(
   `
 )
 
+export const ItemMeta = styled(Typography)<TypographyProps>(
+  ({ theme }) => `
+    && {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-family: FuturaStdCondExtraBoldObl, sans-serif;
+    }
+  `
+)
+
 export const TeacherTitle = styled(Typography)<TypographyProps>(
   ({ theme }) => `
     && {
       font-size: 70px;
+      color: ${theme.palette.primary.main};
     }
   `
 )
@@ -81,16 +92,6 @@ export const TeacherTag = styled(Typography)<TypographyProps>(
       margin: 20px 0 10px;
       text-transform: uppercase;
       font-family: FuturaStdCondensedExtraBd, sans-serif;
-    }
-  `
-)
-
-export const TeacherMeta = styled(Typography)<TypographyProps>(
-  ({ theme }) => `
-    && {
-      margin: 4px 0px;
-      font-size: 17px;
-      text-transform: uppercase;
     }
   `
 )
@@ -115,4 +116,11 @@ export const StyledSplashIllustrationBottom = styled(Image)`
   left: 0;
   bottom: 20%;
   z-index: 8000;
+`
+
+export const StyledSplashIllustrationBottomVariation1 = styled(Image)`
+  position: absolute;
+  left: 0;
+  top: 7%;
+  z-index: -1;
 `
