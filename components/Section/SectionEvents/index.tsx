@@ -10,10 +10,15 @@ import {
   ItemPrice,
   SectionSubtitleEmphasis,
   ItemMeta,
+  StyledSplashIllustrationTop,
+  StyledSplashIllustrationBottomVariation1,
 } from "./../styles"
 
 // MUI
 import { Grid, Typography } from "@mui/material"
+
+// Images
+import SplashIllustrationBottomVariation1 from "./../../../public/images/illustrations/paint-splash-4.svg"
 
 const SectionEvents = () => {
   return (
@@ -52,6 +57,11 @@ const SectionEvents = () => {
           <Button disabled variant="contained" size="large" disableElevation label="Upcoming event" />
         </Grid>
       </Container>
+      <StyledSplashIllustrationBottomVariation1
+        src={SplashIllustrationBottomVariation1}
+        alt="Splash illustration events section bottom"
+        width={950}
+      />
     </Section>
   )
 }

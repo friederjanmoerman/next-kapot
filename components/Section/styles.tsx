@@ -117,3 +117,10 @@ export const StyledSplashIllustrationBottom = styled(Image)`
   bottom: 20%;
   z-index: 8000;
 `
+
+export const StyledSplashIllustrationBottomVariation1 = styled(Image)`
+  position: absolute;
+  left: 0;
+  top: 7%;
+  z-index: -1;
+`
