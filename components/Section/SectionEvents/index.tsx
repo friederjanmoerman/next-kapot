@@ -10,7 +10,6 @@ import {
   ItemPrice,
   SectionSubtitleEmphasis,
   ItemMeta,
-  StyledSplashIllustrationTop,
   StyledSplashIllustrationBottomVariation1,
 } from "./../styles"
 
