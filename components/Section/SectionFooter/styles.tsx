@@ -6,24 +6,16 @@ export const SectionFooter = styled("footer")(
     && {
     position: relative;
     background: ${theme.palette.primary.main};
+    padding: 70px 0 140px;
   `
 )
 
 export const StyledLinkIcon = styled(Link)(
   ({ theme }) => `
       && {
-      background: ${theme.palette.common.black};
-      color: ${theme.palette.common.white};
+      color: ${theme.palette.common.black};
       display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
       transition: all 0.4s ease-out;
-      height: 30px;
-      width: 30px;
-
-      :hover, :active, :focus {
-        color: ${theme.palette.primary.main};
-      }
+      margin: 6px;
     `
 )
