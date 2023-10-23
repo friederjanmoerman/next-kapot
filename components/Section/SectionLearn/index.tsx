@@ -45,19 +45,33 @@ const SectionLearn = () => {
             beforehand, not always available! All ages and levels welcome. Access to our exclusive online inline skate
             community, a Whatsapp group.
           </Typography>
-          <Button inverted variant="contained" size="large" disableElevation label="Book session" />
+          <Button
+            href="https://calendly.com/kapot/private-session"
+            inverted
+            variant="contained"
+            size="large"
+            disableElevation
+            label="Book session"
+          />
         </Grid>
         <Grid item lg={6}>
           <ItemTitle variant="h4">Kapot Membership</ItemTitle>
           <Typography variant="h4">Anywhere</Typography>
-          <ItemPrice variant="h4">€400 per year</ItemPrice>
+          <ItemPrice variant="h4">€400 (first 5 members) per year</ItemPrice>
           <Typography variant="h5">
             Access to our exclusive inline skate online community, a Whatsapp group. One year access to a coach: 24/7
             feedback. We will analyze your videos, suggest training plans and answer questions. One monthly one hour
             feedback session included, online or in person. This plan saves you €80 if you would want a private session
             every month.
           </Typography>
-          <Button inverted variant="contained" size="large" disableElevation label="Become member" />
+          <Button
+            href="https://buy.stripe.com/00gfZDeaR55p4V28wy"
+            inverted
+            variant="contained"
+            size="large"
+            disableElevation
+            label="Become member"
+          />
         </Grid>
       </Container>
       <SectionSubtitle variant="h2">
