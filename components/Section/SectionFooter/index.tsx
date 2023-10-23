@@ -25,13 +25,13 @@ const Footer = () => {
 
         <Grid item xs={12}>
           <Grid container justifyContent="center" alignItems="center">
-            <StyledLinkIcon href="https://www.youtube.com" target="_blank" rel="noopener">
+            <StyledLinkIcon href="https://www.youtube.com/@echtalleskapot" target="_blank" rel="noopener">
               <YouTubeIcon fontSize="large" />
             </StyledLinkIcon>
-            <StyledLinkIcon href="https://www.instagram.com" target="_blank" rel="noopener">
+            <StyledLinkIcon href="https://www.instagram.com/echtalleskapot/" target="_blank" rel="noopener">
               <Instagram fontSize="large" />
             </StyledLinkIcon>
-            <StyledLinkIcon href="https://www.facebook.com" target="_blank" rel="noopener">
+            <StyledLinkIcon href="https://www.facebook.com/echtalleskapot/" target="_blank" rel="noopener">
               <Facebook fontSize="large" />
             </StyledLinkIcon>
           </Grid>
