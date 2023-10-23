@@ -6,6 +6,7 @@ import NavMain from "../components/NavMain"
 import ImageSlider from "../components/ImageSlider"
 import SectionLearn from "../components/Section/SectionLearn"
 import SectionEvents from "../components/Section/SectionEvents"
+import Footer from "../components/Section/SectionFooter"
 
 const slides = [
   {
@@ -31,6 +32,7 @@ function Home() {
       <ImageSlider slides={slides} />
       <SectionLearn />
       <SectionEvents />
+      <Footer />
     </>
   )
 }
