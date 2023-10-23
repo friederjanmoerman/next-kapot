@@ -19,7 +19,9 @@ const Footer = () => {
 
         <Grid item xs={12}>
           <Grid container justifyContent="center" alignItems="center">
-            <Typography variant="h3">kapot@echtalleskapot.be</Typography>
+            <Typography fontSize={"34px"} variant="h3">
+              kapot@echtalleskapot.be
+            </Typography>
           </Grid>
         </Grid>
 
