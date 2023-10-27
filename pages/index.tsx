@@ -1,5 +1,5 @@
 // React
-import React from "react"
+import React, { useRef } from "react"
 
 // Components
 import NavMain from "../components/NavMain"
@@ -26,11 +26,14 @@ const slides = [
 ]
 
 function Home() {
+  const sectionLearn = useRef(null)
+  const sectionEvents = useRef(null)
+
   return (
     <>
       <NavMain />
       <ImageSlider slides={slides} />
-      <SectionLearn />
+      <SectionLearn ref={sectionLearn} />
       <SectionEvents />
       <Footer />
     </>

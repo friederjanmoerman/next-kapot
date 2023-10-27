@@ -8,6 +8,9 @@ import Logo from "./Icons/Logo"
 // MUI
 import { Typography, styled } from "@mui/material"
 
+//
+import ButtonScrollTo from "./ButtonScrollTo/Index"
+
 const Navbar = styled("nav")`
   display: flex;
   justify-content: space-between;
@@ -46,7 +49,7 @@ const NavMain = () => {
       <Logo />
       <Menu>
         <MenuItem>
-          <Typography variant="h2">Learn</Typography>
+          <ButtonScrollTo to="section-learn" label="learn"></ButtonScrollTo>
         </MenuItem>
         <MenuItem>
           <Typography variant="h2">Events</Typography>
