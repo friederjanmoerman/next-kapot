@@ -6,7 +6,7 @@ import Image from "next/image"
 
 // Images
 import SplashIllustration from "./../public/images/illustrations/paint-splash-1.svg"
-import Logo from "./Icons/Logo"
+import Logo from "./icons/Logo"
 
 // MUI
 import { styled } from "@mui/material"
@@ -50,14 +50,14 @@ const MenuItem = styled("li")`
 `
 
 const NavBar = (props: INavbar) => {
-  const { routes } = props
+  const { routes, handleScrollTo } = props
   return (
     <Navbar>
       <Logo />
       <Menu>
         {routes.map(page => (
           <MenuItem key={page.title}>
-            <ButtonScrollTo to={"#" + page.anchor} label={page.title}></ButtonScrollTo>
+            <ButtonScrollTo handleScrollTo={handleScrollTo} to={"#" + page.anchor} label={page.title}></ButtonScrollTo>
           </MenuItem>
         ))}
       </Menu>

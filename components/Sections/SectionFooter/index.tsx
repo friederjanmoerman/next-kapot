@@ -5,7 +5,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube"
 // MUI
 import { Grid, Typography } from "@mui/material"
 import { SectionFooter, StyledLinkIcon } from "./styles"
-import Logo from "../../Icons/Logo"
+import Logo from "../../icons/Logo"
 
 const Footer = () => {
   return (

@@ -25,7 +25,7 @@
       "@hooks/*": ["hooks/*"],
       "@enums/*": ["enums/*"],
       "@pages/*": ["pages/*"],
-      "@theme/*": ["theme/*"],
+      "@theme/*": ["src/theme/*"],
       "@lib/*": ["lib/*"],
       "@models/*": ["models/*"]
     }
@@ -36,7 +36,7 @@
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
-    "src/pages/indextsx",
+    "pages/indextsx",
     "next-env.d.ts",
     "next-auth.d.ts",
     "src/models/shop-item-redeem.ts"

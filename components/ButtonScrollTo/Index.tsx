@@ -1,12 +1,11 @@
+// MUI
 import { Typography, Link } from "@mui/material"
 
-interface IButtonScrolltoProps {
-  to: string
-  label: string
-}
+// Types
+import { IButtonScrollToProps } from "./types"
 
-const ButtonScrollTo = ({ label, to }: IButtonScrolltoProps) => (
-  <Link href={to}>
+const ButtonScrollTo = ({ label, location, handleScrollTo }: IButtonScrollToProps) => (
+  <Link onClick={handleScrollTo} href={location}>
     <Typography variant="h2">{label}</Typography>
   </Link>
 )
