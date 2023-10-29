@@ -3,7 +3,7 @@ import Image from "next/image"
 
 // Images
 import SplashIllustration from "./../public/images/illustrations/paint-splash-1.svg"
-import Logo from "./Icons/Logo"
+import Logo from "./Icons/Logo/"
 
 // MUI
 import { Typography, styled } from "@mui/material"
@@ -49,7 +49,7 @@ const NavMain = () => {
       <Logo />
       <Menu>
         <MenuItem>
-          <ButtonScrollTo to="section-learn" label="learn"></ButtonScrollTo>
+          <ButtonScrollTo to="/#learn" label="learn"></ButtonScrollTo>
         </MenuItem>
         <MenuItem>
           <Typography variant="h2">Events</Typography>

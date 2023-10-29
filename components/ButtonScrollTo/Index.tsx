@@ -1,4 +1,4 @@
-import { Link } from "react-scroll"
+import { Link } from "react-router-dom"
 import { Typography } from "@mui/material"
 
 interface IButtonScrolltoProps {
@@ -7,7 +7,7 @@ interface IButtonScrolltoProps {
 }
 
 const ButtonScrollTo = ({ label, to }: IButtonScrolltoProps) => (
-  <Link to={to} spy={true} smooth={true} offset={-70} duration={500}>
+  <Link to={to}>
     <Typography variant="h2">{label}</Typography>
   </Link>
 )

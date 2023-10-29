@@ -1,12 +1,13 @@
-// React
-import React, { useRef } from "react"
+// Modules
+import { memo, useEffect, createRef } from "react"
+import { useRouter } from "next/router"
 
 // Components
 import NavMain from "../components/NavMain"
 import ImageSlider from "../components/ImageSlider"
-import SectionLearn from "../components/Section/SectionLearn"
-import SectionEvents from "../components/Section/SectionEvents"
-import Footer from "../components/Section/SectionFooter"
+import SectionLearn from "../components/Sections/SectionLearn"
+import SectionEvents from "../components/Sections/SectionEvents"
+import Footer from "../components/Sections/SectionFooter"
 
 const slides = [
   {
@@ -26,18 +27,46 @@ const slides = [
 ]
 
 function Home() {
-  const sectionLearn = useRef(null)
-  const sectionEvents = useRef(null)
+  const router = useRouter()
+
+  const routes = [
+    {
+      anchor: "learn",
+      title: "Learn",
+      linkRef: createRef<HTMLDivElement>(),
+    },
+    {
+      anchor: "events",
+      title: "Events",
+      linkRef: createRef<HTMLDivElement>(),
+    },
+    {
+      anchor: "contact",
+      title: "Contact",
+      linkRef: createRef<HTMLDivElement>(),
+    },
+  ]
+
+  const path = router.asPath
+
+  useEffect(() => {
+    if (path?.length > 2) {
+      routes?.map(el => {
+        router.asPath.includes(el?.anchor) &&
+          el?.linkRef?.current?.scrollIntoView({ behavior: "smooth", block: "start" })
+      })
+    }
+  }, [path, routes])
 
   return (
     <>
-      <NavMain />
+      <NavMain routes={routes} />
       <ImageSlider slides={slides} />
-      <SectionLearn ref={sectionLearn} />
-      <SectionEvents />
-      <Footer />
+      <SectionLearn ref={routes[0].linkRef} />
+      <SectionEvents ref={routes[1].linkRef} />
+      <Footer ref={routes[2].linkRef} />
     </>
   )
 }
 
-export default Home
+export default memo(Home)
