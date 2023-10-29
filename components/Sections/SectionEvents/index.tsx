@@ -10,6 +10,7 @@ import {
   SectionSubtitleEmphasis,
   ItemMeta,
   StyledSplashIllustrationBottomVariation1,
+  Section,
 } from "../styles"
 
 // MUI
@@ -20,7 +21,7 @@ import SplashIllustrationBottomVariation1 from "./../../../public/images/illustr
 
 const SectionEvents = () => {
   return (
-    <>
+    <Section>
       <Typography variant="h1" component="h2">
         Events
       </Typography>
@@ -60,7 +61,7 @@ const SectionEvents = () => {
         alt="Splash illustration events section bottom"
         width={950}
       />
-    </>
+    </Section>
   )
 }
 

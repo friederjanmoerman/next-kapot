@@ -3,7 +3,7 @@ import { memo, useEffect, createRef } from "react"
 import { useRouter } from "next/router"
 
 // Components
-import NavMain from "../components/NavMain"
+import NavMain from "../components/NavBar"
 import ImageSlider from "../components/ImageSlider"
 import SectionLearn from "../components/Sections/SectionLearn"
 import SectionEvents from "../components/Sections/SectionEvents"

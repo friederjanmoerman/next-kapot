@@ -1,14 +1,20 @@
+// React
+import { memo } from "react"
+
 // Next
 import Image from "next/image"
 
 // Images
 import SplashIllustration from "./../public/images/illustrations/paint-splash-1.svg"
-import Logo from "./Icons/Logo/"
+import Logo from "./Icons/Logo"
 
 // MUI
-import { Typography, styled } from "@mui/material"
+import { styled } from "@mui/material"
 
-//
+// Types
+import { INavbar } from "./types"
+
+// Components
 import ButtonScrollTo from "./ButtonScrollTo/Index"
 
 const Navbar = styled("nav")`
@@ -43,24 +49,21 @@ const MenuItem = styled("li")`
   text-transform: uppercase;
 `
 
-const NavMain = () => {
+const NavBar = (props: INavbar) => {
+  const { routes } = props
   return (
     <Navbar>
       <Logo />
       <Menu>
-        <MenuItem>
-          <ButtonScrollTo to="/#learn" label="learn"></ButtonScrollTo>
-        </MenuItem>
-        <MenuItem>
-          <Typography variant="h2">Events</Typography>
-        </MenuItem>
-        <MenuItem>
-          <Typography variant="h2">Contact</Typography>
-        </MenuItem>
+        {routes.map(page => (
+          <MenuItem key={page.title}>
+            <ButtonScrollTo to={"#" + page.anchor} label={page.title}></ButtonScrollTo>
+          </MenuItem>
+        ))}
       </Menu>
       <StyledSplashIllustration src={SplashIllustration} alt="Splash illustration" width={550} />
     </Navbar>
   )
 }
 
-export default NavMain
+export default memo(NavBar)
