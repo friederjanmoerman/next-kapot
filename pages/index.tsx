@@ -51,11 +51,9 @@ const Home = () => {
   const handleScrollTo = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const href = event.currentTarget.href
     event.preventDefault()
-    console.log(href)
 
     routes?.map(el => {
       if (href.includes(el?.anchor)) {
-        console.log(el?.anchor)
         el?.linkRef?.current?.scrollIntoView({ behavior: "smooth", block: "start" })
       }
     })
