@@ -5,8 +5,9 @@ export interface IRoutes {
   routes: {
     anchor: string
     title: string
+    linkRef: RefObject<HTMLDivElement | undefined>
   }[]
-  handleScrollTo: () => void
+  handleScrollTo: (event: React.MouseEvent<HTMLAnchorElement>) => void
 }
 
 export interface INavbar extends IRoutes {}

@@ -57,7 +57,11 @@ const NavBar = (props: INavbar) => {
       <Menu>
         {routes.map(page => (
           <MenuItem key={page.title}>
-            <ButtonScrollTo handleScrollTo={handleScrollTo} to={"#" + page.anchor} label={page.title}></ButtonScrollTo>
+            <ButtonScrollTo
+              handleScrollTo={handleScrollTo}
+              location={"#" + page.anchor}
+              label={page.title}
+            ></ButtonScrollTo>
           </MenuItem>
         ))}
       </Menu>

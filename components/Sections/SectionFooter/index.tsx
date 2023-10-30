@@ -6,10 +6,11 @@ import YouTubeIcon from "@mui/icons-material/YouTube"
 import { Grid, Typography } from "@mui/material"
 import { SectionFooter, StyledLinkIcon } from "./styles"
 import Logo from "../../icons/Logo"
+import { forwardRef } from "react"
 
-const Footer = () => {
+const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
   return (
-    <SectionFooter>
+    <SectionFooter ref={ref}>
       <Grid container spacing={2}>
         <Grid item xs={12}>
           <Grid container justifyContent="center" alignItems="center">
@@ -41,6 +42,6 @@ const Footer = () => {
       </Grid>
     </SectionFooter>
   )
-}
+})
 
 export default Footer

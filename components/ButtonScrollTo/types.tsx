@@ -1,5 +1,5 @@
 export interface IButtonScrollToProps {
   location: string
   label: string
-  handleScrollTo: () => void
+  handleScrollTo: (event: React.MouseEvent<HTMLAnchorElement>) => void
 }

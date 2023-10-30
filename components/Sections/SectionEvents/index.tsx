@@ -1,4 +1,5 @@
 // Modules
+import { forwardRef } from "react"
 
 // Components
 import Button from "../../Button"
@@ -19,9 +20,9 @@ import { Grid, Typography } from "@mui/material"
 // Images
 import SplashIllustrationBottomVariation1 from "./../../../public/images/illustrations/paint-splash-4.svg"
 
-const SectionEvents = () => {
+const SectionEvents = forwardRef<HTMLDivElement>(function SectionEvents(_, ref) {
   return (
-    <Section>
+    <Section ref={ref}>
       <Typography variant="h1" component="h2">
         Events
       </Typography>
@@ -63,6 +64,6 @@ const SectionEvents = () => {
       />
     </Section>
   )
-}
+})
 
 export default SectionEvents
