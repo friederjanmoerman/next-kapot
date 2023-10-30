@@ -1,10 +1,8 @@
-import { Button as MuiButton, ButtonProps as MuiButtonProps, styled } from "@mui/material"
+// MUI
+import { Button as MuiButton, styled } from "@mui/material"
 
-export interface IButtonProps extends MuiButtonProps {
-  label?: string
-  nonActive?: boolean
-  inverted?: boolean
-}
+// Types
+import { IButtonProps } from "./types"
 
 export const StyledButton = styled(MuiButton)<IButtonProps>(
   ({ theme, inverted, disabled }) => `
