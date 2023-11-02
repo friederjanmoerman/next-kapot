@@ -85,26 +85,28 @@ const ImageSlider = (props: ImageSliderProps) => {
               <SlideCaption variant="h3" style={{ opacity: index === currentSlideIndex ? 1 : 0 }}>
                 {slide.caption}
               </SlideCaption>
-              <Button href={slide.ctaUrl} variant="contained" size="large" disableElevation style={{ opacity: index === currentSlideIndex ? 1 : 0 }}>
-                {slide.ctaCopy}
-              </Button>
+              <Button
+                href={slide.ctaUrl}
+                variant="contained"
+                size="large"
+                disableElevation
+                style={{ opacity: index === currentSlideIndex ? 1 : 0 }}
+                label={slide.ctaCopy}
+              ></Button>
             </SlideBody>
           </>
         ))}
         <Overlay></Overlay>
       </SlideContent>
-      <Grid display={'none'} container justifyContent="center">
+      {/* <Grid display={'none'} container justifyContent="center">
         <Grid item>
-          <Button onClick={prevSlide} startIcon={<ArrowBack />} variant="outlined" color="primary">
-            Previous
-          </Button>
+          <Button onClick={prevSlide} startIcon={<ArrowBack />} variant="outlined" color="primary" label="Previous">
+          </Button> 
         </Grid>
         <Grid item>
-          <Button onClick={nextSlide} endIcon={<ArrowForward />} variant="outlined" color="primary">
-            Next
-          </Button>
+          <Button onClick={nextSlide} endIcon={<ArrowForward />} variant="outlined" color="primary" label="Next"></Button>
         </Grid>
-      </Grid>
+      </Grid> */}
     </>
   )
 }

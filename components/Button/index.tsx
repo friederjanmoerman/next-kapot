@@ -1,10 +1,5 @@
 import { StyledButton } from './styles'
 
-const Button = ({ label, children, ...rest }) => (
-  <StyledButton {...rest}>
-    {label}
-    {children}
-  </StyledButton>
-)
+const Button = ({ label, ...rest }) => <StyledButton {...rest}>{label}</StyledButton>
 
 export default Button
