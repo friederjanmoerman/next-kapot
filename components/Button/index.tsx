@@ -1,6 +1,6 @@
-import { StyledButton, IButtonProps } from "./styles"
+import { StyledButton } from './styles'
 
-const Button = ({ label, children, ...rest }: IButtonProps) => (
+const Button = ({ label, children, ...rest }) => (
   <StyledButton {...rest}>
     {label}
     {children}

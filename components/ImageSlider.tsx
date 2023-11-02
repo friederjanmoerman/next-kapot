@@ -1,11 +1,11 @@
-import { useState, useEffect, useCallback } from "react"
-import Image from "next/image"
-import { Typography, Grid, styled } from "@mui/material"
-import { ArrowBack, ArrowForward } from "@mui/icons-material"
+import { useState, useEffect, useCallback } from 'react'
+import Image from 'next/image'
+import { Typography, Grid, styled } from '@mui/material'
+import { ArrowBack, ArrowForward } from '@mui/icons-material'
 
-import Button from "./Button"
+import Button from './Button'
 
-const SlideContent = styled("div")`
+const SlideContent = styled('div')`
   position: relative;
   padding: 0;
   width: 100%;
@@ -17,7 +17,7 @@ const SlideImage = styled(Image)`
   transition: opacity 1.4s ease-out;
 `
 
-const Overlay = styled("div")`
+const Overlay = styled('div')`
   position: absolute;
   top: 0;
   left: 0;
@@ -26,7 +26,7 @@ const Overlay = styled("div")`
   background-color: rgba(0, 0, 0, 0.4);
 `
 
-const SlideBody = styled("div")`
+const SlideBody = styled('div')`
   position: absolute;
   right: 7%;
   bottom: 10%;
@@ -57,11 +57,11 @@ const ImageSlider = (props: ImageSliderProps) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0)
 
   const prevSlide = () => {
-    setCurrentSlideIndex(prevIndex => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1))
+    setCurrentSlideIndex((prevIndex) => (prevIndex === 0 ? slides.length - 1 : prevIndex - 1))
   }
 
   const nextSlide = useCallback(() => {
-    setCurrentSlideIndex(prevIndex => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1))
+    setCurrentSlideIndex((prevIndex) => (prevIndex === slides.length - 1 ? 0 : prevIndex + 1))
   }, [slides.length])
 
   useEffect(() => {
@@ -85,13 +85,7 @@ const ImageSlider = (props: ImageSliderProps) => {
               <SlideCaption variant="h3" style={{ opacity: index === currentSlideIndex ? 1 : 0 }}>
                 {slide.caption}
               </SlideCaption>
-              <Button
-                href={slide.ctaUrl}
-                variant="contained"
-                size="large"
-                disableElevation
-                style={{ opacity: index === currentSlideIndex ? 1 : 0 }}
-              >
+              <Button href={slide.ctaUrl} variant="contained" size="large" disableElevation style={{ opacity: index === currentSlideIndex ? 1 : 0 }}>
                 {slide.ctaCopy}
               </Button>
             </SlideBody>
@@ -99,7 +93,7 @@ const ImageSlider = (props: ImageSliderProps) => {
         ))}
         <Overlay></Overlay>
       </SlideContent>
-      <Grid display={"none"} container justifyContent="center">
+      <Grid display={'none'} container justifyContent="center">
         <Grid item>
           <Button onClick={prevSlide} startIcon={<ArrowBack />} variant="outlined" color="primary">
             Previous

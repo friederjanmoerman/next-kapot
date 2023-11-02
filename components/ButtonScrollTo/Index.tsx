@@ -1,11 +1,11 @@
 // MUI
-import { Typography } from "@mui/material"
+import { Typography } from '@mui/material'
 
 // Styles
-import { StyledLink } from "./styles"
+import { StyledLink } from './styles'
 
 // Types
-import { IButtonScrollToProps } from "./types"
+import { IButtonScrollToProps } from './types'
 
 const ButtonScrollTo = ({ label, location, handleScrollTo }: IButtonScrollToProps) => (
   <StyledLink onClick={handleScrollTo} href={location}>

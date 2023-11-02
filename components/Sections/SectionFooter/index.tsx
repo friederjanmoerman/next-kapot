@@ -1,12 +1,12 @@
-import { Facebook, Instagram, MailOutline } from "@mui/icons-material"
+import { Facebook, Instagram, MailOutline } from '@mui/icons-material'
 
-import YouTubeIcon from "@mui/icons-material/YouTube"
+import YouTubeIcon from '@mui/icons-material/YouTube'
 
 // MUI
-import { Grid, Typography } from "@mui/material"
-import { SectionFooter, StyledLinkIcon } from "./styles"
-import Logo from "../../icons/Logo"
-import { forwardRef } from "react"
+import { Grid, Typography } from '@mui/material'
+import { SectionFooter, StyledLinkIcon } from './styles'
+import Logo from '../../icons/Logo'
+import { forwardRef } from 'react'
 
 const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
   return (
@@ -20,7 +20,7 @@ const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
 
         <Grid item xs={12}>
           <Grid container justifyContent="center" alignItems="center">
-            <Typography fontSize={"34px"} variant="h3">
+            <Typography fontSize={'34px'} variant="h3">
               kapot@echtalleskapot.be
             </Typography>
           </Grid>

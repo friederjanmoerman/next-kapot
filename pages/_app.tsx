@@ -1,12 +1,12 @@
 // MUI
-import { ThemeProvider } from "@emotion/react"
-import { CssBaseline } from "@mui/material"
+import { ThemeProvider } from '@emotion/react'
+import { CssBaseline } from '@mui/material'
 
 // Theme
-import theme from "../theme/theme"
+import theme from '../theme/theme'
 
 // Global styles
-import "../styles/globals.css"
+import '../styles/globals.css'
 
 function App({ Component, pageProps }) {
   return (

@@ -1,9 +1,9 @@
 // MUI
-import { Typography, TypographyProps, styled } from "@mui/material"
-import Grid from "@mui/material/Grid"
+import { Typography, TypographyProps, styled } from '@mui/material'
+import Grid from '@mui/material/Grid'
 
 // Next
-import Image from "next/image"
+import Image from 'next/image'
 
 export interface ISectionProps {
   inverted?: boolean
@@ -25,7 +25,7 @@ export const Section = styled(Grid)<ISectionProps>(
       `
     }
     }
-  `
+  `,
 )
 
 export const SectionSubtitle = styled(Typography)<TypographyProps>(
@@ -36,16 +36,16 @@ export const SectionSubtitle = styled(Typography)<TypographyProps>(
       font-size: 51px;
       margin-top: 90px;
     }
-  `
+  `,
 )
 
-export const SectionSubtitleEmphasis = styled("span")(
+export const SectionSubtitleEmphasis = styled('span')(
   ({ theme }) => `
     && {
       font-family: FuturaStdCondExtraBoldObl, sans-serif;
       color: ${theme.palette.primary.main};
     }
-  `
+  `,
 )
 
 export const Container = styled(Grid)`
@@ -55,7 +55,7 @@ export const Container = styled(Grid)`
 export const ItemTitle = styled(Typography)<TypographyProps>(
   ({ theme }) => `
     text-transform: uppercase;
-  `
+  `,
 )
 
 export const ItemPrice = styled(Typography)<TypographyProps>(
@@ -64,7 +64,7 @@ export const ItemPrice = styled(Typography)<TypographyProps>(
       text-transform: capitalize;
       margin: 24px 0;
     }
-  `
+  `,
 )
 
 export const ItemMeta = styled(Typography)<TypographyProps>(
@@ -74,7 +74,7 @@ export const ItemMeta = styled(Typography)<TypographyProps>(
       font-size: 14px;
       font-family: FuturaStdCondExtraBoldObl, sans-serif;
     }
-  `
+  `,
 )
 
 export const TeacherTitle = styled(Typography)<TypographyProps>(
@@ -83,7 +83,7 @@ export const TeacherTitle = styled(Typography)<TypographyProps>(
       font-size: 70px;
       color: ${theme.palette.primary.main};
     }
-  `
+  `,
 )
 
 export const TeacherTag = styled(Typography)<TypographyProps>(
@@ -93,7 +93,7 @@ export const TeacherTag = styled(Typography)<TypographyProps>(
       text-transform: uppercase;
       font-family: FuturaStdCondensedExtraBd, sans-serif;
     }
-  `
+  `,
 )
 
 export const TeacherBody = styled(Typography)<TypographyProps>(
@@ -101,7 +101,7 @@ export const TeacherBody = styled(Typography)<TypographyProps>(
     && {
       margin: 20px 0px;
     }
-  `
+  `,
 )
 
 export const StyledSplashIllustrationTop = styled(Image)`

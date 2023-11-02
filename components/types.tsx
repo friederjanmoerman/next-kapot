@@ -1,5 +1,5 @@
 // Modules
-import { RefObject } from "react"
+import { RefObject } from 'react'
 
 export interface IRoutes {
   routes: {

@@ -1,6 +1,6 @@
-import { Link, styled } from "@mui/material"
+import { Link, styled } from '@mui/material'
 
-export const MenuItem = styled("li")`
+export const MenuItem = styled('li')`
   font-size: 32px;
   text-transform: uppercase;
 `
@@ -15,5 +15,5 @@ export const StyledLink = styled(Link)(
     :active {
       color: ${theme.palette.primary.main};
     }
-  `
+  `,
 )

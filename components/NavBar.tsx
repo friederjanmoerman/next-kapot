@@ -1,23 +1,23 @@
 // React
-import { memo } from "react"
+import { memo } from 'react'
 
 // Next
-import Image from "next/image"
+import Image from 'next/image'
 
 // Images
-import SplashIllustration from "./../public/images/illustrations/paint-splash-1.svg"
-import Logo from "./icons/Logo"
+import SplashIllustration from './../public/images/illustrations/paint-splash-1.svg'
+import Logo from './icons/Logo'
 
 // MUI
-import { styled } from "@mui/material"
+import { styled } from '@mui/material'
 
 // Types
-import { INavbar } from "./types"
+import { INavbar } from './types'
 
 // Components
-import ButtonScrollTo from "./ButtonScrollTo/Index"
+import ButtonScrollTo from './ButtonScrollTo/Index'
 
-const Navbar = styled("nav")`
+const Navbar = styled('nav')`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,7 +35,7 @@ const StyledSplashIllustration = styled(Image)`
   z-index: 9001;
 `
 
-const Menu = styled("ul")`
+const Menu = styled('ul')`
   list-style: none;
   display: flex;
   justify-content: flex-end;
@@ -44,7 +44,7 @@ const Menu = styled("ul")`
   z-index: 9002;
 `
 
-const MenuItem = styled("li")`
+const MenuItem = styled('li')`
   font-size: 32px;
   text-transform: uppercase;
 `
@@ -55,13 +55,9 @@ const NavBar = (props: INavbar) => {
     <Navbar>
       <Logo />
       <Menu>
-        {routes.map(page => (
+        {routes.map((page) => (
           <MenuItem key={page.title}>
-            <ButtonScrollTo
-              handleScrollTo={handleScrollTo}
-              location={"#" + page.anchor}
-              label={page.title}
-            ></ButtonScrollTo>
+            <ButtonScrollTo handleScrollTo={handleScrollTo} location={'#' + page.anchor} label={page.title}></ButtonScrollTo>
           </MenuItem>
         ))}
       </Menu>

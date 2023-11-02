@@ -1,6 +1,6 @@
-import { styled } from "@mui/material"
+import { styled } from '@mui/material'
 
-export const ContainerLogo = styled("div")`
+export const ContainerLogo = styled('div')`
   position: relative;
   z-index: 9003;
 `

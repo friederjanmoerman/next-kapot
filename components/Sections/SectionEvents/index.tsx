@@ -1,8 +1,8 @@
 // Modules
-import { forwardRef } from "react"
+import { forwardRef } from 'react'
 
 // Components
-import Button from "../../Button"
+import Button from '../../Button'
 import {
   SectionSubtitle,
   Container,
@@ -12,13 +12,13 @@ import {
   ItemMeta,
   StyledSplashIllustrationBottomVariation1,
   Section,
-} from "../styles"
+} from '../styles'
 
 // MUI
-import { Grid, Typography } from "@mui/material"
+import { Grid, Typography } from '@mui/material'
 
 // Images
-import SplashIllustrationBottomVariation1 from "./../../../public/images/illustrations/paint-splash-4.svg"
+import SplashIllustrationBottomVariation1 from './../../../public/images/illustrations/paint-splash-4.svg'
 
 const SectionEvents = forwardRef<HTMLDivElement>(function SectionEvents(_, ref) {
   return (
@@ -37,10 +37,9 @@ const SectionEvents = forwardRef<HTMLDivElement>(function SectionEvents(_, ref) 
           <ItemMeta variant="h4">First Saturday of August</ItemMeta>
           <ItemPrice variant="h4">Free</ItemPrice>
           <Typography variant="h5">
-            A personalised in person experience. You&apos;ll be privately thaught to inline skate by one of our
-            teachers. We have one pair of adaptable size junior aggressive inline skates to try out for children. Ask
-            beforehand, not always available! All ages and levels welcome. Access to our exclusive online inline skate
-            community, a Whatsapp group.
+            A personalised in person experience. You&apos;ll be privately thaught to inline skate by one of our teachers. We have one pair of
+            adaptable size junior aggressive inline skates to try out for children. Ask beforehand, not always available! All ages and levels welcome.
+            Access to our exclusive online inline skate community, a Whatsapp group.
           </Typography>
           <Button variant="contained" size="large" disableElevation label="Upcoming event" />
         </Grid>
@@ -49,10 +48,9 @@ const SectionEvents = forwardRef<HTMLDivElement>(function SectionEvents(_, ref) 
           <ItemMeta variant="h4">Anywhere</ItemMeta>
           <ItemPrice variant="h4">Free</ItemPrice>
           <Typography variant="h5">
-            Access to our exclusive inline skate online community, a Whatsapp group. One year access to a coach: 24/7
-            feedback. We will analyze your videos, suggest training plans and answer questions. One monthly one hour
-            feedback session included, online or in person. This plan saves you €80 if you would want a private session
-            every month.
+            Access to our exclusive inline skate online community, a Whatsapp group. One year access to a coach: 24/7 feedback. We will analyze your
+            videos, suggest training plans and answer questions. One monthly one hour feedback session included, online or in person. This plan saves
+            you €80 if you would want a private session every month.
           </Typography>
           <Button disabled variant="contained" size="large" disableElevation label="Upcoming event" />
         </Grid>

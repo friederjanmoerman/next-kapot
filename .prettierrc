@@ -1,0 +1,23 @@
+{
+  "printWidth": 150,
+  "singleQuote": true,
+  "jsxSingleQuote": false,
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "semi": false,
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "endOfLine": "auto",
+  "importOrder": [
+    "@components/(.*)|@theme/(.*)|^[./components]",
+    "^[./constants]|^[../navigation]",
+    "@hooks/(.*)|^[./use.*]",
+    "@models/(.*)|@enums/(.*)|^[./types]",
+    "@util/(.*)",
+    "@context/(.*)",
+    "@styles/(.*)",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

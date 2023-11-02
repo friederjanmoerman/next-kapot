@@ -1,10 +1,10 @@
-import { ContainerLogo } from "./styles"
+import { ContainerLogo } from './styles'
 
 // Next
-import Image from "next/image"
+import Image from 'next/image'
 
 // Images
-import KapotLogo from "./../../../public/images/illustrations/logo--white.svg"
+import KapotLogo from './../../../public/images/illustrations/logo--white.svg'
 
 const Logo = () => {
   return (
