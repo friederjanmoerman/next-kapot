@@ -8,6 +8,7 @@ import SectionLearn from '../components/Sections/SectionLearn'
 import SectionEvents from '../components/Sections/SectionEvents'
 import Footer from '../components/Sections/SectionFooter'
 import { useRouter } from 'next/router'
+import VideoDisplay from '../components/VideoDisplay'
 
 const slides = [
   {
@@ -70,7 +71,7 @@ const Home = () => {
   return (
     <>
       <NavBar routes={routes} handleScrollTo={handleScrollTo} />
-      <ImageSlider slides={slides} />
+      <VideoDisplay />
       <SectionLearn ref={routes[0].linkRef} />
       <SectionEvents ref={routes[1].linkRef} />
       <Footer ref={routes[2].linkRef} />

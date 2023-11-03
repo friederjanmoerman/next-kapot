@@ -5,7 +5,6 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap" />
-        <script src="https://www.youtube.com/iframe_api" />
       </Head>
       <body>
         <Main />
