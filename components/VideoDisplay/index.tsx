@@ -1,11 +1,14 @@
+import { ContainerVideo, Overlay, Video } from './styles'
+
 const VideoDisplay = () => {
   return (
-    <div className="video-display">
-      <video autoPlay muted loop className="video">
+    <ContainerVideo>
+      <Video autoPlay muted loop>
         <source src="/videos/example.mp4" type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
-    </div>
+      </Video>
+      <Overlay></Overlay>
+    </ContainerVideo>
   )
 }
 
