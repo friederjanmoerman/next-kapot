@@ -17,6 +17,9 @@ import { INavbar } from './types'
 // Components
 import ButtonScrollTo from './ButtonScrollTo/Index'
 
+// Images
+import KapotLogo from './../public/images/illustrations/logo--white.svg'
+
 const Navbar = styled('nav')`
   display: flex;
   justify-content: space-between;
@@ -53,7 +56,7 @@ const NavBar = (props: INavbar) => {
   const { routes, handleScrollTo } = props
   return (
     <Navbar>
-      <Logo />
+      <Logo src={KapotLogo} height={150} alt={'Kapot logo'} />
       <Menu>
         {routes.map((page) => (
           <MenuItem key={page.title}>

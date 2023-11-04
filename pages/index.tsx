@@ -9,6 +9,7 @@ import SectionEvents from '../components/Sections/SectionEvents'
 import Footer from '../components/Sections/SectionFooter'
 import { useRouter } from 'next/router'
 import VideoDisplay from '../components/VideoDisplay'
+import SectionCollab from '../components/Sections/SectionCollab'
 
 const slides = [
   {
@@ -74,6 +75,7 @@ const Home = () => {
       <VideoDisplay />
       <SectionLearn ref={routes[0].linkRef} />
       <SectionEvents ref={routes[1].linkRef} />
+      <SectionCollab></SectionCollab>
       <Footer ref={routes[2].linkRef} />
     </>
   )

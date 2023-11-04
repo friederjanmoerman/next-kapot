@@ -1,17 +1,16 @@
+// Styles
 import { ContainerLogo } from './styles'
 
 // Next
 import Image from 'next/image'
 
-// Images
-import KapotLogo from './../../../public/images/illustrations/logo--white.svg'
+// Types
+import { ILogoProps } from './types'
 
-const Logo = () => {
-  return (
-    <ContainerLogo>
-      <Image src={KapotLogo} alt="Kapot Logo" height={150} />
-    </ContainerLogo>
-  )
-}
+const Logo = ({ src, height, width, alt }: ILogoProps) => (
+  <ContainerLogo>
+    <Image src={src} alt={alt} height={height} width={width} />
+  </ContainerLogo>
+)
 
 export default Logo
