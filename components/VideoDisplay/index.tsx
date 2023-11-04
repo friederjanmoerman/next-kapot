@@ -1,4 +1,4 @@
-import { ContainerVideo, Overlay, Video } from './styles'
+import { ContainerVideo, Emphasis, Overlay, Video, VideoBody, VideoCaption } from './styles'
 
 const VideoDisplay = () => {
   return (
@@ -8,6 +8,15 @@ const VideoDisplay = () => {
         Your browser does not support the video tag.
       </Video>
       <Overlay></Overlay>
+      <VideoBody>
+        <VideoCaption variant="h3">
+          Events and coaching all ages.<br></br>By and for the{' '}
+          <Emphasis variant="h1" component="span">
+            inline skate
+          </Emphasis>{' '}
+          community.
+        </VideoCaption>
+      </VideoBody>
     </ContainerVideo>
   )
 }

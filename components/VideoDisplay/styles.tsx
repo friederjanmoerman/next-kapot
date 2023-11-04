@@ -1,4 +1,4 @@
-import { styled } from '@mui/material'
+import { Typography, TypographyProps, styled } from '@mui/material'
 
 export const ContainerVideo = styled('div')`
   position: relative;
@@ -25,3 +25,29 @@ export const Overlay = styled('div')`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
 `
+
+export const VideoBody = styled('div')`
+  position: absolute;
+  right: 7%;
+  bottom: 10%;
+  z-index: 1;
+  width: 40%;
+`
+
+export const VideoCaption = styled(Typography)`
+  color: #fff;
+  transition: opacity 0.4s ease-out;
+  font-size: 42px;
+  line-height: 52px;
+`
+
+export const Emphasis = styled(Typography)<TypographyProps>(
+  ({ theme }) => `
+      && {
+        font-size: 47px;
+        letter-spacing: 2px;
+        vertical-align: bottom;
+        color: ${theme.palette.primary.main};
+      }
+    `,
+)
