@@ -12,8 +12,9 @@ const VideoDisplay = () => {
         <VideoCaption variant="h3">
           Events and coaching all ages.<br></br>By and for the{' '}
           <Emphasis variant="h1" component="span">
-            inline skate
-          </Emphasis>{' '}
+            {' '}
+            inline skate{' '}
+          </Emphasis>
           community.
         </VideoCaption>
       </VideoBody>

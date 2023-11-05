@@ -7,13 +7,14 @@ import Image from 'next/image'
 
 export interface ISectionProps {
   inverted?: boolean
+  slim?: boolean
 }
 
 export const Section = styled(Grid)<ISectionProps>(
-  ({ theme, inverted }) => `
+  ({ theme, inverted, slim }) => `
     && {
     position: relative;
-    padding: 180px 14% 380px;
+    padding: 180px 14% 200px;
 
     ${
       inverted &&
@@ -24,6 +25,16 @@ export const Section = styled(Grid)<ISectionProps>(
         }
       `
     }
+
+    padding: 180px 14% 200px;
+
+    ${
+      slim &&
+      `
+      padding: 70px 14% 120px;
+      `
+    }
+
     }
   `,
 )

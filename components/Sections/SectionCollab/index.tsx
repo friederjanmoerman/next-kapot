@@ -12,8 +12,8 @@ import LogoSlidingtiger from './../../../public/images/illustrations/sponsor__sl
 import LogoPowsey from './../../../public/images/illustrations/sponsor__powsey.svg'
 import LogoLetmeout from './../../../public/images/illustrations/sponsor__let-me-out.svg'
 
-const SectionEvents = () => (
-  <Section inverted={true}>
+const SectionCollab = () => (
+  <Section slim={true} inverted={true}>
     <Grid container rowSpacing={2} alignItems={'center'} justifyContent={'center'} flexDirection={'column'}>
       <Grid item>
         <Typography variant="h4">in collaboration with</Typography>
@@ -53,4 +53,4 @@ const SectionEvents = () => (
   </Section>
 )
 
-export default SectionEvents
+export default SectionCollab
