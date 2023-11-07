@@ -4,6 +4,8 @@ import { styled, Box, Grid } from '@mui/material'
 // Types
 import { IBox, IButton, IToggle } from './types'
 
+import Image from 'next/image'
+
 export const Overlay = styled('div')<IBox>(
   ({ open }) => `
     display: ${open ? 'block' : 'none'};
@@ -38,13 +40,13 @@ export const ToggledNavBarWrapper = styled(Box)<IBox>(
 )
 
 export const ToggleBtn = styled('span')<IButton>(
-  ({ open, theme }) => `
+  ({ open }) => `
   && {
     position: fixed;
-    right: 30px;
-    top: 24px;
-    width: 28px;
-    height: 30px;
+    right: 40px;
+    top: 30px;
+    width: 40px;
+    height: 40px;
     z-index: 9001;
     cursor: pointer; 
 
@@ -54,30 +56,21 @@ export const ToggleBtn = styled('span')<IButton>(
       left: 0;
       top: 50%;
       width: 100%;
-      height: 2px;
       margin: -2px 0 0;
-      border-radius: 8px;
-      background: ${theme.palette.common.black};
       transform-origin: 50%;
       transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     }
 
-    :hover {
-      .top, .middle, .bottom {
-        background: ${theme.palette.primary.main};
-      }
-    }
-
     .top {
-      transform: translate(0, -8px);
+      transform: translate(0, -12px);
     }
 
     .bottom {
-      transform: translate(0, 8px);
+      transform: translate(0, 12px);
     }
 
     .top {
-      transform: ${open ? 'rotate(-45deg)' : 'rotate(0, -8px'};
+      transform: ${open ? 'rotate(-45deg)' : 'rotate(0, -12px'};
     }
 
     .middle {
@@ -85,10 +78,16 @@ export const ToggleBtn = styled('span')<IButton>(
     }
 
     .bottom {
-      transform: ${open ? 'rotate(45deg)' : 'translate(0, 8px)'};
+      transform: ${open ? 'rotate(45deg)' : 'translate(0, 12px)'};
     }
 `,
 )
+
+export const ToggleBtnTopStroke = styled(Image)``
+
+export const ToggleBtnMiddleStroke = styled(Image)``
+
+export const ToggleBtnBottomStroke = styled(Image)``
 
 export const Content = styled(Grid)<IToggle>(
   ({ open }) => `

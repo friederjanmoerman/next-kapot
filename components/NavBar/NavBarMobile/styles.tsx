@@ -1,5 +1,6 @@
-// Modules
+// Next
 import Link from 'next/link'
+import Image from 'next/image'
 
 // MUI
 import { styled } from '@mui/material'
@@ -11,6 +12,7 @@ export const ToggledNavBarWrapper = styled(Grid)(
     && {
       display: none;
       position: absolute;
+      z-index: 9500;
       
       ${theme.breakpoints.down('lg')} {
           display: flex;
