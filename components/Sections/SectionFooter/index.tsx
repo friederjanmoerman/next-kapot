@@ -1,5 +1,4 @@
-import { Facebook, Instagram, MailOutline } from '@mui/icons-material'
-
+import { Facebook, Instagram } from '@mui/icons-material'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 
 // MUI
