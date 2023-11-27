@@ -9,7 +9,7 @@ export const StyledNav = styled('nav')(
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
+    color: ${theme.palette.common.white};
     width: 100%;
     position: absolute;
     z-index: 9000;

@@ -9,12 +9,10 @@ import Image from 'next/image'
 export const Overlay = styled('div')<IBox>(
   ({ open }) => `
     display: ${open ? 'block' : 'none'};
-    backdrop-filter: blur(4px);
     position: fixed;
     height: 100%;
     width: 100%;
     z-index: 900;
-    background: rgba(0,0,0, 0.1);
   `,
 )
 
@@ -22,7 +20,7 @@ export const ToggledNavBarWrapper = styled(Box)<IBox>(
   ({ theme, open }) => `
     width: ${open ? 280 : 0}px;
     opacity: ${open ? 1 : 0};
-    background: ${theme.palette.common.white};
+    background: ${theme.palette.common.black};
     flex-wrap: nowrap;
     height: 100%;
     padding-top: 90px;

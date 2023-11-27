@@ -1,9 +1,6 @@
 // React
 import { memo } from 'react'
 
-// Constants
-import { SocialMediaRoutes } from './../../constantsSocialMedia'
-
 // Types
 import { INavbar as INavbarDefault } from '../types'
 import { IToggledNavBar } from './types'
@@ -12,7 +9,10 @@ import { IToggledNavBar } from './types'
 import ToggledNavBar from '../../ToggledNavBar'
 
 // Styles
-import { Block, LinkBtn, SocialsAnchor, SocialsBlock, SocialsTitle, SocialsIconGroup, ToggledNavBarWrapper } from './styles'
+import { Block, LinkBtn, SocialsBlock, ToggledNavBarWrapper } from './styles'
+import { Typography } from '@mui/material'
+
+import SocialsBar from '../../SocialsBar'
 
 interface INavBar extends INavbarDefault, IToggledNavBar {}
 
@@ -25,19 +25,14 @@ const NavBarMobile = (props: INavBar) => {
         <Block item>
           {routes.map((page) => (
             <LinkBtn onClick={handleViewToggledNavBar} href={'#' + page.anchor} key={page.title}>
-              {page.title}
+              <Typography variant="h2" textTransform={'uppercase'}>
+                {page.title}
+              </Typography>
             </LinkBtn>
           ))}
         </Block>
-        <SocialsBlock item>
-          <SocialsTitle>Follow us</SocialsTitle>
-          <SocialsIconGroup container>
-            {SocialMediaRoutes.map((page) => (
-              <SocialsAnchor href={page.anchor} key={page.title} target="_blank">
-                {page.icon}
-              </SocialsAnchor>
-            ))}
-          </SocialsIconGroup>
+        <SocialsBlock>
+          <SocialsBar inverted />
         </SocialsBlock>
       </ToggledNavBar>
     </ToggledNavBarWrapper>

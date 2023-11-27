@@ -7,6 +7,8 @@ import { SectionFooter, StyledLinkIcon } from './styles'
 import Logo from '../../icons/Logo'
 import { forwardRef } from 'react'
 
+import SocialsBar from '../../SocialsBar'
+
 import KapotLogo from './../../../public/images/illustrations/logo--white.svg'
 
 const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
@@ -30,20 +32,7 @@ const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
             </Typography>
           </Grid>
         </Grid>
-
-        <Grid item xs={12}>
-          <Grid container justifyContent="center" alignItems="center">
-            <StyledLinkIcon href="https://www.youtube.com/@echtalleskapot" target="_blank" rel="noopener">
-              <YouTubeIcon fontSize="large" />
-            </StyledLinkIcon>
-            <StyledLinkIcon href="https://www.instagram.com/echtalleskapot/" target="_blank" rel="noopener">
-              <Instagram fontSize="large" />
-            </StyledLinkIcon>
-            <StyledLinkIcon href="https://www.facebook.com/echtalleskapot/" target="_blank" rel="noopener">
-              <Facebook fontSize="large" />
-            </StyledLinkIcon>
-          </Grid>
-        </Grid>
+        <SocialsBar />
       </Grid>
     </SectionFooter>
   )

@@ -13,9 +13,6 @@ const ToggledNavBar = (props: IToggledNavBar) => {
   return (
     <>
       <ToggleBtn open={isToggledNavBarOpen} onClick={handleViewToggledNavBar}>
-        {/* <b className="top"></b>
-        <b className="middle"></b>
-        <b className="bottom"></b> */}
         <ToggleBtnTopStroke
           className="top"
           src={MobileMenuStrokeIllustration}

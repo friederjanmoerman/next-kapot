@@ -84,17 +84,6 @@ const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
           <ItemMeta variant="h4">Skating for 11 years</ItemMeta>
           <TeacherBody variant="h5">Surfer/skater nomad. Loves street. Skates 3.5 hours on average daily.</TeacherBody>
         </Grid>
-        <Grid item lg={4}>
-          <TeacherTitle variant="h1" component="h2">
-            Tom
-          </TeacherTitle>
-          <TeacherTag variant="h5">@tom_couvreur</TeacherTag>
-          <ItemMeta variant="h4">27 years old</ItemMeta>
-          <ItemMeta variant="h4">Skating for 24 years</ItemMeta>
-          <TeacherBody variant="h5">
-            Incredible control, style and trick repertoire. Won multiple international contests both street and park.
-          </TeacherBody>
-        </Grid>
       </Container>
       <StyledSplashIllustrationTop src={SplashIllustrationTop} alt="Splash illustration learn section top" width={300} />
       <StyledSplashIllustrationBottom src={SplashIllustrationBottom} alt="Splash illustration learn section bottom" width={150} />
