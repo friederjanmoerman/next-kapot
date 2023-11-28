@@ -26,20 +26,31 @@ export const Overlay = styled('div')`
   background-color: rgba(0, 0, 0, 0.4);
 `
 
-export const VideoBody = styled('div')`
-  position: absolute;
-  right: 7%;
-  bottom: 10%;
-  z-index: 1;
-  width: 40%;
-`
+export const VideoBody = styled('div')(
+  ({ theme }) => `
+  && {
+    position: absolute;
+    right: 7%;
+    bottom: 10%;
+    z-index: 1;
+    max-width: 600px;
 
-export const VideoCaption = styled(Typography)`
-  color: #fff;
-  transition: opacity 0.4s ease-out;
-  font-size: 42px;
-  line-height: 52px;
-`
+    ${theme.breakpoints.down('lg')} {
+      right: auto;
+      left: 7%;
+    }
+  `,
+)
+
+export const VideoCaption = styled(Typography)(
+  ({ theme }) => `
+  && {
+    color: #fff;
+    transition: opacity 0.4s ease-out;
+    font-size: 42px;
+    line-height: 52px;
+  `,
+)
 
 export const Emphasis = styled(Typography)<TypographyProps>(
   ({ theme }) => `
