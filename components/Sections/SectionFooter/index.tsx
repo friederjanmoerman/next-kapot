@@ -1,9 +1,6 @@
-import { Facebook, Instagram } from '@mui/icons-material'
-import YouTubeIcon from '@mui/icons-material/YouTube'
-
 // MUI
 import { Grid, Typography } from '@mui/material'
-import { SectionFooter, StyledLinkIcon } from './styles'
+import { SectionFooter } from './../styles'
 import Logo from '../../icons/Logo'
 import { forwardRef } from 'react'
 

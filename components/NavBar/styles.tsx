@@ -17,12 +17,19 @@ export const StyledNav = styled('nav')(
   `,
 )
 
-export const StyledSplashIllustration = styled(Image)`
-  position: absolute;
-  left: 0;
-  top: 70px;
-  z-index: 9001;
-`
+export const StyledSplashIllustration = styled(Image)(
+  ({ theme }) => `
+    position: absolute;
+    left: 0;
+    top: 70px;
+    z-index: 9001;
+
+    ${theme.breakpoints.down('lg')} {
+      width: 300px;
+      top: 0;
+    }
+  `,
+)
 
 export const Menu = styled('ul')(
   ({ theme }) => `

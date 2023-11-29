@@ -1,5 +1,5 @@
 // MUI
-import { Typography, TypographyProps, styled } from '@mui/material'
+import { Typography, TypographyProps, styled, Link } from '@mui/material'
 import Grid from '@mui/material/Grid'
 
 // Next
@@ -122,16 +122,63 @@ export const StyledSplashIllustrationTop = styled(Image)`
   z-index: 8000;
 `
 
-export const StyledSplashIllustrationBottom = styled(Image)`
-  position: absolute;
-  left: 0;
-  bottom: 20%;
-  z-index: 8000;
-`
+export const StyledSplashIllustrationBottom = styled(Image)(
+  ({ theme }) => `
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    z-index: 8000;
+    
+    ${theme.breakpoints.down('lg')} {
+      width: 100px;
+    }
+    ${theme.breakpoints.down('md')} {
+      width: 70px;
+    }
+    ${theme.breakpoints.down('sm')} {
+      width: 50px;
+    }
+  `,
+)
 
-export const StyledSplashIllustrationBottomVariation1 = styled(Image)`
-  position: absolute;
-  left: 0;
-  top: 7%;
-  z-index: -1;
-`
+export const StyledSplashIllustrationBottomVariation1 = styled(Image)(
+  ({ theme }) => `
+    position: absolute;
+    left: 0;
+    top: 7%;
+    z-index: -1;
+
+    ${theme.breakpoints.down('lg')} {
+      width: 850px;
+      top: 5%;
+    }
+
+    ${theme.breakpoints.down('md')} {
+      width: 570px;
+      top: 4%;
+    }
+    ${theme.breakpoints.down('sm')} {
+      width: 500px;
+      top: 3%;
+    }
+  `,
+)
+
+export const SectionFooter = styled('footer')(
+  ({ theme }) => `
+    && {
+    position: relative;
+    background: ${theme.palette.primary.main};
+    padding: 70px 0 140px;
+  `,
+)
+
+export const StyledLinkIcon = styled(Link)(
+  ({ theme }) => `
+      && {
+      color: ${theme.palette.common.black};
+      display: flex;
+      transition: all 0.4s ease-out;
+      margin: 6px;
+    `,
+)

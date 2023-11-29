@@ -38,6 +38,7 @@ export const VideoBody = styled('div')(
     ${theme.breakpoints.down('lg')} {
       right: auto;
       left: 7%;
+      bottom: 20%;
     }
   `,
 )
