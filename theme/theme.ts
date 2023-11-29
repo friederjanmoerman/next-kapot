@@ -1,6 +1,8 @@
 import { createTheme } from '@mui/material/styles'
 
-const theme = createTheme({
+let theme = createTheme()
+
+theme = createTheme(theme, {
   palette: {
     common: {
       black: '#000000',
@@ -32,6 +34,9 @@ const theme = createTheme({
       fontFamily: 'FuturaStdHeavy, sans-serif',
       fontSize: '26px',
       letterSpacing: '-0.04rem',
+      [theme.breakpoints.down('lg')]: {
+        fontSize: '20px',
+      },
     },
     h5: {
       fontSize: '15px',

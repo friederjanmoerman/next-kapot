@@ -40,6 +40,10 @@ export const VideoBody = styled('div')(
       left: 7%;
       bottom: 20%;
     }
+
+    ${theme.breakpoints.down('sm')} {
+      max-width: 520px;
+    }
   `,
 )
 
@@ -50,6 +54,12 @@ export const VideoCaption = styled(Typography)(
     transition: opacity 0.4s ease-out;
     font-size: 42px;
     line-height: 52px;
+
+    ${theme.breakpoints.down('sm')} {
+      font-size: 30px;
+      letter-spacing: -0.1rem;
+      line-height: 42px;
+    }
   `,
 )
 
@@ -60,6 +70,10 @@ export const Emphasis = styled(Typography)<TypographyProps>(
         letter-spacing: 2px;
         vertical-align: bottom;
         color: ${theme.palette.primary.main};
+
+        ${theme.breakpoints.down('sm')} {
+          font-size: 37px;
+        }
       }
     `,
 )

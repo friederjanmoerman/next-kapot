@@ -46,6 +46,15 @@ export const SectionSubtitle = styled(Typography)<TypographyProps>(
       text-transform: uppercase;
       font-size: 51px;
       margin-top: 90px;
+
+      ${theme.breakpoints.down('xl')} {
+        font-size: 40px;      
+      }
+
+      ${theme.breakpoints.down('lg')} {
+        font-size: 34px;      
+        letter-spacing: -0.1rem;
+      }
     }
   `,
 )
@@ -93,6 +102,11 @@ export const TeacherTitle = styled(Typography)<TypographyProps>(
     && {
       font-size: 70px;
       color: ${theme.palette.primary.main};
+
+      ${theme.breakpoints.down('md')} {
+        font-size: 50px;      
+        letter-spacing: -0.1rem;
+      }
     }
   `,
 )

@@ -21,12 +21,23 @@ export const StyledSplashIllustration = styled(Image)(
   ({ theme }) => `
     position: absolute;
     left: 0;
-    top: 70px;
+    top: 90px;
     z-index: 9001;
 
+    ${theme.breakpoints.down('xl')} {
+      top: 70px;
+      width: 430px;
+    }
     ${theme.breakpoints.down('lg')} {
-      width: 300px;
-      top: 0;
+      top: 40px;
+    }
+    ${theme.breakpoints.down('md')} {
+      top: 35px;
+      width: 350px;
+    }
+    ${theme.breakpoints.down('sm')} {
+      top: 30px;
+      width: 320px;
     }
   `,
 )
