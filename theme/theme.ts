@@ -32,16 +32,20 @@ theme = createTheme(theme, {
     },
     h4: {
       fontFamily: 'FuturaStdHeavy, sans-serif',
-      fontSize: '26px',
+      fontSize: '22px',
       letterSpacing: '-0.04rem',
       [theme.breakpoints.down('lg')]: {
-        fontSize: '20px',
+        fontSize: '16px',
       },
     },
     h5: {
-      fontSize: '15px',
+      fontSize: '14px',
       fontWeight: '800',
       lineHeight: '1.4em',
+      letterSpacing: '0.075em',
+      [theme.breakpoints.down('lg')]: {
+        fontSize: '12px',
+      },
     },
   },
 })

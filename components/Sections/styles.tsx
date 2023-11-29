@@ -1,5 +1,5 @@
 // MUI
-import { Typography, TypographyProps, styled, Link } from '@mui/material'
+import { Typography, TypographyProps, styled, Link, List } from '@mui/material'
 import Grid from '@mui/material/Grid'
 
 // Next
@@ -75,14 +75,18 @@ export const Container = styled(Grid)`
 export const ItemTitle = styled(Typography)<TypographyProps>(
   ({ theme }) => `
     text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 2px;
   `,
 )
 
 export const ItemPrice = styled(Typography)<TypographyProps>(
   ({ theme }) => `
     && {
-      text-transform: capitalize;
       margin: 24px 0;
+      font-family: FuturaStdCondensedExtraBd, sans-serif;
+      text-transform: lowercase;
+      font-size: 17px;
     }
   `,
 )
@@ -93,6 +97,7 @@ export const ItemMeta = styled(Typography)<TypographyProps>(
       text-transform: uppercase;
       font-size: 14px;
       font-family: FuturaStdCondExtraBoldObl, sans-serif;
+      margin: 4px 0;
     }
   `,
 )
@@ -125,6 +130,24 @@ export const TeacherBody = styled(Typography)<TypographyProps>(
   ({ theme }) => `
     && {
       margin: 20px 0px;
+    }
+  `,
+)
+
+export const StyledList = styled(List)(
+  ({ theme }) => `
+    && {
+      color: ${theme.palette.primary.main};
+      .MuiListItemText-primary, .MuiListItemText-secondary {
+        font-family: FuturaStdCondExtraBoldObl, sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: ${theme.palette.primary.main};
+        letterSpacing: '-0.15rem',
+      }
+      svg {
+        fill: ${theme.palette.primary.main};
+      }
     }
   `,
 )
