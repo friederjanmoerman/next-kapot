@@ -13,7 +13,7 @@ import LogoPowsey from './../../../public/images/illustrations/sponsor__powsey.s
 import LogoLetmeout from './../../../public/images/illustrations/sponsor__let-me-out.svg'
 
 const SectionCollab = () => (
-  <Section slim={true} inverted={true}>
+  <Section slim inverted>
     <Grid container rowSpacing={2} alignItems={'center'} justifyContent={'center'} flexDirection={'column'}>
       <Grid item>
         <Typography variant="h4">in collaboration with</Typography>
@@ -21,31 +21,31 @@ const SectionCollab = () => (
       <Grid item>
         <Grid container rowSpacing={0} columnSpacing={{ xs: 7, md: 4, lg: 7 }} alignItems={'center'} justifyContent={'center'}>
           <Grid item>
-            <Logo src={LogoPowerslide} height={55}></Logo>
+            <Logo src={LogoPowerslide} height={55} alt={'Logo Powerslide'}></Logo>
           </Grid>
           <Grid item>
-            <Logo src={LogoGrindhouse} height={40}></Logo>
+            <Logo src={LogoGrindhouse} height={40} alt={'Logo Grindhouse'}></Logo>
           </Grid>
           <Grid item>
-            <Logo src={LogoSkateheaven} height={65}></Logo>
+            <Logo src={LogoSkateheaven} height={65} alt={'Logo Skateheaven'}></Logo>
           </Grid>
           <Grid item>
-            <Logo src={LogoKaltik} height={20}></Logo>
+            <Logo src={LogoKaltik} height={20} alt={'Logo Kaltik'}></Logo>
           </Grid>
           <Grid item>
-            <Logo src={LogoFr} height={55}></Logo>
+            <Logo src={LogoFr} height={55} alt={'Logo FR Skates'}></Logo>
           </Grid>
           <Grid item>
-            <Logo src={LogoMijnleuven} height={100}></Logo>
+            <Logo src={LogoMijnleuven} height={100} alt={'Logo Mijnleuven'}></Logo>
           </Grid>
           <Grid item>
-            <Logo src={LogoSlidingtiger} height={75}></Logo>
+            <Logo src={LogoSlidingtiger} height={75} alt={'Logo Sliding Tiger'}></Logo>
           </Grid>
           <Grid item>
-            <Logo src={LogoPowsey} height={30}></Logo>
+            <Logo src={LogoPowsey} height={30} alt={'Logo Powsey'}></Logo>
           </Grid>
           <Grid item>
-            <Logo src={LogoLetmeout} height={50}></Logo>
+            <Logo src={LogoLetmeout} height={50} alt={'Logo Let Me Out'}></Logo>
           </Grid>
         </Grid>
       </Grid>

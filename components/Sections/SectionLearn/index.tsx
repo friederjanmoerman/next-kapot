@@ -30,7 +30,7 @@ import IconLink from '../../icons/IconLink'
 
 const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
   return (
-    <Section ref={ref} inverted={true}>
+    <Section ref={ref} inverted>
       <Typography color={'#fff'} variant="h1" component="h2">
         Learn
       </Typography>
@@ -147,9 +147,7 @@ const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
           </Grid>
           <ItemMeta variant="h4">32 years old</ItemMeta>
           <ItemMeta variant="h4">Skating for 11 years</ItemMeta>
-          <TeacherBody variant="h5">
-            Co-founder Kapot. Surfer/skater/climber broke(n) gypsy. Street elitist. Skates 3.5 hours on average daily.
-          </TeacherBody>
+          <TeacherBody variant="h5">Co-founder Kapot. Surfer/skater/climber nomad. Street elitist. Skates 3.5 hours on average daily.</TeacherBody>
         </Grid>
       </Container>
       <StyledSplashIllustrationTop src={SplashIllustrationTop} alt="Splash illustration learn section top" height={348} />

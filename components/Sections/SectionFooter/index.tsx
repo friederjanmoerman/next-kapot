@@ -1,12 +1,11 @@
 // MUI
 import { Grid, Typography } from '@mui/material'
 import { SectionFooter } from './../styles'
-import Logo from '../../icons/Logo'
 import { forwardRef } from 'react'
 
 import SocialsBar from '../../SocialsBar'
 
-import KapotLogo from './../../../public/images/illustrations/logo--white.svg'
+import LogoKapot from '../../icons/Logo'
 
 const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
   return (
@@ -15,7 +14,7 @@ const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
         <Grid item xs={12}>
           <Grid container justifyContent="center" alignItems="center" flexDirection={'column'}>
             <Grid item>
-              <Logo src={KapotLogo} height={150} alt={'Kapot logo'} />
+              <LogoKapot height={150} />
             </Grid>
             <Grid item>
               <Typography variant={'h1'}>Kapot</Typography>
