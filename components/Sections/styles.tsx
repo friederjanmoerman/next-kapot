@@ -16,11 +16,22 @@ export const Section = styled(Grid)<ISectionProps>(
     position: relative;
     padding: 180px 14% 200px;
 
+    ${theme.breakpoints.down('lg')} {
+      padding: 100px 14% 140px;    
+    }
+
+    ${theme.breakpoints.down('md')} {
+      padding: 55px 14% 70px;    
+    }
+
     ${
       inverted &&
       `
         background: ${theme.palette.common.black};
         h2, h3, h4, h5 {
+          color: ${theme.palette.common.white};
+        }
+        .MuiSvgIcon-root {
           color: ${theme.palette.common.white};
         }
       `
@@ -107,6 +118,7 @@ export const TeacherTitle = styled(Typography)<TypographyProps>(
     && {
       font-size: 70px;
       color: ${theme.palette.primary.main};
+      margin-bottom: 1rem;
 
       ${theme.breakpoints.down('md')} {
         font-size: 50px;      
@@ -187,16 +199,15 @@ export const StyledSplashIllustrationBottomVariation1 = styled(Image)(
 
     ${theme.breakpoints.down('lg')} {
       width: 850px;
-      top: 5%;
+      top: 0;
     }
 
     ${theme.breakpoints.down('md')} {
       width: 570px;
-      top: 4%;
     }
+
     ${theme.breakpoints.down('sm')} {
       width: 500px;
-      top: 3%;
     }
   `,
 )

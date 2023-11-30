@@ -12,7 +12,6 @@ import {
   ItemTitle,
   ItemPrice,
   TeacherTitle,
-  TeacherTag,
   ItemMeta,
   TeacherBody,
   SectionSubtitleEmphasis,
@@ -20,13 +19,15 @@ import {
 } from '../styles'
 
 // MUI
-import { Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
+import { Grid, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
 
 // Images
 import SplashIllustrationTop from './../../../public/images/illustrations/paint-splash-2.svg'
 import SplashIllustrationBottom from './../../../public/images/illustrations/paint-splash-3.svg'
 
-import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome'
+import { AutoAwesome, Instagram } from '@mui/icons-material'
+import IconLink from '../../icons/IconLink'
+
 const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
   return (
     <Section ref={ref} inverted={true}>
@@ -46,19 +47,19 @@ const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
           <Typography variant="h5">
             A personalised in person experience. You&apos;ll be privately thaught to inline skate by one of our teachers. We have one pair of
             adaptable size junior aggressive inline skates to try out for children. Ask beforehand, not always available! All ages and levels welcome.
-            Access to our exclusive online inline skate community channel on our Discord server.
+            Access to our online inline skate community.
             <StyledList dense>
               <ListItem>
                 <ListItemIcon>
-                  <AutoAwesomeIcon />
+                  <AutoAwesome />
                 </ListItemIcon>
                 <ListItemText primary="private lesson" />
               </ListItem>
               <ListItem>
                 <ListItemIcon>
-                  <AutoAwesomeIcon />
+                  <AutoAwesome />
                 </ListItemIcon>
-                <ListItemText primary="access to supportive community" />
+                <ListItemText primary="access to our online community" />
               </ListItem>
             </StyledList>
           </Typography>
@@ -70,43 +71,43 @@ const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
           </ItemTitle>
           <ItemPrice variant="h4">€400 (first 5 members) per year</ItemPrice>
           <Typography variant="h5">
-            Access to our inline skate online community, our discord server. One year access to a coach: 24/7 feedback. We will analyze your videos,
-            suggest training plans and answer questions. One monthly one hour feedback session included, online or in person. This plan saves you €80
-            if you would want a private session every month.
+            Access to our inline skate online community. One year access to a coach: 24/7 feedback. We will analyze your videos, suggest training
+            plans and answer questions. One monthly one hour feedback session included, online or in person. This plan saves you €80 if you would want
+            a private session every month.
             <StyledList dense>
               <ListItem>
                 <ListItemIcon>
-                  <AutoAwesomeIcon />
+                  <AutoAwesome />
                 </ListItemIcon>
                 <ListItemText primary="monthly 1h private session" secondary="international member 1h live call" />
               </ListItem>
               <ListItem>
                 <ListItemIcon>
-                  <AutoAwesomeIcon />
+                  <AutoAwesome />
                 </ListItemIcon>
                 <ListItemText primary="one year 24/7 online feedback" />
               </ListItem>
               <ListItem>
                 <ListItemIcon>
-                  <AutoAwesomeIcon />
+                  <AutoAwesome />
                 </ListItemIcon>
                 <ListItemText primary="on and off skate training advice and plans" />
               </ListItem>
               <ListItem>
                 <ListItemIcon>
-                  <AutoAwesomeIcon />
+                  <AutoAwesome />
                 </ListItemIcon>
-                <ListItemText primary="access to supportive community" />
+                <ListItemText primary="access to our online community" />
               </ListItem>
               <ListItem>
                 <ListItemIcon>
-                  <AutoAwesomeIcon />
+                  <AutoAwesome />
                 </ListItemIcon>
                 <ListItemText primary="submit your clips, instant feedback" />
               </ListItem>
               <ListItem>
                 <ListItemIcon>
-                  <AutoAwesomeIcon />
+                  <AutoAwesome />
                 </ListItemIcon>
                 <ListItemText primary="kapot shirt" />
               </ListItem>
@@ -124,21 +125,31 @@ const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
           <TeacherTitle variant="h1" component="h2">
             Gilles
           </TeacherTitle>
-          <TeacherTag variant="h5">@gilles.buelens</TeacherTag>
+          <Grid container>
+            <Grid item>
+              <IconLink href={'https://www.instagram.com/gilles.buelens/'} icon={<Instagram />} />
+            </Grid>
+          </Grid>
           <ItemMeta variant="h4">27 years old</ItemMeta>
           <ItemMeta variant="h4">Skating for 24 years</ItemMeta>
           <TeacherBody variant="h5">
-            Incredible control, style and trick repertoire. Won multiple international contests both street and park.
+            Co-founder Kapot. Incredible control, style and trick repertoire. Won multiple international contests both street and park.
           </TeacherBody>
         </Grid>
         <Grid item lg={4}>
           <TeacherTitle variant="h1" component="h2">
             Frieder
           </TeacherTitle>
-          <TeacherTag variant="h5">@shredpuppy</TeacherTag>
+          <Grid container>
+            <Grid item>
+              <IconLink href={'https://www.instagram.com/shredpuppy/'} icon={<Instagram />} />
+            </Grid>
+          </Grid>
           <ItemMeta variant="h4">32 years old</ItemMeta>
           <ItemMeta variant="h4">Skating for 11 years</ItemMeta>
-          <TeacherBody variant="h5">Surfer/skater nomad. Loves street. Skates 3.5 hours on average daily.</TeacherBody>
+          <TeacherBody variant="h5">
+            Co-founder Kapot. Surfer/skater/climber broke(n) gypsy. Street elitist. Skates 3.5 hours on average daily.
+          </TeacherBody>
         </Grid>
       </Container>
       <StyledSplashIllustrationTop src={SplashIllustrationTop} alt="Splash illustration learn section top" height={348} />
