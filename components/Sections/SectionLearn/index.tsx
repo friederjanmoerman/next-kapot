@@ -26,7 +26,7 @@ import SplashIllustrationTop from './../../../public/images/illustrations/paint-
 import SplashIllustrationBottom from './../../../public/images/illustrations/paint-splash-3.svg'
 
 import { AutoAwesome, Instagram } from '@mui/icons-material'
-import IconLink from '../../icons/IconLink'
+import IconLink from '../../Icons/IconLink'
 
 const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
   return (

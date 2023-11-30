@@ -1,6 +1,6 @@
 import { Grid, Typography } from '@mui/material'
 import { Section } from '../styles'
-import Logo from '../../icons/Logo'
+import Logo from '../../Icons/Logo'
 
 import LogoPowerslide from './../../../public/images/illustrations/sponsor__powerslide.svg'
 import LogoGrindhouse from './../../../public/images/illustrations/sponsor__grindhouse.svg'

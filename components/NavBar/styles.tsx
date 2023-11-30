@@ -4,7 +4,7 @@ import Image from 'next/image'
 // MUI
 import { styled } from '@mui/material'
 
-import LogoKapot from '../icons/Logo/LogoKapot'
+import LogoKapot from '../Icons/Logo/LogoKapot'
 
 export const StyledNav = styled('nav')(
   ({ theme }) => `

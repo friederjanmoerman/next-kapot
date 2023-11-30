@@ -4,7 +4,7 @@ import { SectionFooter } from './../styles'
 import { forwardRef } from 'react'
 
 import SocialsBar from '../../SocialsBar'
-import LogoKapot from '../../icons/Logo/LogoKapot'
+import LogoKapot from '../../Icons/Logo/LogoKapot'
 
 const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
   return (
