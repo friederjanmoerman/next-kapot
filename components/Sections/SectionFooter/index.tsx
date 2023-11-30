@@ -4,8 +4,7 @@ import { SectionFooter } from './../styles'
 import { forwardRef } from 'react'
 
 import SocialsBar from '../../SocialsBar'
-
-import LogoKapot from '../../icons/Logo'
+import LogoKapot from '../../icons/Logo/LogoKapot'
 
 const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
   return (
@@ -14,7 +13,7 @@ const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
         <Grid item xs={12}>
           <Grid container justifyContent="center" alignItems="center" flexDirection={'column'}>
             <Grid item>
-              <LogoKapot height={150} />
+              <LogoKapot />
             </Grid>
             <Grid item>
               <Typography variant={'h1'}>Kapot</Typography>

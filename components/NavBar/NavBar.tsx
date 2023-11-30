@@ -8,11 +8,10 @@ import SplashIllustration from './../../public/images/illustrations/paint-splash
 import { INavbar } from './types'
 
 // Styles
-import { StyledNav, Menu, MenuItem, StyledSplashIllustration } from './styles'
+import { StyledNav, Menu, MenuItem, StyledSplashIllustration, StyledLogo } from './styles'
 
 // Components
 import ButtonScrollTo from './../ButtonScrollTo/Index'
-import { LogoKapot } from '../icons/Logo'
 
 // Images
 
@@ -20,7 +19,7 @@ const NavBar = (props: INavbar) => {
   const { routes, handleScrollTo } = props
   return (
     <StyledNav>
-      <LogoKapot height={150} />
+      <StyledLogo />
       <Menu>
         {routes.map((page) => (
           <MenuItem key={page.title}>

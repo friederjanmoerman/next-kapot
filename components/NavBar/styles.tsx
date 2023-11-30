@@ -4,6 +4,8 @@ import Image from 'next/image'
 // MUI
 import { styled } from '@mui/material'
 
+import LogoKapot from '../icons/Logo/LogoKapot'
+
 export const StyledNav = styled('nav')(
   ({ theme }) => `
     display: flex;
@@ -61,3 +63,11 @@ export const MenuItem = styled('li')`
   font-size: 32px;
   text-transform: uppercase;
 `
+
+export const StyledLogo = styled(LogoKapot)(
+  ({ theme }) => `
+    ${theme.breakpoints.down('lg')} {
+     height: 135px;
+    }
+  `,
+)
