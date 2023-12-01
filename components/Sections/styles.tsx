@@ -119,6 +119,14 @@ export const ItemMeta = styled(Typography)<TypographyProps>(
   `,
 )
 
+export const ItemBody = styled(Typography)<TypographyProps>(
+  ({ theme }) => `
+    && {
+      max-width: 400px;
+    }
+  `,
+)
+
 export const TeacherTitle = styled(Typography)<TypographyProps>(
   ({ theme }) => `
     && {
