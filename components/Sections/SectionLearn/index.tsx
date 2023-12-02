@@ -151,7 +151,7 @@ const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
           <TeacherBody variant="h5">Co-founder Kapot. Surfer/skater/climber nomad. Street elitist. Skates 3.5 hours on average daily.</TeacherBody>
         </Grid>
       </Container>
-      <StyledSplashIllustrationTop src={SplashIllustrationTop} alt="Splash illustration learn section top" height={348} />
+      <StyledSplashIllustrationTop src={SplashIllustrationTop} alt="Splash illustration learn section top" width={299} />
       <StyledSplashIllustrationBottom src={SplashIllustrationBottom} alt="Splash illustration learn section bottom" width={150} />
     </Section>
   )

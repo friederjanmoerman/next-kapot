@@ -115,6 +115,9 @@ export const ItemMeta = styled(Typography)<TypographyProps>(
       font-size: 14px;
       font-family: FuturaStdCondExtraBoldObl, sans-serif;
       margin: 4px 0;
+      ${theme.breakpoints.down('sm')} {
+        font-size: 12px;
+      }
     }
   `,
 )
@@ -136,6 +139,11 @@ export const TeacherTitle = styled(Typography)<TypographyProps>(
 
       ${theme.breakpoints.down('md')} {
         font-size: 50px;      
+        letter-spacing: -0.1rem;
+      }
+
+      ${theme.breakpoints.down('sm')} {
+        font-size: 40px;      
         letter-spacing: -0.1rem;
       }
     }
@@ -178,12 +186,19 @@ export const StyledList = styled(List)(
   `,
 )
 
-export const StyledSplashIllustrationTop = styled(Image)`
-  position: absolute;
-  top: -5%;
-  right: 0;
-  z-index: 8000;
-`
+export const StyledSplashIllustrationTop = styled(Image)(
+  ({ theme }) => `
+    position: absolute;
+    top: -5%;
+    right: 0;
+    z-index: 8000;
+
+    ${theme.breakpoints.down('sm')} {
+      top: -7%;
+      width: 200px;
+    }
+  `,
+)
 
 export const StyledSplashIllustrationBottom = styled(Image)(
   ({ theme }) => `
@@ -221,7 +236,8 @@ export const StyledSplashIllustrationBottomVariation1 = styled(Image)(
     }
 
     ${theme.breakpoints.down('sm')} {
-      width: 500px;
+      top: -4%;
+      width: 350px;
     }
   `,
 )
