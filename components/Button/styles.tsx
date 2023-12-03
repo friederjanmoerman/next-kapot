@@ -24,6 +24,10 @@ export const StyledButton = styled(MuiButton)<IButtonProps>(
       background: ${theme.palette.primary.main};
     }
 
+    ${theme.breakpoints.down('sm')} {
+      font-size: 14px;
+    }
+
     ${
       disabled &&
       `

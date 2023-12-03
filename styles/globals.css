@@ -16,6 +16,10 @@ a {
   text-decoration: none;
 }
 
+img {
+  shape-renderer: crispEdges;
+}
+
 /* 
  * Fonts 
  */

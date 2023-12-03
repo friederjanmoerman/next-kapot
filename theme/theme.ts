@@ -18,6 +18,9 @@ theme = createTheme(theme, {
       fontFamily: 'AnotherDanger, serif',
       fontSize: '100px',
       letterSpacing: '-0.2rem',
+      [theme.breakpoints.down('lg')]: {
+        fontSize: '80px',
+      },
     },
     h2: {
       fontFamily: 'FuturaStdCondExtraBoldObl, sans-serif',

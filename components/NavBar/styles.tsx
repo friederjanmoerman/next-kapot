@@ -39,7 +39,7 @@ export const StyledSplashIllustration = styled(Image)(
     }
     ${theme.breakpoints.down('sm')} {
       top: 30px;
-      width: 320px;
+      width: 80%;
     }
   `,
 )

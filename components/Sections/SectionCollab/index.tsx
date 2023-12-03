@@ -1,6 +1,5 @@
 import { Grid, Typography } from '@mui/material'
 import { Section } from '../styles'
-import Logo from '../../Icons/Logo'
 
 import LogoPowerslide from './../../../public/images/illustrations/sponsor__powerslide.svg'
 import LogoGrindhouse from './../../../public/images/illustrations/sponsor__grindhouse.svg'
@@ -11,6 +10,7 @@ import LogoMijnleuven from './../../../public/images/illustrations/sponsor__mijn
 import LogoSlidingtiger from './../../../public/images/illustrations/sponsor__sliding-tiger.svg'
 import LogoPowsey from './../../../public/images/illustrations/sponsor__powsey.svg'
 import LogoLetmeout from './../../../public/images/illustrations/sponsor__let-me-out.svg'
+import Logo from '../../Icons/Logo'
 
 const SectionCollab = () => (
   <Section slim inverted>
@@ -19,7 +19,7 @@ const SectionCollab = () => (
         <Typography variant="h4">in collaboration with</Typography>
       </Grid>
       <Grid item>
-        <Grid container rowSpacing={0} columnSpacing={{ xs: 7, md: 4, lg: 7 }} alignItems={'center'} justifyContent={'center'}>
+        <Grid container rowSpacing={{ xs: 1, md: 2, lg: 4 }} columnSpacing={{ xs: 4, md: 4, lg: 7 }} alignItems={'center'} justifyContent={'center'}>
           <Grid item>
             <Logo src={LogoPowerslide} height={55} alt={'Logo Powerslide'}></Logo>
           </Grid>

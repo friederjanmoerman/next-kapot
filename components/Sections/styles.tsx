@@ -72,6 +72,11 @@ export const SectionSubtitle = styled(Typography)<TypographyProps>(
         font-size: 34px;      
         letter-spacing: -0.1rem;
       }
+
+      ${theme.breakpoints.down('sm')} {
+        font-size: 27px;      
+        letter-spacing: -0.1rem;
+      }
     }
   `,
 )
@@ -85,6 +90,18 @@ export const SectionSubtitleEmphasis = styled('span')(
   `,
 )
 
+export const MailAddress = styled(Typography)(
+  ({ theme }) => `
+    && {
+      font-size: 34px;
+      ${theme.breakpoints.down('sm')} {
+        font-size: 22px;
+        letter-spacing: -0.05rem;
+      }
+    }
+  `,
+)
+
 export const Container = styled(Grid)`
   margin-top: 0;
 `
@@ -94,6 +111,10 @@ export const ItemTitle = styled(Typography)<TypographyProps>(
     text-transform: uppercase;
     font-size: 40px;
     letter-spacing: 2px;
+    
+    ${theme.breakpoints.down('lg')} {
+      font-size: 40px;
+    }
   `,
 )
 
@@ -115,6 +136,17 @@ export const ItemMeta = styled(Typography)<TypographyProps>(
       font-size: 14px;
       font-family: FuturaStdCondExtraBoldObl, sans-serif;
       margin: 4px 0;
+      ${theme.breakpoints.down('sm')} {
+        font-size: 12px;
+      }
+    }
+  `,
+)
+
+export const ItemBody = styled(Typography)<TypographyProps>(
+  ({ theme }) => `
+    && {
+      max-width: 400px;
     }
   `,
 )
@@ -128,6 +160,11 @@ export const TeacherTitle = styled(Typography)<TypographyProps>(
 
       ${theme.breakpoints.down('md')} {
         font-size: 50px;      
+        letter-spacing: -0.1rem;
+      }
+
+      ${theme.breakpoints.down('sm')} {
+        font-size: 40px;      
         letter-spacing: -0.1rem;
       }
     }
@@ -170,12 +207,19 @@ export const StyledList = styled(List)(
   `,
 )
 
-export const StyledSplashIllustrationTop = styled(Image)`
-  position: absolute;
-  top: -5%;
-  right: 0;
-  z-index: 8000;
-`
+export const StyledSplashIllustrationTop = styled(Image)(
+  ({ theme }) => `
+    position: absolute;
+    top: -5%;
+    right: 0;
+    z-index: 8000;
+
+    ${theme.breakpoints.down('sm')} {
+      top: -7%;
+      width: 50%;
+    }
+  `,
+)
 
 export const StyledSplashIllustrationBottom = styled(Image)(
   ({ theme }) => `
@@ -213,7 +257,8 @@ export const StyledSplashIllustrationBottomVariation1 = styled(Image)(
     }
 
     ${theme.breakpoints.down('sm')} {
-      width: 500px;
+      top: -4%;
+      width: 90%;
     }
   `,
 )
