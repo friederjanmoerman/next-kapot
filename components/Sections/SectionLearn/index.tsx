@@ -122,7 +122,7 @@ const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
         <SectionSubtitleEmphasis>the teachers.</SectionSubtitleEmphasis>
       </SectionSubtitle>
       <Container container spacing={7}>
-        <Grid item xs={6} md={6} lg={4}>
+        <Grid item xs={12} sm={6} md={6} lg={4}>
           <TeacherTitle variant="h1" component="h2">
             Gilles
           </TeacherTitle>
@@ -137,7 +137,7 @@ const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
             Co-founder Kapot. Incredible control, style and trick repertoire. Won multiple international contests both street and park.
           </TeacherBody>
         </Grid>
-        <Grid item xs={6} md={6} lg={4}>
+        <Grid item xs={12} sm={6} md={6} lg={4}>
           <TeacherTitle variant="h1" component="h2">
             Frieder
           </TeacherTitle>

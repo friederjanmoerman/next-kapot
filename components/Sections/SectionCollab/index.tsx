@@ -19,7 +19,7 @@ const SectionCollab = () => (
         <Typography variant="h4">in collaboration with</Typography>
       </Grid>
       <Grid item>
-        <Grid container columnSpacing={{ xs: 4, md: 4, lg: 7 }} alignItems={'center'} justifyContent={'center'}>
+        <Grid container rowSpacing={{ xs: 1, md: 2, lg: 4 }} columnSpacing={{ xs: 4, md: 4, lg: 7 }} alignItems={'center'} justifyContent={'center'}>
           <Grid item>
             <Logo src={LogoPowerslide} height={55} alt={'Logo Powerslide'}></Logo>
           </Grid>

@@ -1,6 +1,6 @@
 // MUI
 import { Grid, Typography } from '@mui/material'
-import { SectionFooter } from './../styles'
+import { MailAddress, SectionFooter } from './../styles'
 import { forwardRef } from 'react'
 
 import SocialsBar from '../../SocialsBar'
@@ -22,9 +22,7 @@ const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
         </Grid>
         <Grid item xs={12}>
           <Grid container justifyContent="center" alignItems="center">
-            <Typography fontSize={'34px'} variant="h3">
-              kapot@echtalleskapot.be
-            </Typography>
+            <MailAddress variant="h3">kapot@echtalleskapot.be</MailAddress>
           </Grid>
         </Grid>
         <SocialsBar />

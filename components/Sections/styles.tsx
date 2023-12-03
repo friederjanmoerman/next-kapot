@@ -72,6 +72,11 @@ export const SectionSubtitle = styled(Typography)<TypographyProps>(
         font-size: 34px;      
         letter-spacing: -0.1rem;
       }
+
+      ${theme.breakpoints.down('sm')} {
+        font-size: 27px;      
+        letter-spacing: -0.1rem;
+      }
     }
   `,
 )
@@ -85,6 +90,18 @@ export const SectionSubtitleEmphasis = styled('span')(
   `,
 )
 
+export const MailAddress = styled(Typography)(
+  ({ theme }) => `
+    && {
+      font-size: 34px;
+      ${theme.breakpoints.down('sm')} {
+        font-size: 22px;
+        letter-spacing: -0.05rem;
+      }
+    }
+  `,
+)
+
 export const Container = styled(Grid)`
   margin-top: 0;
 `
@@ -94,6 +111,10 @@ export const ItemTitle = styled(Typography)<TypographyProps>(
     text-transform: uppercase;
     font-size: 40px;
     letter-spacing: 2px;
+    
+    ${theme.breakpoints.down('lg')} {
+      font-size: 40px;
+    }
   `,
 )
 
@@ -195,7 +216,7 @@ export const StyledSplashIllustrationTop = styled(Image)(
 
     ${theme.breakpoints.down('sm')} {
       top: -7%;
-      width: 200px;
+      width: 50%;
     }
   `,
 )
@@ -237,7 +258,7 @@ export const StyledSplashIllustrationBottomVariation1 = styled(Image)(
 
     ${theme.breakpoints.down('sm')} {
       top: -4%;
-      width: 350px;
+      width: 90%;
     }
   `,
 )
