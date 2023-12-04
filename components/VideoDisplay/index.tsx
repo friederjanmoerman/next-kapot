@@ -5,6 +5,7 @@ const VideoDisplay = () => {
     <ContainerVideo>
       <Video autoPlay muted loop>
         <source src="/videos/example.mp4" type="video/mp4" />
+        <source src="/videos/example.webm" type="video/webm" />
         Your browser does not support the video tag.
       </Video>
       <Overlay></Overlay>
