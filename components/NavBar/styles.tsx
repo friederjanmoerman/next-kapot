@@ -66,6 +66,7 @@ export const Menu = styled('ul')(
 export const MenuItem = styled('li')`
   font-size: 32px;
   text-transform: uppercase;
+  text-indext: 4px;
 `
 
 export const StyledLogo = styled(LogoKapot)(
