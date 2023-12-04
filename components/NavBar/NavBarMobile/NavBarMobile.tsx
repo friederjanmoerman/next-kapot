@@ -34,7 +34,7 @@ const NavBarMobile = (props: INavBar) => {
               </Typography>
             </LinkBtn>
           ))}
-          <StyledSplashIllustration src={SplashIllustration} alt="Splash illustration" width={200} />
+          <StyledSplashIllustration src={SplashIllustration} alt="Splash illustration" width={198} />
         </Block>
         <SocialsBlock>
           <SocialsBar inverted />
