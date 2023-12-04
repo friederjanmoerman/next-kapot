@@ -1,5 +1,6 @@
 // Next
 import Link from 'next/link'
+import Image from 'next/image'
 
 // MUI
 import { styled } from '@mui/material'
@@ -71,4 +72,13 @@ export const SocialsBlock = styled(Grid)(
     margin-top: auto;
     padding-top: 12px;
   `,
+)
+
+export const StyledSplashIllustration = styled(Image)(
+  ({ theme }) => `
+      position: absolute;
+      left: 0;
+      bottom: 25%;
+      z-index: -1;
+    `,
 )
