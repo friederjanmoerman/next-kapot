@@ -3,7 +3,6 @@ import { createRef, memo, useEffect } from 'react'
 
 // Components
 import NavBar from '../components/NavBar'
-import ImageSlider from '../components/ImageSlider'
 import SectionLearn from '../components/Sections/SectionLearn'
 import SectionEvents from '../components/Sections/SectionEvents'
 import Footer from '../components/Sections/SectionFooter'
