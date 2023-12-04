@@ -49,7 +49,11 @@ export const Menu = styled('ul')(
     list-style: none;
     display: flex;
     justify-content: flex-end;
-    gap: 70px;
+    
+    > * + * { 
+      margin-left: 70px;
+    }
+
     position: relative;
     z-index: 9002;
 
