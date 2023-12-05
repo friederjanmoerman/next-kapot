@@ -3,7 +3,7 @@ import { ContainerVideo, Emphasis, Overlay, Video, VideoBody, VideoCaption } fro
 const VideoDisplay = () => {
   return (
     <ContainerVideo>
-      <Video autoPlay muted loop>
+      <Video autoPlay muted loop playsInline>
         <source src="/videos/example.mp4" type="video/mp4" />
         <source src="/videos/example.webm" type="video/webm" />
         Your browser does not support the video tag.
