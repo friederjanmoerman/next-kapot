@@ -1,13 +1,4 @@
 // Modules
-import { RefObject } from 'react'
-
-export interface IRoutes {
-  routes: {
-    anchor: string
-    title: string
-    linkRef: RefObject<HTMLDivElement | undefined>
-  }[]
-  handleScrollTo: (event: React.MouseEvent<HTMLAnchorElement>) => void
-}
+import { IRoutes } from '../types'
 
 export interface INavbar extends IRoutes {}

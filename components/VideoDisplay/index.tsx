@@ -1,6 +1,9 @@
-import { ContainerVideo, Emphasis, Overlay, Video, VideoBody, VideoCaption } from './styles'
+import { CallToAction, ContainerVideo, Emphasis, Overlay, Video, VideoBody, VideoCaption } from './styles'
 
-const VideoDisplay = () => {
+import { IVideoDisplay } from './types'
+
+const VideoDisplay = (props: IVideoDisplay) => {
+  const { handleScrollTo, routes } = props
   return (
     <ContainerVideo>
       <Video autoPlay muted loop playsInline>
@@ -18,6 +21,13 @@ const VideoDisplay = () => {
           </Emphasis>
           community.
         </VideoCaption>
+
+        {routes.map((r, i) => {
+          if (i === 0) {
+            return <CallToAction key={r.title} handleScrollTo={handleScrollTo} location={'#' + r.anchor} label="Learn to skate"></CallToAction>
+          }
+          return null
+        })}
       </VideoBody>
     </ContainerVideo>
   )

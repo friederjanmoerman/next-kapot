@@ -1,11 +1,11 @@
 import { Typography, TypographyProps, styled } from '@mui/material'
+import ButtonCtaScrollTo from '../ButtonScrollTo/ButtonCtaScrollTo'
 
 export const ContainerVideo = styled('div')`
   position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  z-index: -1;
 `
 
 export const Video = styled('video')`
@@ -62,6 +62,8 @@ export const VideoCaption = styled(Typography)(
     }
   `,
 )
+
+export const CallToAction = styled(ButtonCtaScrollTo)(({ theme }) => ``)
 
 export const Emphasis = styled(Typography)<TypographyProps>(
   ({ theme }) => `
