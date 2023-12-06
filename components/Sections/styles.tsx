@@ -274,10 +274,10 @@ export const SectionFooter = styled('footer')(
 
 export const StyledLinkIcon = styled(Link)(
   ({ theme }) => `
-      && {
-      color: ${theme.palette.common.black};
-      display: flex;
-      transition: all 0.4s ease-out;
-      margin: 6px;
-    `,
+    && {
+    color: ${theme.palette.common.black};
+    display: flex;
+    transition: all 0.4s ease-out;
+    margin: 6px;
+  `,
 )

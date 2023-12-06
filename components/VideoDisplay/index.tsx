@@ -1,6 +1,4 @@
-import ButtonScrollTo from '../ButtonScrollTo/Index'
-
-import { ContainerVideo, Emphasis, Overlay, Video, VideoBody, VideoCaption } from './styles'
+import { CallToAction, ContainerVideo, Emphasis, Overlay, Video, VideoBody, VideoCaption } from './styles'
 
 import { IVideoDisplay } from './types'
 
@@ -22,13 +20,14 @@ const VideoDisplay = (props: IVideoDisplay) => {
             inline skate{' '}
           </Emphasis>
           community.
-          {routes.map((r, i) => {
-            if (i === 0) {
-              return <ButtonScrollTo key={r.title} handleScrollTo={handleScrollTo} location={'#' + r.anchor} label="Learn to skate"></ButtonScrollTo>
-            }
-            return null
-          })}
         </VideoCaption>
+
+        {routes.map((r, i) => {
+          if (i === 0) {
+            return <CallToAction key={r.title} handleScrollTo={handleScrollTo} location={'#' + r.anchor} label="Learn to skate"></CallToAction>
+          }
+          return null
+        })}
       </VideoBody>
     </ContainerVideo>
   )

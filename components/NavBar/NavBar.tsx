@@ -11,7 +11,7 @@ import { INavbar } from './types'
 import { StyledNav, Menu, MenuItem, StyledSplashIllustration, StyledLogo } from './styles'
 
 // Components
-import ButtonScrollTo from './../ButtonScrollTo/Index'
+import ButtonScrollTo from './../ButtonScrollTo'
 
 // Images
 
