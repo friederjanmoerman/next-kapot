@@ -1,6 +1,11 @@
+import ButtonScrollTo from '../ButtonScrollTo/Index'
+
 import { ContainerVideo, Emphasis, Overlay, Video, VideoBody, VideoCaption } from './styles'
 
-const VideoDisplay = () => {
+import { IVideoDisplay } from './types'
+
+const VideoDisplay = (props: IVideoDisplay) => {
+  const { handleScrollTo, routes } = props
   return (
     <ContainerVideo>
       <Video autoPlay muted loop playsInline>
@@ -17,6 +22,12 @@ const VideoDisplay = () => {
             inline skate{' '}
           </Emphasis>
           community.
+          {routes.map((r, i) => {
+            if (i === 0) {
+              return <ButtonScrollTo key={r.title} handleScrollTo={handleScrollTo} location={'#' + r.anchor} label="Learn to skate"></ButtonScrollTo>
+            }
+            return null
+          })}
         </VideoCaption>
       </VideoBody>
     </ContainerVideo>
