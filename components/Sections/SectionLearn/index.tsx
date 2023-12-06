@@ -131,8 +131,8 @@ const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
               <IconLink href={'https://www.instagram.com/gilles.buelens/'} icon={<Instagram />} />
             </Grid>
           </Grid>
-          <ItemMeta variant="h4">27 years old</ItemMeta>
           <ItemMeta variant="h4">Skating for 24 years</ItemMeta>
+          <ItemMeta variant="h4">27 years old</ItemMeta>
           <TeacherBody variant="h5">
             Co-founder Kapot. Incredible control, style and trick repertoire. Won multiple international contests both street and park.
           </TeacherBody>
@@ -146,9 +146,9 @@ const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
               <IconLink href={'https://www.instagram.com/shredpuppy/'} icon={<Instagram />} />
             </Grid>
           </Grid>
-          <ItemMeta variant="h4">32 years old</ItemMeta>
           <ItemMeta variant="h4">Skating for 11 years</ItemMeta>
-          <TeacherBody variant="h5">Co-founder Kapot. Surfer/skater/climber nomad. Street elitist. Skates 3.5 hours on average daily.</TeacherBody>
+          <ItemMeta variant="h4">32 years old</ItemMeta>
+          <TeacherBody variant="h5">Co-founder Kapot. Surfer/skater/climber gypsy. Street elitist. Skates 3.5 hours on average daily.</TeacherBody>
         </Grid>
       </Container>
       <StyledSplashIllustrationTop src={SplashIllustrationTop} alt="Splash illustration learn section top" width={299} />
