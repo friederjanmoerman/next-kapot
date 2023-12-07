@@ -11,7 +11,7 @@ import { INavbar } from './types'
 import { StyledNav, Menu, MenuItem, StyledSplashIllustration, StyledLogo } from './styles'
 
 // Components
-import ButtonScrollTo from './../ButtonScrollTo'
+import ButtonScrollTo from '../ButtonScrollTo'
 
 // Images
 
@@ -27,7 +27,7 @@ const NavBar = (props: INavbar) => {
           </MenuItem>
         ))}
       </Menu>
-      <StyledSplashIllustration src={SplashIllustration} alt="Splash illustration" width={550} />
+      <StyledSplashIllustration loading="eager" src={SplashIllustration} alt="Splash illustration" width={550} />
     </StyledNav>
   )
 }
