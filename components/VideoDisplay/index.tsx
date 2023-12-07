@@ -1,4 +1,4 @@
-import { CallToAction, ContainerVideo, Emphasis, Overlay, Video, VideoBody, VideoCaption } from './styles'
+import { CallToAction, ContainerVideo, Emphasis, Video, Overlay, VideoBody, VideoCaption } from './styles'
 
 import { IVideoDisplay } from './types'
 
@@ -6,11 +6,7 @@ const VideoDisplay = (props: IVideoDisplay) => {
   const { handleScrollTo, routes } = props
   return (
     <ContainerVideo>
-      <Video autoPlay muted loop playsInline>
-        <source src="/videos/example.mp4" type="video/mp4" />
-        <source src="/videos/example.webm" type="video/webm" />
-        Your browser does not support the video tag.
-      </Video>
+      <Video />
       <Overlay></Overlay>
       <VideoBody>
         <VideoCaption variant="h3">

@@ -1,5 +1,7 @@
 import { Typography, TypographyProps, styled } from '@mui/material'
+
 import ButtonCtaScrollTo from '../ButtonScrollTo/ButtonCtaScrollTo'
+import VideoPlayer from './VideoPlayer'
 
 export const ContainerVideo = styled('div')`
   position: relative;
@@ -8,7 +10,7 @@ export const ContainerVideo = styled('div')`
   overflow: hidden;
 `
 
-export const Video = styled('video')`
+export const Video = styled(VideoPlayer)`
   object-fit: cover;
   width: 100%;
   height: 100%;
