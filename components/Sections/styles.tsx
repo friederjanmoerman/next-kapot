@@ -1,14 +1,12 @@
+// Modules
+import Image from 'next/image'
+
 // MUI
 import { Typography, TypographyProps, styled, Link, List } from '@mui/material'
 import Grid from '@mui/material/Grid'
 
-// Next
-import Image from 'next/image'
-
-export interface ISectionProps {
-  inverted?: boolean
-  slim?: boolean
-}
+// Types
+import { ISectionProps } from './types'
 
 export const Section = styled(Grid)<ISectionProps>(
   ({ theme, inverted, slim }) => `
@@ -136,6 +134,7 @@ export const ItemMeta = styled(Typography)<TypographyProps>(
       font-size: 14px;
       font-family: FuturaStdCondExtraBoldObl, sans-serif;
       margin: 4px 0;
+
       ${theme.breakpoints.down('sm')} {
         font-size: 12px;
       }
@@ -193,6 +192,7 @@ export const StyledList = styled(List)(
   ({ theme }) => `
     && {
       color: ${theme.palette.primary.main};
+
       .MuiListItemText-primary, .MuiListItemText-secondary {
         font-family: FuturaStdCondExtraBoldObl, sans-serif;
         font-size: 12px;
@@ -200,6 +200,7 @@ export const StyledList = styled(List)(
         color: ${theme.palette.primary.main};
         letterSpacing: '-0.15rem',
       }
+      
       svg {
         fill: ${theme.palette.primary.main};
       }

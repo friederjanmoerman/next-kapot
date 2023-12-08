@@ -1,5 +1,7 @@
+// MUI
 import { Typography, TypographyProps, styled } from '@mui/material'
 
+// Components
 import ButtonCtaScrollTo from '../ButtonScrollTo/ButtonCtaScrollTo'
 import VideoPlayer from './VideoPlayer'
 

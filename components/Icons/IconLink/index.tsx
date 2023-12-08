@@ -1,9 +1,8 @@
+// MUI
 import { SvgIconProps, IconButton } from '@mui/material'
 
-interface IconLinkProps {
-  href: string
-  icon: React.ReactElement<SvgIconProps>
-}
+// Types
+import { IconLinkProps } from './types'
 
 const IconLink = ({ href, icon }: IconLinkProps) => (
   <IconButton href={href} target="_blank" rel="noopener noreferrer">

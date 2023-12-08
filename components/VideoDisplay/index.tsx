@@ -1,5 +1,7 @@
+// Styles
 import { CallToAction, ContainerVideo, Emphasis, Video, Overlay, VideoBody, VideoCaption } from './styles'
 
+// Types
 import { IVideoDisplay } from './types'
 
 const VideoDisplay = (props: IVideoDisplay) => {

@@ -3,6 +3,14 @@ import { forwardRef } from 'react'
 
 // Components
 import Button from '../../Button'
+
+// MUI
+import { Grid, Typography } from '@mui/material'
+
+// Media
+import SplashIllustrationBottomVariation1 from './../../../public/images/illustrations/paint-splash-4.svg'
+
+// Styles
 import {
   SectionSubtitle,
   Container,
@@ -14,12 +22,6 @@ import {
   Section,
   ItemBody,
 } from '../styles'
-
-// MUI
-import { Grid, Typography } from '@mui/material'
-
-// Images
-import SplashIllustrationBottomVariation1 from './../../../public/images/illustrations/paint-splash-4.svg'
 
 const SectionEvents = forwardRef<HTMLDivElement>(function SectionEvents(_, ref) {
   return (

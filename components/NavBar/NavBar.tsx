@@ -1,7 +1,10 @@
-// React
+// Modules
 import { memo } from 'react'
 
-// Images
+// Components
+import ButtonScrollTo from '../ButtonScrollTo'
+
+// Media
 import SplashIllustration from './../../public/images/illustrations/paint-splash-1.svg'
 
 // Types
@@ -9,11 +12,6 @@ import { INavbar } from './types'
 
 // Styles
 import { StyledNav, Menu, MenuItem, StyledSplashIllustration, StyledLogo } from './styles'
-
-// Components
-import ButtonScrollTo from '../ButtonScrollTo'
-
-// Images
 
 const NavBar = (props: INavbar) => {
   const { routes, handleScrollTo } = props

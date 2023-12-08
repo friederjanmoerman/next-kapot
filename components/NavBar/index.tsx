@@ -1,4 +1,4 @@
-// React
+// Modules
 import { useState, useCallback, memo } from 'react'
 
 // Components

@@ -1,10 +1,15 @@
-// MUI
-import { Grid, Typography } from '@mui/material'
-import { MailAddress, SectionFooter } from './../styles'
+// Modules
 import { forwardRef } from 'react'
 
+// MUI
+import { Grid, Typography } from '@mui/material'
+
+// Components
 import SocialsBar from '../../SocialsBar'
 import LogoKapot from '../../Icons/Logo/LogoKapot'
+
+// Styles
+import { MailAddress, SectionFooter } from './../styles'
 
 const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
   return (

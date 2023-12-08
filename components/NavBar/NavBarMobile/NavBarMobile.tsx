@@ -1,22 +1,22 @@
-// React
+// Modules
 import { memo } from 'react'
+
+// MUI
+import { Typography } from '@mui/material'
+
+// Components
+import ToggledNavBar from '../../ToggledNavBar'
+import SocialsBar from '../../SocialsBar'
+
+// Media
+import SplashIllustration from '../../../public/images/illustrations/paint-splash-1.svg'
+
+// Styles
+import { Block, LinkBtn, SocialsBlock, ToggledNavBarWrapper, StyledSplashIllustration } from './styles'
 
 // Types
 import { INavbar as INavbarDefault } from '../types'
 import { IToggledNavBar } from './types'
-
-// Components
-import ToggledNavBar from '../../ToggledNavBar'
-
-// Styles
-import { Block, LinkBtn, SocialsBlock, ToggledNavBarWrapper } from './styles'
-import { Typography } from '@mui/material'
-
-import SocialsBar from '../../SocialsBar'
-import { StyledSplashIllustration } from './styles'
-
-// Images
-import SplashIllustration from '../../../public/images/illustrations/paint-splash-1.svg'
 
 interface INavBar extends INavbarDefault, IToggledNavBar {}
 

@@ -1,9 +1,12 @@
+// MUI
 import { Instagram, Facebook } from '@mui/icons-material'
 import YouTubeIcon from '@mui/icons-material/YouTube'
-
 import { Grid } from '@mui/material'
 
+// Styles
 import { StyledLinkIcon } from './styles'
+
+// Types
 import { ISocialsBarProps } from './types'
 
 const SocialsBar = (props: ISocialsBarProps) => {

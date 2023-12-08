@@ -1,6 +1,7 @@
 // MUI
 import { Link, styled } from '@mui/material'
 
+// Types
 import { ISocialsBarProps } from './types'
 
 export const StyledLinkIcon = styled(Link)<ISocialsBarProps>(
@@ -10,6 +11,7 @@ export const StyledLinkIcon = styled(Link)<ISocialsBarProps>(
         display: flex;
         transition: all 0.4s ease-out;
         margin: 6px;
+        
         ${
           inverted &&
           `

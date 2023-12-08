@@ -1,11 +1,14 @@
-// Types
-import { IToggledNavBar } from './types'
+// Modules
+import Image from 'next/image'
+
+// Media
+import MobileMenuStrokeIllustration from './../../public/images/illustrations/paint-mobile-menu-stroke.svg'
 
 // Styles
 import { Content, ToggledNavBarWrapper, ToggleBtn, Overlay, ToggleBtnMiddleStroke, ToggleBtnTopStroke, ToggleBtnBottomStroke } from './styles'
 
-import MobileMenuStrokeIllustration from './../../public/images/illustrations/paint-mobile-menu-stroke.svg'
-import Image from 'next/image'
+// Types
+import { IToggledNavBar } from './types'
 
 const ToggledNavBar = (props: IToggledNavBar) => {
   const { children, isToggledNavBarOpen, handleViewToggledNavBar } = props

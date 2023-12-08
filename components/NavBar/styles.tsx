@@ -1,9 +1,10 @@
-// Next
+// Modules
 import Image from 'next/image'
 
 // MUI
 import { styled } from '@mui/material'
 
+// Media
 import LogoKapot from '../Icons/Logo/LogoKapot'
 
 export const StyledNav = styled('nav')(

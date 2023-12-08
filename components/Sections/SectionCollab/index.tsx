@@ -1,6 +1,10 @@
+// MUI
 import { Grid, Typography } from '@mui/material'
-import { Section } from '../styles'
 
+// Components
+import Logo from '../../Icons/Logo'
+
+// Media
 import LogoPowerslide from './../../../public/images/illustrations/sponsor__powerslide.svg'
 import LogoGrindhouse from './../../../public/images/illustrations/sponsor__grindhouse.svg'
 import LogoSkateheaven from './../../../public/images/illustrations/sponsor__skateheaven.svg'
@@ -10,7 +14,9 @@ import LogoMijnleuven from './../../../public/images/illustrations/sponsor__mijn
 import LogoSlidingtiger from './../../../public/images/illustrations/sponsor__sliding-tiger.svg'
 import LogoPowsey from './../../../public/images/illustrations/sponsor__powsey.svg'
 import LogoLetmeout from './../../../public/images/illustrations/sponsor__let-me-out.svg'
-import Logo from '../../Icons/Logo'
+
+// Styles
+import { Section } from '../styles'
 
 const SectionCollab = () => (
   <Section slim inverted>

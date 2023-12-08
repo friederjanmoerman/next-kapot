@@ -1,10 +1,11 @@
+// Modules
+import Image from 'next/image'
+
 // MUI
 import { styled, Box, Grid } from '@mui/material'
 
 // Types
 import { IBox, IButton, IToggle } from './types'
-
-import Image from 'next/image'
 
 export const Overlay = styled('div')<IBox>(
   ({ open }) => `

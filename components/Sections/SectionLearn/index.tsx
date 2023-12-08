@@ -3,6 +3,17 @@ import { forwardRef } from 'react'
 
 // Components
 import Button from '../../Button'
+import IconLink from '../../Icons/IconLink'
+
+// MUI
+import { Grid, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
+import { AutoAwesome, Instagram } from '@mui/icons-material'
+
+// Media
+import SplashIllustrationTop from './../../../public/images/illustrations/paint-splash-2.svg'
+import SplashIllustrationBottom from './../../../public/images/illustrations/paint-splash-3.svg'
+
+// Styles
 import {
   Section,
   StyledSplashIllustrationBottom,
@@ -18,16 +29,6 @@ import {
   StyledList,
   ItemBody,
 } from '../styles'
-
-// MUI
-import { Grid, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
-
-// Images
-import SplashIllustrationTop from './../../../public/images/illustrations/paint-splash-2.svg'
-import SplashIllustrationBottom from './../../../public/images/illustrations/paint-splash-3.svg'
-
-import { AutoAwesome, Instagram } from '@mui/icons-material'
-import IconLink from '../../Icons/IconLink'
 
 const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
   return (
