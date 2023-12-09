@@ -1,17 +1,15 @@
 // Modules
 import { createRef, memo, useEffect } from 'react'
 import { useRouter } from 'next/router'
-import dynamic from 'next/dynamic'
 
 // Components
-// Above the fold
 import NavBar from '../components/NavBar'
 import VideoDisplay from '../components/VideoDisplay'
-// Lazy loaded
-const SectionLearn = dynamic(() => import('../components/Sections/SectionLearn'))
-const SectionEvents = dynamic(() => import('../components/Sections/SectionEvents'))
-const SectionCollab = dynamic(() => import('../components/Sections/SectionCollab'))
-const Footer = dynamic(() => import('../components/Sections/SectionFooter'))
+
+import SectionLearn from '../components/Sections/SectionLearn'
+import SectionEvents from '../components/Sections/SectionEvents'
+import SectionCollab from '../components/Sections/SectionCollab'
+import Footer from '../components/Sections/SectionFooter'
 
 const slides = [
   {
@@ -56,6 +54,8 @@ const Home = () => {
     const href = event.currentTarget.href
     event.preventDefault()
 
+    console.log(href)
+
     routes?.map((el) => {
       if (href.includes(el?.anchor)) {
         el?.linkRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -77,7 +77,7 @@ const Home = () => {
       <VideoDisplay routes={routes} handleScrollTo={handleScrollTo} />
       <SectionLearn ref={routes[0].linkRef} />
       <SectionEvents ref={routes[1].linkRef} />
-      <SectionCollab />
+      <SectionCollab></SectionCollab>
       <Footer ref={routes[2].linkRef} />
     </>
   )
