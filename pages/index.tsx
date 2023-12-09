@@ -56,8 +56,6 @@ const Home = () => {
     const href = event.currentTarget.href
     event.preventDefault()
 
-    console.log(href)
-
     routes?.map((el) => {
       if (href.includes(el?.anchor)) {
         el?.linkRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })

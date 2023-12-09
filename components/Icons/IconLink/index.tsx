@@ -1,5 +1,5 @@
 // MUI
-import { SvgIconProps, IconButton } from '@mui/material'
+import { IconButton } from '@mui/material'
 
 // Types
 import { IconLinkProps } from './types'
