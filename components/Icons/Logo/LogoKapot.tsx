@@ -1,9 +1,9 @@
 // Media
-import KapotLogo from './../../../public/images/illustrations/logo--white.svg'
+import kapotLogo from './../../../public/images/illustrations/logo--white.svg'
 
 // Components
 import Logo from '.'
 
-const LogoKapot = () => <Logo src={KapotLogo} height={150} alt="Kapot Logo" />
+const LogoKapot = () => <Logo src={kapotLogo} height={150} alt="Kapot Logo" />
 
 export default LogoKapot

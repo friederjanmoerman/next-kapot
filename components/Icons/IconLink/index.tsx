@@ -1,13 +1,16 @@
+// Modules
+import { memo } from 'react'
+
 // MUI
 import { IconButton } from '@mui/material'
 
 // Types
-import { IconLinkProps } from './types'
+import { IIconLinkProps } from './types'
 
-const IconLink = ({ href, icon }: IconLinkProps) => (
-  <IconButton href={href} target="_blank" rel="noopener noreferrer">
+const IconLink = ({ link, icon }: IIconLinkProps) => (
+  <IconButton href={link} target="_blank" rel="noopener noreferrer">
     {icon}
   </IconButton>
 )
 
-export default IconLink
+export default memo(IconLink)

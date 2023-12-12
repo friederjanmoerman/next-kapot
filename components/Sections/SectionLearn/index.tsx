@@ -129,7 +129,7 @@ const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
           </TeacherTitle>
           <Grid container>
             <Grid item>
-              <IconLink href={'https://www.instagram.com/gilles.buelens/'} icon={<Instagram />} />
+              <IconLink link={'https://www.instagram.com/gilles.buelens/'} icon={<Instagram />} />
             </Grid>
           </Grid>
           <ItemMeta variant="h4">Skating for 24 years</ItemMeta>
@@ -144,7 +144,7 @@ const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
           </TeacherTitle>
           <Grid container>
             <Grid item>
-              <IconLink href={'https://www.instagram.com/shredpuppy/'} icon={<Instagram />} />
+              <IconLink link={'https://www.instagram.com/shredpuppy/'} icon={<Instagram />} />
             </Grid>
           </Grid>
           <ItemMeta variant="h4">Skating for 11 years</ItemMeta>

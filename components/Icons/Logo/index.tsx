@@ -1,5 +1,6 @@
 // Modules
 import Image from 'next/image'
+import { memo } from 'react'
 
 // Styles
 import { ContainerLogo } from './styles'
@@ -13,4 +14,4 @@ const Logo = ({ src, height, width, alt }: ILogoProps) => (
   </ContainerLogo>
 )
 
-export default Logo
+export default memo(Logo)
