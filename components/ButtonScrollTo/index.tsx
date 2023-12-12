@@ -1,3 +1,6 @@
+// Modules
+import { memo } from 'react'
+
 // MUI
 import { Typography } from '@mui/material'
 
@@ -13,4 +16,4 @@ const ButtonScrollTo = ({ label, location, handleScrollTo }: IButtonScrollToProp
   </StyledLink>
 )
 
-export default ButtonScrollTo
+export default memo(ButtonScrollTo)
