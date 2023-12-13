@@ -6,9 +6,9 @@ import { Typography, TypographyProps, styled, Link, List } from '@mui/material'
 import Grid from '@mui/material/Grid'
 
 // Types
-import { ISectionProps } from './types'
+import { SectionProps } from './types'
 
-export const Section = styled(Grid)<ISectionProps>(
+export const Section = styled(Grid)<SectionProps>(
   ({ theme, inverted, slim }) => `
     && {
     position: relative;
@@ -190,22 +190,22 @@ export const TeacherBody = styled(Typography)<TypographyProps>(
 
 export const StyledList = styled(List)(
   ({ theme }) => `
-    && {
-      color: ${theme.palette.primary.main};
-
-      .MuiListItemText-primary, .MuiListItemText-secondary {
-        font-family: FuturaStdCondExtraBoldObl, sans-serif;
-        font-size: 12px;
-        text-transform: uppercase;
+      && {
         color: ${theme.palette.primary.main};
-        letterSpacing: '-0.15rem',
+  
+        .MuiListItemText-primary, .MuiListItemText-secondary {
+          font-family: FuturaStdCondExtraBoldObl, sans-serif;
+          font-size: 12px;
+          text-transform: uppercase;
+          color: ${theme.palette.primary.main};
+          letterSpacing: '-0.15rem',
+        }
+        
+        svg {
+          fill: ${theme.palette.primary.main};
+        }
       }
-      
-      svg {
-        fill: ${theme.palette.primary.main};
-      }
-    }
-  `,
+    `,
 )
 
 export const StyledSplashIllustrationTop = styled(Image)(

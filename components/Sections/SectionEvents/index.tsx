@@ -38,8 +38,11 @@ const SectionEvents = forwardRef<HTMLDivElement>(function SectionEvents(_, ref) 
           <ItemTitle variant="h1" component="h2">
             Kapot Contest
           </ItemTitle>
-          <ItemMeta variant="h4">Sportoase skatepark, Leuven</ItemMeta>
-          <ItemMeta variant="h4">First Saturday of August</ItemMeta>
+          <ItemMeta as="h3" variant="h4">
+            Sportoase skatepark, Leuven
+            <br />
+            First Saturday of August
+          </ItemMeta>
           <ItemPrice variant="h4">Free</ItemPrice>
           <ItemBody variant="h5">
             Belgian annual celebration of inline skating! Feel the vibes as skaters from all over the world come together to showcase their tricks.
@@ -51,7 +54,9 @@ const SectionEvents = forwardRef<HTMLDivElement>(function SectionEvents(_, ref) 
           <ItemTitle variant="h1" component="h2">
             Kapot sessions
           </ItemTitle>
-          <ItemMeta variant="h4">Anywhere</ItemMeta>
+          <ItemMeta as="h3" variant="h4">
+            Anywhere
+          </ItemMeta>
           <ItemPrice variant="h4">Free</ItemPrice>
           <ItemBody variant="h5">Inline skate jams at different locations, park and street. No entry fee, bring your skates and skate.</ItemBody>
           <Button disabled variant="contained" size="large" disableElevation label="Upcoming event" />
@@ -60,8 +65,11 @@ const SectionEvents = forwardRef<HTMLDivElement>(function SectionEvents(_, ref) 
           <ItemTitle variant="h1" component="h2">
             Nocturnus
           </ItemTitle>
-          <ItemMeta variant="h4">Blaarmeersen skatepark, Gent</ItemMeta>
-          <ItemMeta variant="h4">TBA</ItemMeta>
+          <ItemMeta as="h3" variant="h4">
+            Blaarmeersen skatepark, Gent
+            <br />
+            TBA
+          </ItemMeta>
           <ItemPrice variant="h4">Free</ItemPrice>
           <ItemBody variant="h5">
             All-night inline skate jam in a skatepark. Tradition brought back to life. Relocated to Gent! Lights will be lit until morning.
@@ -69,11 +77,7 @@ const SectionEvents = forwardRef<HTMLDivElement>(function SectionEvents(_, ref) 
           <Button disabled variant="contained" size="large" disableElevation label="To be announced" />
         </Grid>
       </Container>
-      <StyledSplashIllustrationBottomVariation1
-        src={SplashIllustrationBottomVariation1}
-        alt="Splash illustration events section bottom"
-        width={950}
-      />
+      <StyledSplashIllustrationBottomVariation1 src={SplashIllustrationBottomVariation1} alt="" width={950} />
     </Section>
   )
 })
