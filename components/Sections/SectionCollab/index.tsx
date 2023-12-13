@@ -4,16 +4,8 @@ import { Grid, Typography } from '@mui/material'
 // Components
 import Logo from '../../Icons/Logo'
 
-// Media
-import LogoPowerslide from './../../../public/images/illustrations/sponsor__powerslide.svg'
-import LogoGrindhouse from './../../../public/images/illustrations/sponsor__grindhouse.svg'
-import LogoSkateheaven from './../../../public/images/illustrations/sponsor__skateheaven.svg'
-import LogoKaltik from './../../../public/images/illustrations/sponsor__kaltik.svg'
-import LogoFr from './../../../public/images/illustrations/sponsor__fr.svg'
-import LogoMijnleuven from './../../../public/images/illustrations/sponsor__mijnleuven.svg'
-import LogoSlidingtiger from './../../../public/images/illustrations/sponsor__sliding-tiger.svg'
-import LogoPowsey from './../../../public/images/illustrations/sponsor__powsey.svg'
-import LogoLetmeout from './../../../public/images/illustrations/sponsor__let-me-out.svg'
+// Constants
+import { logosBrands } from './constantsLogosBrands'
 
 // Styles
 import { Section } from '../styles'
@@ -26,33 +18,11 @@ const SectionCollab = () => (
       </Grid>
       <Grid item>
         <Grid container rowSpacing={{ xs: 1, md: 2, lg: 4 }} columnSpacing={{ xs: 4, md: 4, lg: 7 }} alignItems={'center'} justifyContent={'center'}>
-          <Grid item>
-            <Logo src={LogoPowerslide} height={55} alt={'Logo Powerslide'}></Logo>
-          </Grid>
-          <Grid item>
-            <Logo src={LogoGrindhouse} height={40} alt={'Logo Grindhouse'}></Logo>
-          </Grid>
-          <Grid item>
-            <Logo src={LogoSkateheaven} height={65} alt={'Logo Skateheaven'}></Logo>
-          </Grid>
-          <Grid item>
-            <Logo src={LogoKaltik} height={20} alt={'Logo Kaltik'}></Logo>
-          </Grid>
-          <Grid item>
-            <Logo src={LogoFr} height={55} alt={'Logo FR Skates'}></Logo>
-          </Grid>
-          <Grid item>
-            <Logo src={LogoMijnleuven} height={100} alt={'Logo Mijnleuven'}></Logo>
-          </Grid>
-          <Grid item>
-            <Logo src={LogoSlidingtiger} height={75} alt={'Logo Sliding Tiger'}></Logo>
-          </Grid>
-          <Grid item>
-            <Logo src={LogoPowsey} height={30} alt={'Logo Powsey'}></Logo>
-          </Grid>
-          <Grid item>
-            <Logo src={LogoLetmeout} height={50} alt={'Logo Let Me Out'}></Logo>
-          </Grid>
+          {logosBrands.map((logo, index) => (
+            <Grid item key={index}>
+              <Logo src={logo.src} height={logo.height} alt={logo.alt}></Logo>
+            </Grid>
+          ))}
         </Grid>
       </Grid>
     </Grid>
