@@ -1,6 +1,4 @@
 // MUI
-import { Instagram, Facebook } from '@mui/icons-material'
-import YouTubeIcon from '@mui/icons-material/YouTube'
 import { Grid } from '@mui/material'
 
 // Styles
@@ -9,20 +7,19 @@ import { StyledLinkIcon } from './styles'
 // Types
 import { ISocialsBarProps } from './types'
 
+// Constants
+import { constantsSocialMedia } from './constantsSocialMedia'
+
 const SocialsBar = (props: ISocialsBarProps) => {
   const { inverted } = props
   return (
     <Grid item xs={12}>
       <Grid container justifyContent="center" alignItems="center">
-        <StyledLinkIcon inverted={inverted} href="https://www.youtube.com/@echtalleskapot" target="_blank" rel="noopener">
-          <YouTubeIcon fontSize="large" />
-        </StyledLinkIcon>
-        <StyledLinkIcon inverted={inverted} href="https://www.instagram.com/echtalleskapot/" target="_blank" rel="noopener">
-          <Instagram fontSize="large" />
-        </StyledLinkIcon>
-        <StyledLinkIcon inverted={inverted} href="https://www.facebook.com/echtalleskapot/" target="_blank" rel="noopener">
-          <Facebook fontSize="large" />
-        </StyledLinkIcon>
+        {constantsSocialMedia.map((route, index) => (
+          <StyledLinkIcon key={index} inverted={inverted} href={route.link} target="_blank" rel="noopener">
+            {route.icon}
+          </StyledLinkIcon>
+        ))}
       </Grid>
     </Grid>
   )
