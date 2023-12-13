@@ -8,9 +8,9 @@ import { Typography } from '@mui/material'
 import { StyledLink } from './styles'
 
 // Types
-import { IButtonScrollToProps } from './types'
+import { ButtonScrollToProps } from './types'
 
-const ButtonScrollTo = ({ label, location, handleScrollTo }: IButtonScrollToProps) => (
+const ButtonScrollTo = ({ label, location, handleScrollTo }: ButtonScrollToProps) => (
   <StyledLink onClick={handleScrollTo} href={location}>
     <Typography variant="h2">{label}</Typography>
   </StyledLink>

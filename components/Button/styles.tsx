@@ -2,7 +2,7 @@
 import { Button as MuiButton, styled } from '@mui/material'
 
 // Types
-import { IButtonProps } from './types'
+import { ButtonProps } from './types'
 
 const baseStyles = ({ theme }) => `
   background: ${theme.palette.common.black};
@@ -56,7 +56,7 @@ const invertedStyles = ({ theme, inverted }) => `
   }
 `
 
-export const StyledButton = styled(MuiButton)<IButtonProps>(
+export const StyledButton = styled(MuiButton)<ButtonProps>(
   ({ theme, inverted, disabled }) => `
     && {
       ${baseStyles({ theme })}

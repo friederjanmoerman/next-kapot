@@ -3,9 +3,9 @@ import { memo } from 'react'
 import Button from '../Button'
 
 // Types
-import { IButtonScrollToProps } from './types'
+import { ButtonScrollToProps } from './types'
 
-const ButtonCtaScrollTo = ({ label, location, handleScrollTo }: IButtonScrollToProps) => (
+const ButtonCtaScrollTo = ({ label, location, handleScrollTo }: ButtonScrollToProps) => (
   <Button onClick={handleScrollTo} href={location} label={label} />
 )
 

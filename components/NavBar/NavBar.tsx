@@ -8,12 +8,12 @@ import ButtonScrollTo from '../ButtonScrollTo'
 import SplashIllustration from './../../public/images/illustrations/paint-splash-1.svg'
 
 // Types
-import { INavbar } from './types'
+import { NavbarProps } from './types'
 
 // Styles
 import { StyledNav, Menu, MenuItem, StyledSplashIllustration, StyledLogo } from './styles'
 
-const NavBar = (props: INavbar) => {
+const NavBar = (props: NavbarProps) => {
   const { routes, handleScrollTo } = props
   return (
     <StyledNav>

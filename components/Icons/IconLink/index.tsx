@@ -5,9 +5,9 @@ import { memo } from 'react'
 import { IconButton } from '@mui/material'
 
 // Types
-import { IIconLinkProps } from './types'
+import { IconLinkProps } from './types'
 
-const IconLink = ({ link, icon }: IIconLinkProps) => (
+const IconLink = ({ link, icon }: IconLinkProps) => (
   <IconButton href={link} target="_blank" rel="noopener noreferrer">
     {icon}
   </IconButton>

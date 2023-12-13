@@ -3,6 +3,6 @@
  * @param {boolean} inverted - Indicates whether the button has an inverted color scheme.
  */
 
-export interface IButtonProps {
+export interface ButtonProps {
   inverted?: boolean
 }

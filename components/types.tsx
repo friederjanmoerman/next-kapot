@@ -1,7 +1,7 @@
 // Modules
 import { RefObject } from 'react'
 
-export interface IRoutes {
+export interface RoutesProps {
   routes: {
     anchor: string
     title: string

@@ -1,4 +1,4 @@
-export interface ILogoProps {
+export interface LogoProps {
   src?: string
   height?: number
   width?: number

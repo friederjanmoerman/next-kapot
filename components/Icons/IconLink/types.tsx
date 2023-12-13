@@ -1,7 +1,7 @@
 // MUI
 import { SvgIconProps } from '@mui/material'
 
-export interface IIconLinkProps {
+export interface IconLinkProps {
   link: string
   icon: React.ReactElement<SvgIconProps>
 }

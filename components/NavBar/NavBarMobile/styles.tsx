@@ -25,21 +25,7 @@ export const Block = styled(Grid)`
   flex-direction: column;
 `
 
-export const BtnBlock = styled(Grid)(
-  ({ theme }) => `
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-bottom: 1px solid ${theme.palette.common.white};
-    padding-bottom: 40px;
-
-    button:first-of-type {
-        margin-bottom: 12px;
-    }
-  `,
-)
-
-export const LinkBtn = styled(Link)(
+export const LinkButton = styled(Link)(
   ({ theme }) => `
     && {
       background: transparent;
