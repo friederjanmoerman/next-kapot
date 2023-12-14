@@ -5,12 +5,12 @@ import { Grid } from '@mui/material'
 import { StyledLinkIcon } from './styles'
 
 // Types
-import { ISocialsBarProps } from './types'
+import { ISocialsBar } from './types'
 
 // Constants
 import { constantsSocialMedia } from './constantsSocialMedia'
 
-const SocialsBar = (props: ISocialsBarProps) => {
+const SocialsBar = (props: ISocialsBar) => {
   const { inverted } = props
   return (
     <Grid item xs={12}>

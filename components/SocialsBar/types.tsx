@@ -1,3 +1,3 @@
-export interface ISocialsBarProps {
+export interface ISocialsBar {
   inverted?: boolean
 }

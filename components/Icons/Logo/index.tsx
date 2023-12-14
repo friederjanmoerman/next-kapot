@@ -6,9 +6,9 @@ import { memo } from 'react'
 import { ContainerLogo } from './styles'
 
 // Types
-import { LogoProps } from './types'
+import { ILogo } from './types'
 
-const Logo = ({ src, height, width, alt }: LogoProps) => (
+const Logo = ({ src, height, width, alt }: ILogo) => (
   <ContainerLogo>
     <Image src={src} alt={alt} height={height} width={width} />
   </ContainerLogo>

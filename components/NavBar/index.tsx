@@ -6,9 +6,9 @@ import NavBar from './NavBar'
 import NavBarMobile from './NavBarMobile/NavBarMobile'
 
 // Types
-import { NavbarProps } from './types'
+import { INavbar } from './types'
 
-const NavbarContainer = (props: NavbarProps) => {
+const NavbarContainer = (props: INavbar) => {
   const [isToggledNavBarOpen, setIsToggledNavBarOpen] = useState(false)
   const handleViewToggledNavBar = useCallback(() => setIsToggledNavBarOpen(!isToggledNavBarOpen), [isToggledNavBarOpen])
 

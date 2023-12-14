@@ -16,9 +16,9 @@ import { Block, LinkButton, SocialsBlock, ToggledNavBarWrapper, StyledSplashIllu
 
 // Types
 import { INavbar as INavbarDefault } from '../types'
-import { ToggledNavBarProps } from './types'
+import { IToggledNavBar } from './types'
 
-interface INavBar extends INavbarDefault, ToggledNavBarProps {}
+interface INavBar extends INavbarDefault, IToggledNavBar {}
 
 const NavBarMobile = (props: INavBar) => {
   const { routes, isToggledNavBarOpen, handleViewToggledNavBar } = props

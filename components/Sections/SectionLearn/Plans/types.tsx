@@ -1,4 +1,4 @@
-export interface PlanProps {
+export interface IPlan {
   title: string
   price: string
   description: string

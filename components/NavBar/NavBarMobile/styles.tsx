@@ -50,21 +50,17 @@ export const LinkButton = styled(Link)(
   `,
 )
 
-export const SocialsBlock = styled(Grid)(
-  ({ theme }) => `
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: auto;
-    padding-top: 12px;
-  `,
-)
+export const SocialsBlock = styled(Grid)`
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 12px;
+`
 
-export const StyledSplashIllustration = styled(Image)(
-  ({ theme }) => `
-      position: absolute;
-      left: 0;
-      bottom: 25%;
-      z-index: -1;
-    `,
-)
+export const StyledSplashIllustration = styled(Image)`
+  position: absolute;
+  left: 0;
+  bottom: 25%;
+  z-index: -1;
+`

@@ -1,4 +1,4 @@
-export interface SectionProps {
+export interface ISection {
   inverted?: boolean
   slim?: boolean
 }

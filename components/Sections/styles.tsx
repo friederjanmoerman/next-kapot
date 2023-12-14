@@ -6,9 +6,9 @@ import { Typography, TypographyProps, styled, Link, List } from '@mui/material'
 import Grid from '@mui/material/Grid'
 
 // Types
-import { SectionProps } from './types'
+import { ISection } from './types'
 
-export const Section = styled(Grid)<SectionProps>(
+export const Section = styled(Grid)<ISection>(
   ({ theme, inverted, slim }) => `
     && {
     position: relative;

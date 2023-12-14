@@ -12,9 +12,9 @@ import Button from './../../../Button'
 import { ItemPrice, ItemTitle, StyledList } from '../../styles'
 
 // Types
-import { PlanProps } from './types'
+import { IPlan } from './types'
 
-const Plans = (props: PlanProps) => {
+const Plans = (props: IPlan) => {
   const { title, price, description, list, buttonLink, buttonLabel } = props
   return (
     <Grid item md={6} lg={6}>

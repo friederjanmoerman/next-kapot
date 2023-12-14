@@ -1,4 +1,4 @@
-export interface ToggledNavBarProps {
+export interface IToggledNavBar {
   isToggledNavBarOpen: boolean
   handleViewToggledNavBar: () => void
 }

@@ -1,4 +1,4 @@
 // Types
-import { RoutesProps } from '../types'
+import { IRoutes } from '../types'
 
-export interface NavbarProps extends RoutesProps {}
+export interface INavbar extends IRoutes {}
