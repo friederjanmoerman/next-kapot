@@ -1,29 +1,15 @@
 // Modules
 import { forwardRef } from 'react'
 
-// Components
-import IconLink from '../../Icons/IconLink'
-
 // MUI
-import { Grid, Typography } from '@mui/material'
-import { Instagram } from '@mui/icons-material'
+import Typography from '@mui/material/Typography'
 
 // Media
 import SplashIllustrationTop from './../../../public/images/illustrations/paint-splash-2.svg'
 import SplashIllustrationBottom from './../../../public/images/illustrations/paint-splash-3.svg'
 
 // Styles
-import {
-  Section,
-  StyledSplashIllustrationBottom,
-  StyledSplashIllustrationTop,
-  SectionSubtitle,
-  Container,
-  TeacherTitle,
-  ItemMeta,
-  TeacherBody,
-  SectionSubtitleEmphasis,
-} from '../styles'
+import { Section, StyledSplashIllustrationBottom, StyledSplashIllustrationTop, SectionSubtitle, SectionSubtitleEmphasis } from '../styles'
 import ContainerPlans from './Plans'
 import ContainerTeachers from './Teachers'
 
