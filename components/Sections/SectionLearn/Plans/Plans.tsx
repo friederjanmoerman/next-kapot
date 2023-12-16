@@ -35,7 +35,7 @@ const Plans = (props: IPlan) => {
           </ListItem>
         ))}
       </StyledList>
-      <Button href={buttonLink} inverted variant="contained" size="large" disableElevation label={buttonLabel} />
+      <Button className="inverted" href={buttonLink} variant="contained" size="large" disableElevation label={buttonLabel} />
     </Grid>
   )
 }

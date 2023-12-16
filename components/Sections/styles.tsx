@@ -5,26 +5,13 @@ import Image from 'next/image'
 import { Typography, TypographyProps, styled, Link, List } from '@mui/material'
 import Grid from '@mui/material/Grid'
 
-// Types
-import { ISection } from './types'
-
-export const Section = styled(Grid)<ISection>(
-  ({ theme, inverted, slim }) => `
+export const Section = styled(Grid)(
+  ({ theme }) => `
     && {
-    position: relative;
-    padding: 180px 14% 200px;
+      position: relative;
+      padding: 180px 14% 200px;
 
-    ${theme.breakpoints.down('lg')} {
-      padding: 100px 14% 140px;    
-    }
-
-    ${theme.breakpoints.down('md')} {
-      padding: 55px 14% 70px;    
-    }
-
-    ${
-      inverted &&
-      `
+      &.inverted {
         background: ${theme.palette.common.black};
         h2, h3, h4, h5 {
           color: ${theme.palette.common.white};
@@ -38,18 +25,19 @@ export const Section = styled(Grid)<ISection>(
             color: ${theme.palette.primary.main};
           }
         }
-      `
-    }
+      }
 
-    padding: 180px 14% 200px;
+      &.slim {
+        padding: 70px 14% 120px;
+      }
 
-    ${
-      slim &&
-      `
-      padding: 70px 14% 120px;
-      `
-    }
+      ${theme.breakpoints.down('lg')} {
+        padding: 100px 14% 140px;    
+      }
 
+      ${theme.breakpoints.down('md')} {
+        padding: 55px 14% 70px;    
+      }
     }
   `,
 )

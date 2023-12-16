@@ -37,7 +37,7 @@ const NavBarMobile = (props: INavBar) => {
           <StyledSplashIllustration src={SplashIllustration} alt="Splash illustration" width={198} />
         </Block>
         <SocialsBlock>
-          <SocialsBar inverted />
+          <SocialsBar className="inverted" />
         </SocialsBlock>
       </ToggledNavBar>
     </ToggledNavBarWrapper>

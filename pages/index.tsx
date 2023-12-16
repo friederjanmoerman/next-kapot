@@ -1,5 +1,5 @@
 // Modules
-import { createRef, memo, useEffect } from 'react'
+import { createRef, useEffect } from 'react'
 import { useRouter } from 'next/router'
 
 // Components
@@ -66,4 +66,4 @@ const Home = () => {
   )
 }
 
-export default memo(Home)
+export default Home

@@ -27,7 +27,7 @@ const Teacher = (props: ITeacher) => {
       <ItemMeta as="h3" variant="h4">
         Skating for {timeSkating} years
       </ItemMeta>
-      <ItemMeta variant="h4">{age}years old</ItemMeta>
+      <ItemMeta variant="h4">{age} years old</ItemMeta>
       <TeacherBody variant="h5">{description}</TeacherBody>
     </Grid>
   )

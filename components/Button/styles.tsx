@@ -1,9 +1,6 @@
 // MUI
 import { Button as MuiButton, styled } from '@mui/material'
 
-// Types
-import { IButton } from './types'
-
 const baseStyles = ({ theme }) => `
   background: ${theme.palette.common.black};
   padding: 8px 20px;
@@ -38,31 +35,20 @@ const disabledStyles = ({ disabled }) => `
   }
 `
 
-const invertedStyles = ({ theme, inverted }) => `
-  ${
-    inverted &&
-    `
-      // Apply hover styles again to fix a bug with multiple prop styles
-      :hover,
-      :active {
-        color: ${theme.palette.common.black};
-        background: ${theme.palette.primary.main};
-      }
-
-      // Regular styling
-      color: ${theme.palette.common.black};
-      background: ${theme.palette.common.white};
-    `
+const invertedStyles = ({ theme }) => `
+  &.inverted {
+    color: ${theme.palette.common.black};
+    background: ${theme.palette.common.white};
   }
 `
 
-export const StyledButton = styled(MuiButton)<IButton>(
-  ({ theme, inverted, disabled }) => `
+export const StyledButton = styled(MuiButton)(
+  ({ theme, disabled }) => `
     && {
       ${baseStyles({ theme })}
       ${hoverStyles({ theme })}
       ${disabledStyles({ disabled })}
-      ${invertedStyles({ theme, inverted })}
+      ${invertedStyles({ theme })}
     }
   `,
 )

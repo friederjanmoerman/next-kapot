@@ -10,8 +10,8 @@ import { Container } from '../../styles'
 const ContainerTeachers = () => {
   return (
     <Container container spacing={10}>
-      {constantsTeachers.map((data, index) => (
-        <Teacher key={index} {...data} />
+      {constantsTeachers.map((teacher, index) => (
+        <Teacher key={index} {...teacher} />
       ))}
     </Container>
   )

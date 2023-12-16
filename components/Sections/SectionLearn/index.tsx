@@ -15,7 +15,7 @@ import ContainerTeachers from './Teachers'
 
 const SectionLearn = forwardRef<HTMLDivElement>(function SectionLearn(_, ref) {
   return (
-    <Section ref={ref} inverted>
+    <Section className="inverted" ref={ref}>
       <Typography variant="h1" component="h2">
         Learn
       </Typography>

@@ -11,7 +11,7 @@ import { logosBrands } from './constantsLogosBrands'
 import { Section } from '../styles'
 
 const SectionCollab = () => (
-  <Section slim inverted>
+  <Section className="slim inverted">
     <Grid container rowSpacing={2} alignItems={'center'} justifyContent={'center'} flexDirection={'column'}>
       <Grid item>
         <Typography variant="h4">in collaboration with</Typography>

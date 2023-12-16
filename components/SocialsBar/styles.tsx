@@ -1,9 +1,6 @@
 // MUI
 import { Link, styled } from '@mui/material'
 
-// Types
-import { ISocialsBar } from './types'
-
 const baseStyles = ({ theme }) => `
   color: ${theme.palette.common.black};
   display: flex;
@@ -11,21 +8,19 @@ const baseStyles = ({ theme }) => `
   margin: 6px;
 `
 
-const invertedStyles = ({ theme, inverted }) => `
-  ${
-    inverted &&
-    `
-      color: ${theme.palette.common.white};
-      :hover {
-        color: ${theme.palette.primary.main};
-      }
-    `
+const invertedStyles = ({ theme }) => `
+  &.inverted {
+    color: ${theme.palette.common.white};
+
+    :hover {
+      color: ${theme.palette.primary.main};
+    }
   }
 `
 
-export const StyledLinkIcon = styled(Link)<ISocialsBar>(
-  ({ theme, inverted }) => `
+export const StyledLinkIcon = styled(Link)(
+  ({ theme }) => `
     ${baseStyles({ theme })}
-    ${invertedStyles({ theme, inverted })}
+    ${invertedStyles({ theme })}
   `,
 )
