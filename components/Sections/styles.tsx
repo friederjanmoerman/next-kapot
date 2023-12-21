@@ -5,26 +5,13 @@ import Image from 'next/image'
 import { Typography, TypographyProps, styled, Link, List } from '@mui/material'
 import Grid from '@mui/material/Grid'
 
-// Types
-import { ISectionProps } from './types'
-
-export const Section = styled(Grid)<ISectionProps>(
-  ({ theme, inverted, slim }) => `
+export const Section = styled(Grid)(
+  ({ theme }) => `
     && {
-    position: relative;
-    padding: 180px 14% 200px;
+      position: relative;
+      padding: 180px 14% 200px;
 
-    ${theme.breakpoints.down('lg')} {
-      padding: 100px 14% 140px;    
-    }
-
-    ${theme.breakpoints.down('md')} {
-      padding: 55px 14% 70px;    
-    }
-
-    ${
-      inverted &&
-      `
+      &.inverted {
         background: ${theme.palette.common.black};
         h2, h3, h4, h5 {
           color: ${theme.palette.common.white};
@@ -38,18 +25,19 @@ export const Section = styled(Grid)<ISectionProps>(
             color: ${theme.palette.primary.main};
           }
         }
-      `
-    }
+      }
 
-    padding: 180px 14% 200px;
+      &.slim {
+        padding: 70px 14% 120px;
+      }
 
-    ${
-      slim &&
-      `
-      padding: 70px 14% 120px;
-      `
-    }
+      ${theme.breakpoints.down('lg')} {
+        padding: 100px 14% 140px;    
+      }
 
+      ${theme.breakpoints.down('md')} {
+        padding: 55px 14% 70px;    
+      }
     }
   `,
 )
@@ -190,22 +178,22 @@ export const TeacherBody = styled(Typography)<TypographyProps>(
 
 export const StyledList = styled(List)(
   ({ theme }) => `
-    && {
-      color: ${theme.palette.primary.main};
-
-      .MuiListItemText-primary, .MuiListItemText-secondary {
-        font-family: FuturaStdCondExtraBoldObl, sans-serif;
-        font-size: 12px;
-        text-transform: uppercase;
+      && {
         color: ${theme.palette.primary.main};
-        letterSpacing: '-0.15rem',
+  
+        .MuiListItemText-primary, .MuiListItemText-secondary {
+          font-family: FuturaStdCondExtraBoldObl, sans-serif;
+          font-size: 12px;
+          text-transform: uppercase;
+          color: ${theme.palette.primary.main};
+          letterSpacing: '-0.15rem',
+        }
+        
+        svg {
+          fill: ${theme.palette.primary.main};
+        }
       }
-      
-      svg {
-        fill: ${theme.palette.primary.main};
-      }
-    }
-  `,
+    `,
 )
 
 export const StyledSplashIllustrationTop = styled(Image)(
@@ -214,6 +202,7 @@ export const StyledSplashIllustrationTop = styled(Image)(
     top: -5%;
     right: 0;
     z-index: 8000;
+    height: auto;
 
     ${theme.breakpoints.down('sm')} {
       top: -7%;
@@ -228,6 +217,7 @@ export const StyledSplashIllustrationBottom = styled(Image)(
     left: 0;
     bottom: 20%;
     z-index: 8000;
+    height: auto;
     
     ${theme.breakpoints.down('lg')} {
       width: 100px;

@@ -82,11 +82,17 @@ export const ToggleBtn = styled('span')<IButton>(
 `,
 )
 
-export const ToggleBtnTopStroke = styled(Image)``
+export const ToggleBtnTopStroke = styled(Image)`
+  height: auto;
+`
 
-export const ToggleBtnMiddleStroke = styled(Image)``
+export const ToggleBtnMiddleStroke = styled(Image)`
+  height: auto;
+`
 
-export const ToggleBtnBottomStroke = styled(Image)``
+export const ToggleBtnBottomStroke = styled(Image)`
+  height: auto;
+`
 
 export const Content = styled(Grid)<IToggle>(
   ({ open }) => `

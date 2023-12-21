@@ -12,7 +12,7 @@ import SocialsBar from '../../SocialsBar'
 import SplashIllustration from '../../../public/images/illustrations/paint-splash-1.svg'
 
 // Styles
-import { Block, LinkBtn, SocialsBlock, ToggledNavBarWrapper, StyledSplashIllustration } from './styles'
+import { Block, LinkButton, SocialsBlock, ToggledNavBarWrapper, StyledSplashIllustration } from './styles'
 
 // Types
 import { INavbar as INavbarDefault } from '../types'
@@ -28,16 +28,16 @@ const NavBarMobile = (props: INavBar) => {
       <ToggledNavBar isToggledNavBarOpen={isToggledNavBarOpen} handleViewToggledNavBar={handleViewToggledNavBar}>
         <Block item>
           {routes.map((page) => (
-            <LinkBtn onClick={handleViewToggledNavBar} href={'#' + page.anchor} key={page.title}>
+            <LinkButton onClick={handleViewToggledNavBar} href={'#' + page.anchor} key={page.title}>
               <Typography variant="h2" textTransform={'uppercase'}>
                 {page.title}
               </Typography>
-            </LinkBtn>
+            </LinkButton>
           ))}
           <StyledSplashIllustration src={SplashIllustration} alt="Splash illustration" width={198} />
         </Block>
         <SocialsBlock>
-          <SocialsBar inverted />
+          <SocialsBar className="inverted" />
         </SocialsBlock>
       </ToggledNavBar>
     </ToggledNavBarWrapper>

@@ -1,6 +1,3 @@
-// Modules
-import Image from 'next/image'
-
 // Media
 import MobileMenuStrokeIllustration from './../../public/images/illustrations/paint-mobile-menu-stroke.svg'
 

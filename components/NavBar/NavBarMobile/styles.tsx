@@ -25,21 +25,7 @@ export const Block = styled(Grid)`
   flex-direction: column;
 `
 
-export const BtnBlock = styled(Grid)(
-  ({ theme }) => `
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-bottom: 1px solid ${theme.palette.common.white};
-    padding-bottom: 40px;
-
-    button:first-of-type {
-        margin-bottom: 12px;
-    }
-  `,
-)
-
-export const LinkBtn = styled(Link)(
+export const LinkButton = styled(Link)(
   ({ theme }) => `
     && {
       background: transparent;
@@ -64,21 +50,17 @@ export const LinkBtn = styled(Link)(
   `,
 )
 
-export const SocialsBlock = styled(Grid)(
-  ({ theme }) => `
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: auto;
-    padding-top: 12px;
-  `,
-)
+export const SocialsBlock = styled(Grid)`
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 12px;
+`
 
-export const StyledSplashIllustration = styled(Image)(
-  ({ theme }) => `
-      position: absolute;
-      left: 0;
-      bottom: 25%;
-      z-index: -1;
-    `,
-)
+export const StyledSplashIllustration = styled(Image)`
+  position: absolute;
+  left: 0;
+  bottom: 25%;
+  z-index: -1;
+`

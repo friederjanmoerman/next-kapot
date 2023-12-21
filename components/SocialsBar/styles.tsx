@@ -1,25 +1,26 @@
 // MUI
 import { Link, styled } from '@mui/material'
 
-// Types
-import { ISocialsBarProps } from './types'
+const baseStyles = ({ theme }) => `
+  color: ${theme.palette.common.black};
+  display: flex;
+  transition: all 0.4s ease-out;
+  margin: 6px;
+`
 
-export const StyledLinkIcon = styled(Link)<ISocialsBarProps>(
-  ({ theme, inverted }) => `
-    && {
-        color: ${theme.palette.common.black};
-        display: flex;
-        transition: all 0.4s ease-out;
-        margin: 6px;
-        
-        ${
-          inverted &&
-          `
-            color: ${theme.palette.common.white};
-            :hover {
-              color: ${theme.palette.primary.main};
-            }
-          `
-        }
-    `,
+const invertedStyles = ({ theme }) => `
+  &.inverted {
+    color: ${theme.palette.common.white};
+
+    :hover {
+      color: ${theme.palette.primary.main};
+    }
+  }
+`
+
+export const StyledLinkIcon = styled(Link)(
+  ({ theme }) => `
+    ${baseStyles({ theme })}
+    ${invertedStyles({ theme })}
+  `,
 )
