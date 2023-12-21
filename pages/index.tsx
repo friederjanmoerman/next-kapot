@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic'
 // Components
 const NavBar = dynamic(() => import('../components/NavBar'), { ssr: false })
 import VideoDisplay from '../components/VideoDisplay'
+
 const SectionLearn = dynamic(() => import('../components/Sections/SectionLearn/WrappedSectionLearn'), { ssr: false })
 const SectionEvents = dynamic(() => import('../components/Sections/SectionEvents/WrappedSectionEvents'), { ssr: false })
 const SectionCollab = dynamic(() => import('../components/Sections/SectionCollab'), { ssr: false })

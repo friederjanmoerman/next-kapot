@@ -1,3 +1,7 @@
+// Modules
+import Head from 'next/head'
+import { AppProps } from 'next/app'
+
 // MUI
 import { ThemeProvider } from '@emotion/react'
 import { CssBaseline } from '@mui/material'
@@ -8,8 +12,7 @@ import theme from '../theme/theme'
 // Global styles
 import '../styles/globals.css'
 
-import Head from 'next/head'
-import { AppProps } from 'next/app'
+// Cache
 import { CacheProvider, EmotionCache } from '@emotion/react'
 import createEmotionCache from '../src/createEmotionCache'
 

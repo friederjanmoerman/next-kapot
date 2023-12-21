@@ -1,13 +1,16 @@
-import * as React from 'react'
+// Modules
 import Document, { Html, Head, Main, NextScript, DocumentProps, DocumentContext } from 'next/document'
-import createEmotionServer from '@emotion/server/create-instance'
-import { AppType } from 'next/app'
-import theme from '../theme/theme'
-import createEmotionCache from '../src/createEmotionCache'
-import { MyAppProps } from './_app'
 
-// Client-side cache, shared for the whole session of the user in the browser.
-const clientSideEmotionCache = createEmotionCache()
+// Theme
+import theme from '../theme/theme'
+
+// Caching
+import createEmotionCache from '../src/createEmotionCache'
+import createEmotionServer from '@emotion/server/create-instance'
+
+// Types
+import { MyAppProps } from './_app'
+import { AppType } from 'next/app'
 
 interface MyDocumentProps extends DocumentProps {
   emotionStyleTags: JSX.Element[]

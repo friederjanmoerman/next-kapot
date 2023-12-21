@@ -1,3 +1,4 @@
+// Emotion
 import createCache from '@emotion/cache'
 
 const isBrowser = typeof document !== 'undefined'
@@ -6,7 +7,7 @@ const isBrowser = typeof document !== 'undefined'
 // This assures that MUI styles are loaded first.
 // It allows developers to easily override MUI styles with other styling solutions, like CSS modules.
 export default function createEmotionCache() {
-  let insertionPoint
+  let insertionPoint: HTMLMetaElement
 
   if (isBrowser) {
     const emotionInsertionPoint = document.querySelector<HTMLMetaElement>('meta[name="emotion-insertion-point"]')
