@@ -6,13 +6,15 @@ import { StyledLinkIcon } from './styles'
 
 // Constants
 import { constantsSocialMedia } from './constantsSocialMedia'
+import { ISocialsBar } from './types'
 
-const SocialsBar = () => {
+const SocialsBar = (props: ISocialsBar) => {
+  const { className } = props
   return (
     <Grid item xs={12}>
       <Grid container justifyContent="center" alignItems="center">
         {constantsSocialMedia.map((route, index) => (
-          <StyledLinkIcon className="inverted" key={index} href={route.link} target="_blank" rel="noopener">
+          <StyledLinkIcon className={className} key={index} href={route.link} target="_blank" rel="noopener">
             {route.icon}
           </StyledLinkIcon>
         ))}

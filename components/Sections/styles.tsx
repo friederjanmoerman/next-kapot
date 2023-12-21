@@ -202,6 +202,7 @@ export const StyledSplashIllustrationTop = styled(Image)(
     top: -5%;
     right: 0;
     z-index: 8000;
+    height: auto;
 
     ${theme.breakpoints.down('sm')} {
       top: -7%;
@@ -216,6 +217,7 @@ export const StyledSplashIllustrationBottom = styled(Image)(
     left: 0;
     bottom: 20%;
     z-index: 8000;
+    height: auto;
     
     ${theme.breakpoints.down('lg')} {
       width: 100px;

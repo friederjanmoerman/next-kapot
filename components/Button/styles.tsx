@@ -38,7 +38,7 @@ const disabledStyles = ({ disabled }) => `
 const invertedStyles = ({ theme }) => `
   &.inverted {
     color: ${theme.palette.common.black};
-    background: ${theme.palette.common.white};
+    background: ${theme.palette.common.white}; 
   }
 `
 
@@ -46,9 +46,9 @@ export const StyledButton = styled(MuiButton)(
   ({ theme, disabled }) => `
     && {
       ${baseStyles({ theme })}
+      ${invertedStyles({ theme })}
       ${hoverStyles({ theme })}
       ${disabledStyles({ disabled })}
-      ${invertedStyles({ theme })}
     }
   `,
 )

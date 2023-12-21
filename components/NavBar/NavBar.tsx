@@ -25,7 +25,7 @@ const NavBar = (props: INavbar) => {
           </MenuItem>
         ))}
       </Menu>
-      <StyledSplashIllustration priority loading="eager" src={SplashIllustration} alt="" width={550} />
+      <StyledSplashIllustration src={SplashIllustration} alt="" width={550} style={{ height: 'auto' }} />
     </StyledNav>
   )
 }

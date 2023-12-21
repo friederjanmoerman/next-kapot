@@ -1,12 +1,13 @@
 // Modules
 import { memo } from 'react'
+import dynamic from 'next/dynamic'
 
 // MUI
 import { Grid, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
 import { AutoAwesome } from '@mui/icons-material'
 
 // Components
-import Button from './../../../Button'
+const Button = dynamic(() => import('../../../Button'), { ssr: false })
 
 // Styles
 import { ItemPrice, ItemTitle, StyledList } from '../../styles'
@@ -35,7 +36,7 @@ const Plans = (props: IPlan) => {
           </ListItem>
         ))}
       </StyledList>
-      <Button className="inverted" href={buttonLink} variant="contained" size="large" disableElevation label={buttonLabel} />
+      <Button href={buttonLink} variant="contained" size="large" className="inverted" disableElevation label={buttonLabel} />
     </Grid>
   )
 }
