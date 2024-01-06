@@ -25,7 +25,9 @@ const Plans = (props: IPlan) => {
       <ItemPrice as="h3" variant="h4">
         {price}
       </ItemPrice>
-      <Typography variant="h5">{description}</Typography>
+      <Typography variant="h5" component="p">
+        {description}
+      </Typography>
       <StyledList dense>
         {list.map((item, index) => (
           <ListItem key={index}>

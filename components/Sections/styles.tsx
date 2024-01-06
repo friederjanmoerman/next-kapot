@@ -13,7 +13,7 @@ export const Section = styled(Grid)(
 
       &.inverted {
         background: ${theme.palette.common.black};
-        h2, h3, h4, h5 {
+        h2, h3, h4, h5, p {
           color: ${theme.palette.common.white};
         }
         .MuiSvgIcon-root {
@@ -76,7 +76,7 @@ export const SectionSubtitleEmphasis = styled('span')(
   `,
 )
 
-export const MailAddress = styled(Typography)(
+export const MailAddress = styled(Typography)<TypographyProps>(
   ({ theme }) => `
     && {
       font-size: 34px;

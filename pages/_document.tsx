@@ -1,5 +1,5 @@
 // Modules
-import Document, { Html, Head, Main, NextScript, DocumentProps, DocumentContext } from 'next/document'
+import Document, { Html, Main, Head, NextScript, DocumentProps, DocumentContext } from 'next/document'
 
 // Theme
 import theme from '../theme/theme'
