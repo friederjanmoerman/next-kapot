@@ -28,7 +28,8 @@ export default function MyApp(props: MyAppProps) {
   return (
     <CacheProvider value={emotionCache}>
       <Head>
-        <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <meta name="description" content="Learn to inline skate, attend rollerblade contests and events. By and for the inline community." />
+        <title>Kapot | Inline skate events, contests and lessons.</title>
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />

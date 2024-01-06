@@ -21,7 +21,7 @@ const Teacher = (props: ITeacher) => {
       </TeacherTitle>
       <Grid container>
         <Grid item>
-          <IconLink link={instagramLink} icon={<Instagram />} />
+          <IconLink ariaLabel="Check out the teacher's Instagram" link={instagramLink} icon={<Instagram />} />
         </Grid>
       </Grid>
       <ItemMeta as="h3" variant="h4">

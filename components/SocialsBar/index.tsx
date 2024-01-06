@@ -14,7 +14,7 @@ const SocialsBar = (props: ISocialsBar) => {
     <Grid item xs={12}>
       <Grid container justifyContent="center" alignItems="center">
         {constantsSocialMedia.map((route, index) => (
-          <StyledLinkIcon className={className} key={index} href={route.link} target="_blank" rel="noopener">
+          <StyledLinkIcon aria-label={route.ariaLabel} className={className} key={index} href={route.link} target="_blank" rel="noopener">
             {route.icon}
           </StyledLinkIcon>
         ))}

@@ -21,13 +21,15 @@ const Footer = forwardRef<HTMLDivElement>(function Footer(_, ref) {
               <LogoKapot />
             </Grid>
             <Grid item>
-              <Typography variant={'h1'}>Kapot</Typography>
+              <Typography variant="h1">Kapot</Typography>
             </Grid>
           </Grid>
         </Grid>
         <Grid item xs={12}>
           <Grid container justifyContent="center" alignItems="center">
-            <MailAddress variant="h3">kapot@echtalleskapot.be</MailAddress>
+            <MailAddress variant="h3" component="span">
+              kapot@echtalleskapot.be
+            </MailAddress>
           </Grid>
         </Grid>
         <SocialsBar />
