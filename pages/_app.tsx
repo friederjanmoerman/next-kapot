@@ -8,6 +8,7 @@ import { CssBaseline } from '@mui/material'
 
 // Vercel
 import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 // Theme
 import theme from '../theme/theme'
@@ -38,6 +39,7 @@ export default function MyApp(props: MyAppProps) {
         <CssBaseline />
         <Component {...pageProps} />
         <Analytics />
+        <SpeedInsights />
       </ThemeProvider>
     </CacheProvider>
   )
