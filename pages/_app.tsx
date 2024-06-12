@@ -6,6 +6,9 @@ import { AppProps } from 'next/app'
 import { ThemeProvider } from '@emotion/react'
 import { CssBaseline } from '@mui/material'
 
+// Vercel
+import { Analytics } from '@vercel/analytics/react'
+
 // Theme
 import theme from '../theme/theme'
 
@@ -34,6 +37,7 @@ export default function MyApp(props: MyAppProps) {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Component {...pageProps} />
+        <Analytics />
       </ThemeProvider>
     </CacheProvider>
   )
