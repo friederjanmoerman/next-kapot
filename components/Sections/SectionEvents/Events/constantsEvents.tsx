@@ -3,11 +3,12 @@ export const constantsEvents = [
     title: 'Coping Box Jam',
     location: 'Chinastraat, Gent',
     price: 'free',
-    date: '20th of September, 2-4pm',
+    date: '21th of September, 2-4pm',
     description:
       'Saturday 20th of September Kapot will be hosting a coping box session at Asfalt urban sports festival in Gent, Chinastraat at 2pm until 4pm.',
-    buttonLabel: 'More info soon',
-    disabledButton: true,
+    buttonLabel: 'More info',
+    buttonLink: 'https://www.facebook.com/events/483102844629897',
+    disabledButton: false,
   },
   {
     title: 'Kapot Contest',
