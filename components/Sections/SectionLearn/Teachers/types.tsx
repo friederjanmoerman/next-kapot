@@ -1,6 +1,6 @@
 export interface ITeacher {
   name: string
-  instagramLink: string
+  instagramLink?: string
   timeSkating: number
   age: number
   description: string
