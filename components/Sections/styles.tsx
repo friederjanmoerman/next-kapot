@@ -272,3 +272,7 @@ export const StyledLinkIcon = styled(Link)(
     margin: 6px;
   `,
 )
+
+export const SocialsGrid = styled(Grid)`
+  height: 40px;
+`

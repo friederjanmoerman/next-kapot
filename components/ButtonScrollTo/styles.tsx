@@ -12,7 +12,6 @@ export const StyledLink = styled(Link)(
     text-decoration: none;
     transition: all 0.4s ease-out;
 
-    // safari hover font bug fix
     h1, h2, h3, h4, h5, h6 {
       margin: 0 -9px;
       padding: 0 9px;

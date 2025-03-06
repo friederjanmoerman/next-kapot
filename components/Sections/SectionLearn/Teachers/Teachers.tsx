@@ -6,7 +6,7 @@ import { Grid } from '@mui/material'
 import { Instagram } from '@mui/icons-material'
 
 // Styles
-import { ItemMeta, TeacherBody, TeacherTitle } from '../../styles'
+import { SocialsGrid, ItemMeta, TeacherBody, TeacherTitle } from '../../styles'
 
 // Types
 import { ITeacher } from './types'
@@ -20,9 +20,9 @@ const Teacher = (props: ITeacher) => {
         {name}
       </TeacherTitle>
       <Grid container>
-        <Grid item>
-          <IconLink ariaLabel="Check out the teacher's Instagram" link={instagramLink} icon={<Instagram />} />
-        </Grid>
+        <SocialsGrid item>
+          {instagramLink && <IconLink ariaLabel="Check out the teacher's Instagram" link={instagramLink} icon={<Instagram />} />}
+        </SocialsGrid>
       </Grid>
       <ItemMeta as="h3" variant="h4">
         Skating for {timeSkating} years

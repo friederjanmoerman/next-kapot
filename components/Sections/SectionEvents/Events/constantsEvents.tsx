@@ -1,13 +1,13 @@
 export const constantsEvents = [
   {
-    title: 'Coping Box Jam',
-    location: 'Chinastraat, Gent',
-    price: 'free',
-    date: '21th of September, 2-4pm',
+    title: 'Inline Skate Camp',
+    location: 'Blaarmeersen, Gent',
+    price: '€50',
+    date: '14-18 April, 4-6pm every weekday',
     description:
-      'Saturday 20th of September Kapot will be hosting a coping box session at Asfalt urban sports festival in Gent, Chinastraat at 2pm until 4pm.',
-    buttonLabel: 'More info',
-    buttonLink: 'https://www.facebook.com/events/483102844629897',
+      'A pilot test for a new concept: a week-long inline skate camp during the Easter holidays. The camp will be held in the Blaarmeersen skatepark in Gent. Open to inline skaters of all ages and skill levels. Led by Ryan who will teach trick focused inline skating or aggressive inline skating. A great way to learn new skills, make new friends, and have a great time on wheels. Only 10 spots available. When raining we have arranged SBA indoor skatepark as backup, it will be €5 extra per person to enter.',
+    buttonLabel: 'Reserve your spot',
+    buttonLink: 'mailto:kapot@echtalleskapot.be',
     disabledButton: false,
   },
   {
